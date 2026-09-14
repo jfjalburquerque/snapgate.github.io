@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snapgate</title>
+<meta name="description" content="Decide which photos reach your cloud.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  var supported = ["es","en","pt","fr","de","it"];
+  var want = (navigator.language || "en").slice(0, 2).toLowerCase();
+  var go = supported.indexOf(want) >= 0 ? want : "en";
+  location.replace(go + "/" + location.hash);
+</script>
+</head>
+<body>
+<div class="wrap page prose">
+  <h1>Snapgate</h1>
+  <p>Choose your language:</p>
+  <ul><li><a href="es/">Español</a></li><li><a href="en/">English</a></li><li><a href="pt/">Português</a></li><li><a href="fr/">Français</a></li><li><a href="de/">Deutsch</a></li><li><a href="it/">Italiano</a></li></ul>
+</div>
+</body>
+</html>

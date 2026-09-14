@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Snapgate exists · Snapgate</title>
+<meta name="description" content="Almost every photo filling my cloud is a document I photographed to look at for ten minutes.">
+<meta property="og:title" content="Why Snapgate exists · Snapgate">
+<meta property="og:description" content="Almost every photo filling my cloud is a document I photographed to look at for ten minutes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../assets/icon.png">
+<meta name="theme-color" content="#16a34a">
+<link rel="icon" href="../../assets/icon.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="es" href="https://jfjalburquerque.github.io/snapgate-web/es/"><link rel="alternate" hreflang="en" href="https://jfjalburquerque.github.io/snapgate-web/en/"><link rel="alternate" hreflang="pt" href="https://jfjalburquerque.github.io/snapgate-web/pt/"><link rel="alternate" hreflang="fr" href="https://jfjalburquerque.github.io/snapgate-web/fr/"><link rel="alternate" hreflang="de" href="https://jfjalburquerque.github.io/snapgate-web/de/"><link rel="alternate" hreflang="it" href="https://jfjalburquerque.github.io/snapgate-web/it/">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../en/">
+      <img src="../../assets/icon.png" alt="">
+      <span>Snapgate</span>
+    </a>
+    <nav class="main">
+      <a href="../../en/#how" class="hide-sm">How it works</a>
+      <a href="../../en/privacy.html">Privacy</a>
+      <a href="../../en/blog/">Blog</a>
+      <details class="lang">
+        <summary>English</summary>
+        <ul><li><a href="../../es/" hreflang="es">Español</a></li><li><a href="../../en/" hreflang="en">English</a></li><li><a href="../../pt/" hreflang="pt">Português</a></li><li><a href="../../fr/" hreflang="fr">Français</a></li><li><a href="../../de/" hreflang="de">Deutsch</a></li><li><a href="../../it/" hreflang="it">Italiano</a></li></ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+
+<div class="wrap page prose">
+  <h1>Why Snapgate exists</h1>
+  <p class="meta">14 September 2026</p>
+  
+<p>One day I looked into why my Google storage was full, and the answer was mildly
+embarrassing. Not holidays. Not birthdays. Parking tickets, receipts, my car's bay
+number on level 3 of an airport, a hotel wifi password, a shirt size, a whiteboard
+from a meeting that ended eighteen months ago.</p>
+
+<p>Photos I took to look at for ten minutes, paying rent in my account ever since.</p>
+
+<h2>The problem isn't the camera, it's all-or-nothing</h2>
+
+<p>Google Photos backup has exactly two states: on for an entire folder, or off.
+There is no middle ground. Either it uploads your whole camera roll, or it uploads
+nothing and you accept the risk of losing the photos that actually matter.</p>
+
+<p>Since no nuance is possible, most people leave it on and pay to store rubbish. It
+is a perfectly reasonable design from Google's point of view, and a perfectly
+annoying one from mine.</p>
+
+<h2>There are only two ways to fix it</h2>
+
+<p>The first is to review your camera roll periodically and delete by hand. It works
+in theory. In practice nobody does it, because it is a chore with no immediate reward
+that can always wait until tomorrow.</p>
+
+<p>The second is to decide in the moment. When you photograph a receipt, you know
+perfectly well you don't want it forever. That information exists precisely then, and
+evaporates thirty seconds later. Snapgate is nothing more than an attempt to capture
+it before it's gone.</p>
+
+<h2>What I learned building it</h2>
+
+<p>The first version asked photo by photo with a notification. It seemed obvious.
+Then I took six shots of the same plate and got six notifications, and understood
+that the obvious design was the wrong one.</p>
+
+<p>The version that survived groups them: a single notification that rewrites itself,
+with two buttons inside. You decide without opening anything, and a burst is still
+one interruption. It's less elegant to explain and far better to use.</p>
+
+<h2>What Snapgate does not solve</h2>
+
+<p>Worth being honest: this app stops <em>your cloud</em> filling up, not your phone.
+The receipt photo you discard still takes three megabytes on the device. At one point
+I considered adding expiry — marked photos disappearing on their own after seven days
+— and deliberately left it out.</p>
+
+<p>Deleting is irreversible in the user's eyes, even when it technically goes to the
+bin. If an app gets it wrong once and a photo that mattered disappears, you uninstall
+it forever, and rightly so. I would rather ship an app that does less and that you
+can trust completely.</p>
+
+</div>
+
+
+<footer class="site">
+  <div class="wrap cols">
+    <div>
+      <strong style="color:var(--ink-soft)">Snapgate</strong> · you decide what reaches the cloud<br>
+      <span>© 2026. Made in Spain.</span>
+    </div>
+    <div class="links">
+      <a href="../../en/privacy.html">Privacy</a>
+      <a href="../../en/terms.html">Terms</a>
+      <a href="../../en/blog/">Blog</a>
+      <a href="https://github.com/jfjalburquerque/snapgate">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

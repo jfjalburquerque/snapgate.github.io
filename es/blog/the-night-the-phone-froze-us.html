@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La noche que el móvil nos congeló sin avisar · Snapgate</title>
+<meta name="description" content="Perseguimos durante horas un fallo que no existía. El culpable era el ahorro de batería del fabricante.">
+<meta property="og:title" content="La noche que el móvil nos congeló sin avisar · Snapgate">
+<meta property="og:description" content="Perseguimos durante horas un fallo que no existía. El culpable era el ahorro de batería del fabricante.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../assets/icon.png">
+<meta name="theme-color" content="#16a34a">
+<link rel="icon" href="../../assets/icon.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="es" href="https://jfjalburquerque.github.io/snapgate-web/es/"><link rel="alternate" hreflang="en" href="https://jfjalburquerque.github.io/snapgate-web/en/"><link rel="alternate" hreflang="pt" href="https://jfjalburquerque.github.io/snapgate-web/pt/"><link rel="alternate" hreflang="fr" href="https://jfjalburquerque.github.io/snapgate-web/fr/"><link rel="alternate" hreflang="de" href="https://jfjalburquerque.github.io/snapgate-web/de/"><link rel="alternate" hreflang="it" href="https://jfjalburquerque.github.io/snapgate-web/it/">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../es/">
+      <img src="../../assets/icon.png" alt="">
+      <span>Snapgate</span>
+    </a>
+    <nav class="main">
+      <a href="../../es/#how" class="hide-sm">Cómo funciona</a>
+      <a href="../../es/privacy.html">Privacidad</a>
+      <a href="../../es/blog/">Blog</a>
+      <details class="lang">
+        <summary>Español</summary>
+        <ul><li><a href="../../es/" hreflang="es">Español</a></li><li><a href="../../en/" hreflang="en">English</a></li><li><a href="../../pt/" hreflang="pt">Português</a></li><li><a href="../../fr/" hreflang="fr">Français</a></li><li><a href="../../de/" hreflang="de">Deutsch</a></li><li><a href="../../it/" hreflang="it">Italiano</a></li></ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+
+<div class="wrap page prose">
+  <h1>La noche que el móvil nos congeló sin avisar</h1>
+  <p class="meta">13 de septiembre de 2026</p>
+  
+<p>La app estaba terminada, instalada y funcionando. Hacías una foto y no pasaba nada.
+Ni notificación, ni traza, ni error. Silencio.</p>
+
+<h2>Todo lo que comprobamos, y todo lo que salió bien</h2>
+
+<p>El servicio estaba vivo y en primer plano. Los permisos, concedidos. La foto,
+correctamente indexada por el sistema con un identificador más alto que nuestra línea
+base. El proceso, sin congelar según el propio Android. Ninguna restricción declarada
+en la configuración de la app.</p>
+
+<p>Cada comprobación descartaba una hipótesis y nos dejaba con menos sitios donde
+mirar.</p>
+
+<h2>El error de diagnóstico</h2>
+
+<p>Concluimos que el mecanismo de aviso de cambios del sistema estaba silenciado para
+apps en segundo plano, y construimos una alternativa: un sondeo periódico. Tampoco
+funcionó.</p>
+
+<p>Entonces hicimos lo que deberíamos haber hecho al principio: añadir un latido. Una
+traza cada pocos segundos diciendo simplemente «sigo aquí». Y ahí apareció el patrón.
+El latido se paraba unos treinta segundos después de salir de la app, y no volvía.</p>
+
+<p>No era que no nos llegaran los avisos. Es que <strong>no se estaba ejecutando nada</strong>.
+El fabricante congelaba el proceso entero, con su servicio en primer plano y todo,
+sin matarlo y sin reportarlo por ninguno de los canales que habíamos consultado.</p>
+
+<h2>La solución tenía un interruptor</h2>
+
+<p>Quitarle a la app las restricciones de batería en los ajustes del sistema. Un
+interruptor. Con eso funcionó a la primera, y además reveló que nuestro diagnóstico era
+falso: el mecanismo original nunca había estado roto, y el aviso llegaba en 415
+milisegundos.</p>
+
+<h2>Lo que nos llevamos</h2>
+
+<p><strong>Un fallo silencioso es peor que uno ruidoso.</strong> Si el sistema nos
+hubiera dicho «he congelado esta app», habríamos tardado cinco minutos. Al no decir
+nada, gastamos horas construyendo una solución a un problema inexistente.</p>
+
+<p><strong>Instrumenta el camino feliz, no solo los errores.</strong> Solo registrábamos
+trazas cuando detectábamos algo. Por eso no podíamos distinguir «no ha pasado nada» de
+«estoy muerto», que son dos situaciones con arreglos opuestos.</p>
+
+<p><strong>Y sobre todo: eso le va a pasar a tus usuarios.</strong> No es una anécdota de
+desarrollo. Cualquiera que instale la app en un móvil de esos fabricantes va a vivir
+exactamente lo mismo, sin trazas y sin saber por qué. Por eso quitar la restricción de
+batería dejó de ser una nota en el manual y pasó a ser un paso propio del alta, con su
+estado comprobado por la app: si no está hecho, te lo dice y te lleva allí.</p>
+
+</div>
+
+
+<footer class="site">
+  <div class="wrap cols">
+    <div>
+      <strong style="color:var(--ink-soft)">Snapgate</strong> · tú decides qué sube a la nube<br>
+      <span>© 2026. Hecho en España.</span>
+    </div>
+    <div class="links">
+      <a href="../../es/privacy.html">Privacidad</a>
+      <a href="../../es/terms.html">Términos</a>
+      <a href="../../es/blog/">Blog</a>
+      <a href="https://github.com/jfjalburquerque/snapgate">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

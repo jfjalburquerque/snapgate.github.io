@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The night the phone froze us without saying so · Snapgate</title>
+<meta name="description" content="We chased a bug that did not exist for hours. The culprit was the manufacturer's battery saver.">
+<meta property="og:title" content="The night the phone froze us without saying so · Snapgate">
+<meta property="og:description" content="We chased a bug that did not exist for hours. The culprit was the manufacturer's battery saver.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../assets/icon.png">
+<meta name="theme-color" content="#16a34a">
+<link rel="icon" href="../../assets/icon.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="es" href="https://jfjalburquerque.github.io/snapgate-web/es/"><link rel="alternate" hreflang="en" href="https://jfjalburquerque.github.io/snapgate-web/en/"><link rel="alternate" hreflang="pt" href="https://jfjalburquerque.github.io/snapgate-web/pt/"><link rel="alternate" hreflang="fr" href="https://jfjalburquerque.github.io/snapgate-web/fr/"><link rel="alternate" hreflang="de" href="https://jfjalburquerque.github.io/snapgate-web/de/"><link rel="alternate" hreflang="it" href="https://jfjalburquerque.github.io/snapgate-web/it/">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../en/">
+      <img src="../../assets/icon.png" alt="">
+      <span>Snapgate</span>
+    </a>
+    <nav class="main">
+      <a href="../../en/#how" class="hide-sm">How it works</a>
+      <a href="../../en/privacy.html">Privacy</a>
+      <a href="../../en/blog/">Blog</a>
+      <details class="lang">
+        <summary>English</summary>
+        <ul><li><a href="../../es/" hreflang="es">Español</a></li><li><a href="../../en/" hreflang="en">English</a></li><li><a href="../../pt/" hreflang="pt">Português</a></li><li><a href="../../fr/" hreflang="fr">Français</a></li><li><a href="../../de/" hreflang="de">Deutsch</a></li><li><a href="../../it/" hreflang="it">Italiano</a></li></ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+
+<div class="wrap page prose">
+  <h1>The night the phone froze us without saying so</h1>
+  <p class="meta">13 September 2026</p>
+  
+<p>The app was finished, installed and running. You took a photo and nothing happened.
+No notification, no log line, no error. Silence.</p>
+
+<h2>Everything we checked, and everything that was fine</h2>
+
+<p>The service was alive and in the foreground. Permissions granted. The photo correctly
+indexed by the system with an identifier higher than our baseline. The process not frozen
+according to Android itself. No restrictions declared in the app's own configuration.</p>
+
+<p>Every check ruled out a hypothesis and left us with fewer places to look.</p>
+
+<h2>The misdiagnosis</h2>
+
+<p>We concluded that the system's change-notification mechanism was being muted for
+background apps, and built an alternative: periodic polling. That didn't work either.</p>
+
+<p>Then we did what we should have done at the start: add a heartbeat. A log line every
+few seconds saying simply "still here". And the pattern appeared. The heartbeat stopped
+about thirty seconds after leaving the app, and never came back.</p>
+
+<p>It wasn't that notifications weren't reaching us. It was that <strong>nothing was
+running at all</strong>. The manufacturer was freezing the entire process, foreground
+service and all, without killing it and without reporting it through any of the channels
+we had checked.</p>
+
+<h2>The fix was a single switch</h2>
+
+<p>Removing the app's battery restrictions in the system settings. One switch. It worked
+first time, and revealed that our diagnosis had been wrong: the original mechanism had
+never been broken, and the notification arrived in 415 milliseconds.</p>
+
+<h2>What we took away</h2>
+
+<p><strong>A silent failure is worse than a loud one.</strong> Had the system told us "I
+froze this app", it would have taken five minutes. Saying nothing, it cost us hours
+building a solution to a problem that didn't exist.</p>
+
+<p><strong>Instrument the happy path, not just the errors.</strong> We only logged when we
+detected something. That meant we could not tell "nothing happened" apart from "I am
+dead" — two situations with opposite fixes.</p>
+
+<p><strong>And above all: this will happen to your users.</strong> It isn't a development
+anecdote. Anyone installing the app on one of those phones will experience exactly the
+same thing, without logs and without knowing why. That is why removing the battery
+restriction stopped being a note in the manual and became a step in the setup flow, with
+its state verified by the app: if it isn't done, it tells you and takes you there.</p>
+
+</div>
+
+
+<footer class="site">
+  <div class="wrap cols">
+    <div>
+      <strong style="color:var(--ink-soft)">Snapgate</strong> · you decide what reaches the cloud<br>
+      <span>© 2026. Made in Spain.</span>
+    </div>
+    <div class="links">
+      <a href="../../en/privacy.html">Privacy</a>
+      <a href="../../en/terms.html">Terms</a>
+      <a href="../../en/blog/">Blog</a>
+      <a href="https://github.com/jfjalburquerque/snapgate">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

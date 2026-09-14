@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Por qué decides desde la notificación · Snapgate</title>
+<meta name="description" content="Un botón en la notificación parece un detalle de interfaz. En realidad viene impuesto por cómo Android protege tus ficheros.">
+<meta property="og:title" content="Por qué decides desde la notificación · Snapgate">
+<meta property="og:description" content="Un botón en la notificación parece un detalle de interfaz. En realidad viene impuesto por cómo Android protege tus ficheros.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../assets/icon.png">
+<meta name="theme-color" content="#16a34a">
+<link rel="icon" href="../../assets/icon.png">
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="alternate" hreflang="es" href="https://jfjalburquerque.github.io/snapgate-web/es/"><link rel="alternate" hreflang="en" href="https://jfjalburquerque.github.io/snapgate-web/en/"><link rel="alternate" hreflang="pt" href="https://jfjalburquerque.github.io/snapgate-web/pt/"><link rel="alternate" hreflang="fr" href="https://jfjalburquerque.github.io/snapgate-web/fr/"><link rel="alternate" hreflang="de" href="https://jfjalburquerque.github.io/snapgate-web/de/"><link rel="alternate" hreflang="it" href="https://jfjalburquerque.github.io/snapgate-web/it/">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../../es/">
+      <img src="../../assets/icon.png" alt="">
+      <span>Snapgate</span>
+    </a>
+    <nav class="main">
+      <a href="../../es/#how" class="hide-sm">Cómo funciona</a>
+      <a href="../../es/privacy.html">Privacidad</a>
+      <a href="../../es/blog/">Blog</a>
+      <details class="lang">
+        <summary>Español</summary>
+        <ul><li><a href="../../es/" hreflang="es">Español</a></li><li><a href="../../en/" hreflang="en">English</a></li><li><a href="../../pt/" hreflang="pt">Português</a></li><li><a href="../../fr/" hreflang="fr">Français</a></li><li><a href="../../de/" hreflang="de">Deutsch</a></li><li><a href="../../it/" hreflang="it">Italiano</a></li></ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+
+<div class="wrap page prose">
+  <h1>Por qué decides desde la notificación</h1>
+  <p class="meta">13 de septiembre de 2026</p>
+  
+<p>Snapgate te deja resolver desde la propia notificación: dos botones, Descartar y
+Subir, sin abrir la app. Parece una decisión de diseño cómoda. En realidad está
+condicionada por una regla del sistema que casi nadie conoce.</p>
+
+<h2>Mover un fichero ajeno requiere permiso; copiarlo no</h2>
+
+<p>Desde Android 10, una app no puede tocar libremente ficheros que no ha creado.
+Para mover una foto que hizo la cámara hay que pedir consentimiento con un diálogo
+del sistema, y ese diálogo <strong>solo lo puede lanzar una Activity</strong>: es
+decir, la app tiene que estar abierta en pantalla.</p>
+
+<p>Si «Subir» tuviera que mover el fichero, pulsar el botón abriría la app y te
+pondría delante otro diálogo. Dos toques más y la promesa de decidir en un gesto se
+va al traste.</p>
+
+<p>Pero copiar es otra historia. El fichero copiado lo creamos nosotros, así que no
+hace falta permiso de nadie y funciona perfectamente en segundo plano. Por eso el
+botón de la notificación copia en lugar de mover, y el original queda apuntado en una
+cola de limpieza que se vacía después de una sola vez, con un único diálogo para todo
+el lote.</p>
+
+<p>Ese es el precio, y es un precio real: durante un rato tienes la foto duplicada en
+el móvil. Nos pareció mejor que romper el gesto de un toque.</p>
+
+<h2>Cuando hay cuenta de Google, el precio desaparece</h2>
+
+<p>Todo lo anterior aplica a la ruta por carpetas, que es el plan B. Con la cuenta
+conectada, Snapgate sube la foto directamente por la API de Google Photos, y para eso
+solo necesita <em>leer</em> los bytes. Leer ya lo tenemos permitido.</p>
+
+<p>Resultado: sin mover, sin copiar, sin duplicados y sin diálogos. Esa es la razón de
+que la cuenta de Google pasara de ser una función opcional escondida en ajustes a ser
+el camino principal del producto.</p>
+
+<h2>La ventana de decisión</h2>
+
+<p>Hay un detalle que nació de una conversación y resultó ser estructural: una foto
+solo se te ofrece durante sus primeros minutos. Si no contestas, se queda en el móvil
+sin subir y deja de preguntar.</p>
+
+<p>Suena a comodidad, y también es una red de seguridad. Impide que una instalación
+nueva —o un fallo en el cálculo de qué es «reciente»— te plante delante las novecientas
+fotos de tu carrete pidiéndote que decidas una por una. Nos pasó durante el desarrollo,
+y la ventana lo hace imposible pase lo que pase.</p>
+
+</div>
+
+
+<footer class="site">
+  <div class="wrap cols">
+    <div>
+      <strong style="color:var(--ink-soft)">Snapgate</strong> · tú decides qué sube a la nube<br>
+      <span>© 2026. Hecho en España.</span>
+    </div>
+    <div class="links">
+      <a href="../../es/privacy.html">Privacidad</a>
+      <a href="../../es/terms.html">Términos</a>
+      <a href="../../es/blog/">Blog</a>
+      <a href="https://github.com/jfjalburquerque/snapgate">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
