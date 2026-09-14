@@ -9,7 +9,7 @@ PRIVACY = {}
 TERMS = {}
 
 UPDATED = "2026-09-14"
-CONTACT = "info@visionatec.com"
+CONTACT = "jfjalburquerque@gmail.com"
 
 PRIVACY["es"] = {
     "title": "Política de privacidad · Snapgate",
