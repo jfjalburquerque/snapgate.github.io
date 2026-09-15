@@ -23,8 +23,8 @@ SOFT = (99, 108, 122)
 SHOTS = [
     ("phone-notif.png", "Decide desde la notificación", "Sin abrir la app."),
     ("phone-selection.png", "O repasa por tandas", "Diez fotos despachadas en segundos."),
-    ("phone-features.png", "Modos y reglas que deciden por ti", "Caducan solos. No se quedan puestos."),
-    ("phone-onb1.png", "Tu nube deja de llenarse de tickets", "Solo sube lo que tú apruebes."),
+    ("phone-features.png", "Reglas que deciden por ti", "Y modos temporales que caducan solos."),
+    ("phone-onb1.png", "Tu nube deja de llenarse", "De tickets, facturas y pizarras."),
 ]
 
 
@@ -32,6 +32,23 @@ def face(instance, size):
     f = ImageFont.truetype(FONT, size)
     f.set_variation_by_name(instance)
     return f
+
+
+def wrap(draw, text, font, max_width):
+    """Reparte el texto en lineas que quepan. PIL no ajusta solo: si el rotulo
+    se pasa de ancho, lo dibuja igual y se sale del lienzo sin avisar."""
+    words, lines, current = text.split(), [], ""
+    for word in words:
+        probe = (current + " " + word).strip()
+        if draw.textlength(probe, font=font) <= max_width:
+            current = probe
+        else:
+            if current:
+                lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
 
 
 def frame(shot_name, title, subtitle, index):
@@ -47,11 +64,18 @@ def frame(shot_name, title, subtitle, index):
     canvas = Image.alpha_composite(canvas.convert("RGBA"), veil).convert("RGB")
     d = ImageDraw.Draw(canvas)
 
-    d.text((72, 118), title, font=face("SemiBold", 62), fill=INK)
-    d.text((74, 206), subtitle, font=face("Regular", 36), fill=SOFT)
+    margin = 72
+    title_font = face("SemiBold", 60)
+    sub_font = face("Regular", 35)
+    y = 108
+    for line in wrap(d, title, title_font, W - margin * 2):
+        d.text((margin, y), line, font=title_font, fill=INK)
+        y += 72
+    d.text((margin + 2, y + 6), subtitle, font=sub_font, fill=SOFT)
 
     shot = Image.open(os.path.join(CAPS, shot_name)).convert("RGB")
-    target_h = H - 330
+    top = 372
+    target_h = H - top - 30
     scale = target_h / shot.height
     shot = shot.resize((int(shot.width * scale), target_h), Image.LANCZOS)
 
@@ -62,7 +86,7 @@ def frame(shot_name, title, subtitle, index):
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, shot.width - 1, shot.height - 1),
                                            radius=radius, fill=255)
     x = (W - shot.width) // 2
-    y = 300
+    y = top
 
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(shadow).rounded_rectangle(
