@@ -58,8 +58,8 @@ propio cuadrado redondeado dentro del recorte.
 
 - La fuente del icono es de 192 px. Con el original en alta resolución, estos
   recursos ganarían nitidez, sobre todo el de 512.
-- `SITE_URL` en `build.py` apunta a la URL por defecto de Pages. Si se configura
-  un dominio propio, hay que cambiarlo y regenerar.
+- El dominio propio es `snapgate.app`, declarado en `CNAME` y en `SITE_URL`
+  dentro de `build.py`. Si alguna vez cambia, hay que tocar los dos y regenerar.
 - Correo de contacto real en `content/legal.py`.
 
 ## Publicar

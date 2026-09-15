@@ -26,7 +26,7 @@ DEFAULT_LANG = "en"
 # a la URL que da GitHub Pages; si se configura un dominio propio hay que
 # cambiarlo aqui y volver a generar, porque un hreflang que apunta a un dominio
 # que no existe es peor que no ponerlo.
-SITE_URL = "https://jfjalburquerque.github.io/snapgate-web"
+SITE_URL = "https://snapgate.app"
 
 
 def shell(lang, *, title, description, body, path_depth=1, active=""):
