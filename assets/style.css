@@ -90,7 +90,8 @@ nav.main a:hover { color: var(--ink); text-decoration: none; }
 
 /* --- Portada --- */
 
-.hero { padding: 88px 0 72px; }
+/* Igual que en .page: el atajo anularia el padding lateral de .wrap. */
+.hero { padding-top: 88px; padding-bottom: 72px; }
 .hero img.app-icon {
   width: 84px; height: 84px; border-radius: 20px;
   box-shadow: 0 12px 34px rgba(0,0,0,.12);
@@ -155,16 +156,23 @@ ol.steps p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
 
 /* --- Texto largo: legal y blog --- */
 
-.page { padding: 56px 0 80px; }
+/* Solo el eje vertical: usar el atajo aqui anulaba el padding lateral
+   que aporta .wrap y dejaba el texto pegado al borde en moviles. */
+.page { padding-top: 56px; padding-bottom: 80px; }
 .page h1 { font-size: clamp(29px, 4vw, 40px); letter-spacing: -0.02em; margin: 0 0 10px; font-weight: 670; }
 .page .meta { color: var(--ink-faint); font-size: 14.5px; margin: 0 0 42px; }
 .page h2 { font-size: 23px; margin: 46px 0 12px; font-weight: 640; letter-spacing: -0.012em; }
 .page h3 { font-size: 18.5px; margin: 32px 0 8px; font-weight: 620; }
-.page p, .page li { color: var(--ink-soft); }
+.page p, .page li { color: var(--ink-soft); overflow-wrap: anywhere; }
 .page strong { color: var(--ink); font-weight: 620; }
 .page ul, .page ol { padding-left: 22px; }
 .page li { margin: 7px 0; }
 .page table { width: 100%; border-collapse: collapse; margin: 26px 0; font-size: 15.5px; }
+/* Una tabla mas ancha que la pantalla desplazaria la pagina entera. En movil
+   se desplaza ella dentro de su caja y no arrastra al resto del contenido. */
+@media (max-width: 640px) {
+  .page table { display: block; overflow-x: auto; white-space: nowrap; }
+}
 .page th, .page td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); }
 .page th { color: var(--ink); font-weight: 620; }
 .page td { color: var(--ink-soft); }
@@ -200,8 +208,9 @@ footer.site .links { display: flex; gap: 20px; flex-wrap: wrap; }
 
 @media (max-width: 640px) {
   body { font-size: 16.5px; }
+  .wrap { padding: 0 20px; }
   nav.main { gap: 14px; }
   nav.main a.hide-sm { display: none; }
-  .hero { padding: 58px 0 48px; }
+  .hero { padding-top: 58px; padding-bottom: 48px; }
   section { padding: 52px 0; }
 }
