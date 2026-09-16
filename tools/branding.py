@@ -145,6 +145,44 @@ def wordmark_only(dark=False):
     return canvas
 
 
+def consent_logo(size=120):
+    """Marca cuadrada con el nombre, para la pantalla de consentimiento de Google.
+
+    Se compone a 4x y se reduce al final: a 120 px el texto es de unos 15 px y
+    dibujarlo directamente a ese tamano lo deja sucio.
+
+    El nombre se mantiene dentro del circulo inscrito porque Google puede
+    recortar el logotipo en redondo: a 35 px del centro el ancho disponible baja
+    de 120 a unos 97, y un texto que use el ancho completo perderia las puntas.
+    """
+    S = size * 4
+    canvas = Image.new("RGBA", (S, S), TILE_BG)
+    d = ImageDraw.Draw(canvas)
+
+    glyph = Image.open(ICON).convert("RGBA").crop(GLYPH_BOX)
+    target = int(S * 0.50)
+    gw, gh = glyph.size
+    k = target / max(gw, gh)
+    g = glyph.resize((max(1, int(gw * k)), max(1, int(gh * k))), Image.LANCZOS)
+    canvas.paste(g, ((S - g.width) // 2, int(S * 0.13)), g)
+
+    # El ancho util es el del circulo inscrito a la altura del texto, no el del
+    # lienzo; de ahi que se busque el cuerpo por prueba en lugar de fijarlo.
+    baseline = int(S * 0.735)
+    dy = abs(baseline + S * 0.055 - S / 2)
+    half = (max((S / 2) ** 2 - dy ** 2, 0.0)) ** 0.5
+    usable = half * 2 * 0.88
+
+    for pt in range(int(S * 0.16), int(S * 0.05), -2):
+        font = face("SemiBold", pt)
+        if d.textlength("Snapgate", font=font) <= usable:
+            break
+    width = d.textlength("Snapgate", font=font)
+    d.text(((S - width) / 2, baseline), "Snapgate", font=font, fill=INK)
+
+    return rounded(canvas, radius_ratio=0.225).resize((size, size), Image.LANCZOS)
+
+
 def feature_graphic():
     """1024 x 500 exactos: es lo que exige la ficha de Google Play.
 
@@ -213,9 +251,13 @@ def main():
     # se ve en la web, asi que es el icono cuadrado, no el logotipo horizontal:
     # un lockup con texto se reduce a un borron ilegible a ese tamano.
     consent = Image.new("RGB", (120, 120), (255, 255, 255))
-    mark = icon_at(120, shadow=False)
+    mark = consent_logo(120)
     consent.paste(mark, (0, 0), mark)
     consent.save(os.path.join(OUT, "oauth-consent-logo-120.png"))
+
+    # El mismo diseno en grande, para la web y para cualquier otro sitio que
+    # pida la marca con nombre.
+    consent_logo(512).save(os.path.join(OUT, "mark-named-512.png"))
 
     # El mismo icono a 512 para la web, para que la pantalla de consentimiento y
     # la portada muestren exactamente la misma marca.
