@@ -208,6 +208,20 @@ def main():
 
     feature_graphic().save(os.path.join(OUT, "play-feature-graphic.png"))
 
+    # Logotipo de la pantalla de consentimiento de OAuth: 120 x 120 exactos.
+    # Google exige que identifique la marca sin ambiguedad y que sea el mismo que
+    # se ve en la web, asi que es el icono cuadrado, no el logotipo horizontal:
+    # un lockup con texto se reduce a un borron ilegible a ese tamano.
+    consent = Image.new("RGB", (120, 120), (255, 255, 255))
+    mark = icon_at(120, shadow=False)
+    consent.paste(mark, (0, 0), mark)
+    consent.save(os.path.join(OUT, "oauth-consent-logo-120.png"))
+
+    # El mismo icono a 512 para la web, para que la pantalla de consentimiento y
+    # la portada muestren exactamente la misma marca.
+    site = icon_at(512, shadow=False)
+    site.save(os.path.join(OUT, "mark-512.png"))
+
     # Icono de la ficha de Play: 512 x 512 exactos, sin transparencia.
     store = Image.new("RGB", (512, 512), (255, 255, 255))
     store.paste(icon_at(512, shadow=False).convert("RGB"), (0, 0),

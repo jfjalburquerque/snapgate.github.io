@@ -59,9 +59,9 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="{up}assets/icon.png">
+<meta property="og:image" content="{up}assets/brand/mark-512.png">
 <meta name="theme-color" content="#16a34a">
-<link rel="icon" href="{up}assets/icon.png">
+<link rel="icon" href="{up}assets/brand/mark-512.png">
 <link rel="stylesheet" href="{up}assets/style.css">
 {alternates}
 </head>
@@ -70,7 +70,7 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
 <header class="site">
   <div class="wrap">
     <a class="brand" href="{up}{lang}/">
-      <img src="{up}assets/icon.png" alt="">
+      <img src="{up}assets/brand/mark-512.png" alt="">
       <span>Snapgate</span>
     </a>
     <nav class="main">
@@ -121,7 +121,7 @@ def landing_html(lang):
 
     body = f"""
 <div class="wrap hero">
-  <img class="app-icon" src="../assets/icon.png" alt="Snapgate">
+  <img class="app-icon" src="../assets/brand/mark-512.png" alt="Snapgate">
   <h1>{c["h1"]}</h1>
   <p class="lede">{c["lede"]}</p>
   <div class="cta">
