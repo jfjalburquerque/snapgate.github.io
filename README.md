@@ -45,7 +45,7 @@ Produce en `assets/brand/`:
 | `logo-horizontal.png` | Logotipo principal, fondo claro |
 | `logo-horizontal-dark.png` | Igual, para fondos oscuros |
 | `wordmark.png` / `-dark.png` | Solo la palabra |
-| `play-feature-graphic.png` | Gráfico de cabecera de Play, 1024 × 500 |
+| `../store/feature/<idioma>.png` | Gráfico de cabecera de Play, 1024 × 500, uno por idioma |
 | `play-icon-512.png` | Icono de la ficha de Play, 512 × 512 |
 
 Tipografía [Inter](https://rsms.me/inter/), con licencia SIL Open Font.

@@ -183,7 +183,18 @@ def consent_logo(size=120):
     return rounded(canvas, radius_ratio=0.225).resize((size, size), Image.LANCZOS)
 
 
-def feature_graphic():
+# Los reclamos del grafico de cabecera, por idioma de la ficha. Play lo sirve
+# por idioma igual que las capturas, asi que un grafico en espanol en la ficha
+# inglesa desentona justo en lo primero que se ve.
+FEATURE_TEXT = {
+    "es": ("Decide qué fotos llegan a tu nube",
+           "Pago único · Sin anuncios · Sin servidores"),
+    "en": ("Decide which photos reach your cloud",
+           "One-time purchase · No ads · No servers"),
+}
+
+
+def feature_graphic(lang="es"):
     """1024 x 500 exactos: es lo que exige la ficha de Google Play.
 
     Play recorta y superpone elementos en los bordes segun el dispositivo, asi
@@ -227,9 +238,15 @@ def feature_graphic():
     draw_tracked(d, (tx, ty), "Snap", name, INK, tracking)
     draw_tracked(d, (tx + w_snap, ty), "gate", name, GREEN, tracking)
 
-    d.text((tx + 3, ty + 122), "Decide qué fotos llegan a tu nube", font=tag, fill=SOFT)
-    d.text((tx + 3, ty + 166), "Pago único · Sin anuncios · Sin servidores",
-           font=face("Medium", 25), fill=(130, 139, 152))
+    claim, sub = FEATURE_TEXT[lang]
+
+    # El reclamo se reduce si no cabe: en ingles es mas largo y se salia por el
+    # borde sin avisar, que es como PIL trata cualquier texto que no entra.
+    size = 31
+    while size > 22 and d.textlength(claim, font=face("Regular", size)) > W - tx - 60:
+        size -= 1
+    d.text((tx + 3, ty + 122), claim, font=face("Regular", size), fill=SOFT)
+    d.text((tx + 3, ty + 166), sub, font=face("Medium", 25), fill=(130, 139, 152))
     return canvas
 
 
@@ -244,7 +261,10 @@ def main():
     for name, img in jobs.items():
         img.save(os.path.join(OUT, name))
 
-    feature_graphic().save(os.path.join(OUT, "play-feature-graphic.png"))
+    features = os.path.join(ROOT, "assets", "store", "feature")
+    os.makedirs(features, exist_ok=True)
+    for lang in FEATURE_TEXT:
+        feature_graphic(lang).save(os.path.join(features, f"{lang}.png"))
 
     # Logotipo de la pantalla de consentimiento de OAuth: 120 x 120 exactos.
     # Google exige que identifique la marca sin ambiguedad y que sea el mismo que
