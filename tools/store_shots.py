@@ -20,12 +20,23 @@ W, H = 1080, 1920
 INK = (28, 32, 39)
 SOFT = (99, 108, 122)
 
-SHOTS = [
-    ("phone-notif.png", "Decide desde la notificación", "Sin abrir la app."),
-    ("phone-selection.png", "O repasa por tandas", "Diez fotos despachadas en segundos."),
-    ("phone-features.png", "Reglas que deciden por ti", "Y modos temporales que caducan solos."),
-    ("phone-onb1.png", "Tu nube deja de llenarse", "De tickets, facturas y pizarras."),
-]
+# Un juego por idioma de la ficha. Las capturas son de la app corriendo en ese
+# idioma, no la misma imagen con otro rotulo encima: Play exige que representen
+# la aplicacion, y un usuario que ve la ficha en ingles espera la app en ingles.
+SHOTS = {
+    "es": [
+        ("es-notif.png", "Decide desde la notificación", "Sin abrir la app."),
+        ("es-selection.png", "O repasa por tandas", "Diez fotos despachadas en segundos."),
+        ("es-features.png", "Reglas que deciden por ti", "Y modos temporales que caducan solos."),
+        ("es-onb1.png", "Tu nube deja de llenarse", "De tickets, facturas y pizarras."),
+    ],
+    "en": [
+        ("en-notif.png", "Decide from the notification", "Without opening the app."),
+        ("en-selection.png", "Or review in batches", "Ten photos cleared in seconds."),
+        ("en-features.png", "Rules that decide for you", "And modes that expire on their own."),
+        ("en-onb1.png", "Your cloud stops filling up", "With receipts, invoices and whiteboards."),
+    ],
+}
 
 
 def face(instance, size):
@@ -100,12 +111,16 @@ def frame(shot_name, title, subtitle, index):
 
 
 def main():
-    os.makedirs(OUT, exist_ok=True)
-    for i, (name, title, sub) in enumerate(SHOTS, start=1):
-        img = frame(name, title, sub, i)
-        path = os.path.join(OUT, f"{i:02d}-{name.replace('phone-', '')}")
-        img.save(path)
-        print(f"  {os.path.basename(path)}  {img.size[0]}x{img.size[1]}")
+    for lang, shots in SHOTS.items():
+        out = os.path.join(OUT, lang)
+        os.makedirs(out, exist_ok=True)
+        for stale in os.listdir(out):
+            os.remove(os.path.join(out, stale))
+        for i, (name, title, sub) in enumerate(shots, start=1):
+            img = frame(name, title, sub, i)
+            path = os.path.join(out, f"{i:02d}-{name.split('-', 1)[1]}")
+            img.save(path)
+            print(f"  {lang}/{os.path.basename(path)}  {img.size[0]}x{img.size[1]}")
 
 
 if __name__ == "__main__":
