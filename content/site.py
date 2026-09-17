@@ -72,7 +72,7 @@ LANDING["es"] = {
          "«Durante ocho horas no subas nada.» «Estos cuatro días sube todo, estoy "
          "de viaje.» Caducan solos, para que no se te queden puestos."),
         ("Reglas por contexto",
-         "Decide por franja horaria, día de la semana, carpeta o lugar. Las fotos "
+         "Decide por franja horaria, día de la semana o carpeta. Las fotos "
          "del horario laboral no tienen por qué acabar en tu cuenta personal."),
         ("Colecciones",
          "Manda lo que apruebes directamente a un álbum concreto de tu biblioteca, "
@@ -187,7 +187,7 @@ LANDING["en"] = {
          "days, I'm travelling.\" They always expire on their own, so you can't "
          "leave one running by accident."),
         ("Context rules",
-         "Decide by time of day, day of week, folder or place. Photos taken during "
+         "Decide by time of day, day of week or folder. Photos taken during "
          "work hours don't have to end up in your personal account."),
         ("Collections",
          "Send what you approve straight into a specific album in your library, "
@@ -298,7 +298,7 @@ LANDING["pt"] = {
          "«Durante oito horas não envies nada.» «Estes quatro dias envia tudo, estou "
          "de viagem.» Expiram sozinhos, para não ficarem ligados por esquecimento."),
         ("Regras por contexto",
-         "Decide por hora, dia da semana, pasta ou lugar. As fotos do horário de "
+         "Decide por hora, dia da semana ou pasta. As fotos do horário de "
          "trabalho não têm de acabar na tua conta pessoal."),
         ("Coleções",
          "Envia o que aprovares diretamente para um álbum concreto da tua biblioteca, "
@@ -408,7 +408,7 @@ LANDING["fr"] = {
          "« N'envoie rien pendant huit heures. » « Envoie tout pendant quatre jours, "
          "je voyage. » Ils expirent toujours d'eux-mêmes."),
         ("Règles contextuelles",
-         "Décidez selon l'heure, le jour, le dossier ou le lieu. Les photos prises au "
+         "Décidez selon l'heure, le jour ou le dossier. Les photos prises au "
          "travail n'ont pas à finir dans votre compte personnel."),
         ("Collections",
          "Envoyez ce que vous approuvez directement dans un album précis de votre "
@@ -522,7 +522,7 @@ LANDING["de"] = {
          "„Acht Stunden lang nichts hochladen.“ „Vier Tage alles hochladen, ich bin "
          "unterwegs.“ Sie laufen immer von selbst ab."),
         ("Kontextregeln",
-         "Entscheide nach Uhrzeit, Wochentag, Ordner oder Ort. Fotos aus der "
+         "Entscheide nach Uhrzeit, Wochentag oder Ordner. Fotos aus der "
          "Arbeitszeit müssen nicht in deinem privaten Konto landen."),
         ("Sammlungen",
          "Schicke Freigegebenes direkt in ein bestimmtes Album deiner Mediathek."),
@@ -633,7 +633,7 @@ LANDING["it"] = {
          "«Per otto ore non caricare niente.» «Questi quattro giorni carica tutto, sono "
          "in viaggio.» Scadono sempre da sole."),
         ("Regole di contesto",
-         "Decidi per orario, giorno della settimana, cartella o luogo. Le foto in "
+         "Decidi per orario, giorno della settimana o cartella. Le foto in "
          "orario di lavoro non devono finire nel tuo account personale."),
         ("Raccolte",
          "Manda ciò che approvi direttamente in un album preciso della tua libreria."),

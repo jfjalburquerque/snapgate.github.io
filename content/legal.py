@@ -48,12 +48,6 @@ ninguna foto o álbum que ya tuvieras. La restricción la impone Google, no noso
 El testigo de acceso se guarda cifrado en el almacenamiento privado de la app y
 nunca se transmite a terceros.</p>
 
-<h3>Tu ubicación</h3>
-<p>Solo si activas las reglas por lugar y concedes el permiso. Se consulta la
-última posición conocida en el momento de evaluar una foto, para comprobar si
-encaja con una regla que tú has creado. No se registra, no se almacena y no sale
-del dispositivo.</p>
-
 <h3>Datos de uso</h3>
 <p>Ninguno. No hay analítica, ni herramientas de medición, ni identificadores
 publicitarios, ni informes de fallos automáticos.</p>
@@ -264,11 +258,6 @@ photo or album you already had. That restriction is enforced by Google, not prom
 by us. The access token is stored in the app's private storage on your device and is
 never transmitted to third parties.</p>
 
-<h3>Your location</h3>
-<p>Only if you enable place-based rules and grant the permission. The last known
-position is read at the moment a photo is evaluated, to check whether it matches a
-rule you created. It is not logged, not stored and never leaves the device.</p>
-
 <h3>Usage data</h3>
 <p>None. There is no analytics, no measurement tooling, no advertising identifiers
 and no automatic crash reporting.</p>
@@ -460,11 +449,6 @@ pela própria app. Com elas a aplicação <strong>não pode ler, alterar nem eli
 nada do que já tens. A restrição é imposta pela Google. O testigo de acesso fica no
 armazenamento privado da app e nunca é transmitido a terceiros.</p>
 
-<h3>A tua localização</h3>
-<p>Só se ativares as regras por lugar. É consultada no momento de avaliar uma foto, para
-verificar se corresponde a uma regra tua. Não é registada, não é guardada e não sai do
-dispositivo.</p>
-
 <h3>Dados de utilização</h3>
 <p>Nenhuns. Sem analítica, sem rastreadores, sem identificadores publicitários e sem
 relatórios automáticos de erros.</p>
@@ -636,11 +620,6 @@ photos, et <code>photoslibrary.readonly.appcreateddata</code>, qui permet de voi
 les albums créés par l'application. Avec elles, l'app <strong>ne peut ni lire, ni modifier,
 ni supprimer</strong> ce que vous possédez déjà. Cette restriction est imposée par Google.
 Le jeton d'accès reste dans le stockage privé de l'application.</p>
-
-<h3>Votre position</h3>
-<p>Uniquement si vous activez les règles de lieu. Elle est lue au moment d'évaluer une photo,
-pour vérifier si elle correspond à une règle que vous avez créée. Elle n'est ni journalisée,
-ni stockée, et ne quitte jamais l'appareil.</p>
 
 <h3>Données d'usage</h3>
 <p>Aucune. Pas d'analytique, pas de traqueurs, pas d'identifiants publicitaires, pas de
@@ -821,11 +800,6 @@ selbst erstellten Alben sichtbar macht. Damit kann die App <strong>nichts lesen,
 löschen</strong>, was du bereits hast. Diese Einschränkung erzwingt Google. Das Zugriffstoken
 bleibt im privaten Speicher der App.</p>
 
-<h3>Dein Standort</h3>
-<p>Nur wenn du Ortsregeln aktivierst. Er wird im Moment der Auswertung eines Fotos gelesen,
-um zu prüfen, ob eine deiner Regeln zutrifft. Er wird nicht protokolliert, nicht gespeichert
-und verlässt das Gerät nie.</p>
-
 <h3>Nutzungsdaten</h3>
 <p>Keine. Keine Analyse, kein Tracking, keine Werbe-IDs, keine automatischen Absturzberichte.</p>
 
@@ -993,11 +967,6 @@ consente <strong>solo di aggiungere</strong> foto, e
 creati dall'app stessa. Con essi l'app <strong>non può leggere, modificare né eliminare</strong>
 nulla di ciò che possiedi già. La restrizione è imposta da Google. Il token di accesso resta
 nell'archivio privato dell'app.</p>
-
-<h3>La tua posizione</h3>
-<p>Solo se attivi le regole per luogo. Viene letta nel momento in cui si valuta una foto, per
-verificare se corrisponde a una tua regola. Non viene registrata, né salvata, né esce dal
-dispositivo.</p>
 
 <h3>Dati di utilizzo</h3>
 <p>Nessuno. Niente analitica, niente tracciamento, nessun identificatore pubblicitario e
