@@ -37,7 +37,7 @@
 
 <div class="wrap page prose">
   <h1>Política de privacidad</h1>
-  <p class="meta">Última actualización: 14 de septiembre de 2026</p>
+  <p class="meta">Última actualización: 17 de septiembre de 2026</p>
   
 <p>Snapgate es una aplicación para Android que te permite decidir, foto a foto,
 cuáles se suben a tu biblioteca de Google Fotos y cuáles no.</p>
@@ -79,6 +79,72 @@ del dispositivo.</p>
 <h3>Datos de uso</h3>
 <p>Ninguno. No hay analítica, ni herramientas de medición, ni identificadores
 publicitarios, ni informes de fallos automáticos.</p>
+
+<h2>Datos de usuario de Google a los que accede la aplicación</h2>
+
+<p>Si conectas tu cuenta, Snapgate solicita exactamente dos permisos de la API de
+Google Photos y ninguno más:</p>
+
+<table>
+  <tr><th>Permiso</th><th>Qué permite exactamente</th></tr>
+  <tr>
+    <td><code>photoslibrary.appendonly</code></td>
+    <td>Solo <strong>añadir</strong> fotos y crear álbumes en tu biblioteca. Es
+        de escritura: no da acceso de lectura a nada de lo que ya tienes.</td>
+  </tr>
+  <tr>
+    <td><code>photoslibrary.readonly.appcreateddata</code></td>
+    <td>Leer <strong>únicamente</strong> los álbumes creados por la propia
+        aplicación, para que puedas elegir a cuál enviar tus fotos.</td>
+  </tr>
+</table>
+
+<p>Con esos permisos, los datos de tu cuenta de Google a los que la aplicación
+tiene acceso se limitan a:</p>
+
+<ul>
+  <li>El <strong>título e identificador de los álbumes creados por la propia
+      aplicación</strong>, para mostrártelos como destino.</li>
+  <li>Los <strong>testigos de acceso</strong> (token de acceso y de renovación)
+      que emite Google al autorizarla.</li>
+</ul>
+
+<p>La aplicación <strong>no accede</strong> a tus fotos o álbumes existentes, ni a
+tu nombre, correo, contactos, calendario, archivos de Drive ni a ningún otro
+servicio de Google. Esa limitación no depende de nuestra buena fe: la impone
+Google al conceder solo esos permisos, y puedes comprobarla en la pantalla de
+consentimiento antes de aceptar.</p>
+
+<p><strong>Para qué se usan.</strong> Únicamente para subir a tu biblioteca las
+fotografías que apruebas de forma explícita, y para ofrecerte como destino los
+álbumes que la aplicación haya creado. No se usan para publicidad, ni para
+elaborar perfiles, ni para entrenar modelos, ni se venden o ceden a nadie.</p>
+
+<h2>Cómo se protegen estos datos</h2>
+
+<ul>
+  <li><strong>En tránsito.</strong> Toda comunicación con las API de Google viaja
+      cifrada mediante HTTPS/TLS. La aplicación no se comunica con ningún otro
+      servidor, porque no existe ningún servidor nuestro.</li>
+  <li><strong>En reposo.</strong> Los testigos de acceso se guardan en el
+      almacenamiento privado de la aplicación, aislado por el espacio de nombres
+      de Android, al que ninguna otra aplicación del dispositivo puede llegar.</li>
+  <li><strong>Fuera de las copias de seguridad.</strong> El fichero que contiene
+      los testigos está excluido tanto de la copia en la nube como de la
+      transferencia directa a un dispositivo nuevo. La credencial no sale nunca
+      del móvil en el que la autorizaste.</li>
+  <li><strong>Mínimo imprescindible.</strong> Se pide el permiso de escritura más
+      restringido que existe para esta función, en lugar de acceso completo a la
+      biblioteca.</li>
+  <li><strong>Conservación y borrado.</strong> Los testigos se conservan mientras
+      la cuenta siga conectada. Se eliminan al desconectarla desde los ajustes de
+      la aplicación y al desinstalarla. Puedes además revocar el acceso en
+      cualquier momento desde la
+      <a href="https://myaccount.google.com/permissions">página de permisos de tu
+      cuenta de Google</a>, lo que invalida los testigos de inmediato.</li>
+  <li><strong>Sin terceros.</strong> No se emplea analítica, ni SDK publicitarios,
+      ni servicios de registro de errores que pudieran recibir estos datos.</li>
+</ul>
 
 <h2>Con quién se comparten</h2>
 <p>Con nadie. Las únicas comunicaciones de red que realiza la aplicación son:</p>

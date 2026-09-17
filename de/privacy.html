@@ -37,7 +37,7 @@
 
 <div class="wrap page prose">
   <h1>Datenschutzerklärung</h1>
-  <p class="meta">Zuletzt aktualisiert: 14. September 2026</p>
+  <p class="meta">Zuletzt aktualisiert: 17. September 2026</p>
   
 <p>Snapgate ist eine Android-App, mit der du Foto für Foto entscheidest, welche Bilder in
 deine Google-Fotos-Mediathek hochgeladen werden.</p>
@@ -69,6 +69,61 @@ und verlässt das Gerät nie.</p>
 
 <h3>Nutzungsdaten</h3>
 <p>Keine. Keine Analyse, kein Tracking, keine Werbe-IDs, keine automatischen Absturzberichte.</p>
+
+<h2>Google-Nutzerdaten, auf die die App zugreift</h2>
+
+<p>Wenn du dein Konto verbindest, fordert Snapgate genau zwei Berechtigungen der
+Google-Photos-API an und keine weiteren:</p>
+
+<table>
+  <tr><th>Berechtigung</th><th>Was sie genau erlaubt</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Nur Fotos <strong>hinzufügen</strong> und Alben anlegen. Schreibend:
+          kein Lesezugriff auf das, was du bereits hast.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td><strong>Nur</strong> die von der App selbst erstellten Alben lesen,
+          damit du ein Ziel auswählen kannst.</td></tr>
+</table>
+
+<p>Damit beschränken sich die zugänglichen Daten deines Google-Kontos auf:</p>
+<ul>
+  <li><strong>Titel und Kennung der von der App selbst erstellten Alben</strong>,
+      um sie dir als Ziel anzubieten.</li>
+  <li>Die von Google ausgestellten <strong>Zugriffs- und Aktualisierungstoken</strong>.</li>
+</ul>
+
+<p>Die App <strong>greift nicht</strong> auf deine vorhandenen Fotos oder Alben zu,
+auch nicht auf Name, E-Mail, Kontakte, Kalender, Drive-Dateien oder andere
+Google-Dienste. Diese Grenze beruht nicht auf unserem guten Willen: Google erzwingt
+sie, indem es nur diese Berechtigungen erteilt, und du kannst es vor dem Zustimmen
+auf dem Einwilligungsbildschirm prüfen.</p>
+
+<p><strong>Wozu sie dienen.</strong> Ausschließlich dazu, die von dir ausdrücklich
+freigegebenen Fotos in deine Mediathek zu laden und dir von der App erstellte Alben
+als Ziel anzubieten. Nicht für Werbung, Profilbildung oder Modelltraining, und
+niemals verkauft oder weitergegeben.</p>
+
+<h2>Wie diese Daten geschützt werden</h2>
+<ul>
+  <li><strong>Bei der Übertragung.</strong> Die gesamte Kommunikation mit Googles
+      APIs ist per HTTPS/TLS verschlüsselt. Mit anderen Servern spricht die App
+      nicht, denn einen eigenen Server gibt es nicht.</li>
+  <li><strong>Im Ruhezustand.</strong> Die Token liegen im privaten Speicher der
+      App, abgeschottet durch die Android-Sandbox, für andere Apps unerreichbar.</li>
+  <li><strong>Von Sicherungen ausgenommen.</strong> Die Datei mit den Token ist
+      sowohl von der Cloud-Sicherung als auch von der Geräteübertragung
+      ausgeschlossen. Die Zugangsdaten verlassen nie das Handy, auf dem du sie
+      erteilt hast.</li>
+  <li><strong>Geringstmögliche Rechte.</strong> Angefordert wird die
+      restriktivste Schreibberechtigung statt vollem Mediathekzugriff.</li>
+  <li><strong>Aufbewahrung und Löschung.</strong> Die Token bestehen nur, solange
+      das Konto verbunden ist. Sie werden beim Trennen in den Einstellungen und
+      beim Deinstallieren gelöscht. Du kannst den Zugriff zudem jederzeit auf der
+      <a href="https://myaccount.google.com/permissions">Berechtigungsseite deines
+      Google-Kontos</a> widerrufen, was sie sofort ungültig macht.</li>
+  <li><strong>Keine Dritten.</strong> Keine Analyse, keine Werbe-SDKs, keine
+      Absturzberichte, die diese Daten erhalten könnten.</li>
+</ul>
 
 <h2>Weitergabe</h2>
 <p>An niemanden. Die einzige Netzwerkkommunikation erfolgt mit Googles Servern, um Freigegebenes

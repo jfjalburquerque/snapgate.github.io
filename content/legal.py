@@ -8,14 +8,14 @@ estar publicada en una URL accesible antes de poder configurar el consentimiento
 PRIVACY = {}
 TERMS = {}
 
-UPDATED = "2026-09-14"
+UPDATED = "2026-09-17"
 CONTACT = "jfjalburquerque@gmail.com"
 
 PRIVACY["es"] = {
     "title": "Política de privacidad · Snapgate",
     "description": "Qué datos trata Snapgate y, sobre todo, qué no puede hacer.",
     "h1": "Política de privacidad",
-    "meta": "Última actualización: 14 de septiembre de 2026",
+    "meta": "Última actualización: 17 de septiembre de 2026",
     "body": f"""
 <p>Snapgate es una aplicación para Android que te permite decidir, foto a foto,
 cuáles se suben a tu biblioteca de Google Fotos y cuáles no.</p>
@@ -58,6 +58,72 @@ del dispositivo.</p>
 <p>Ninguno. No hay analítica, ni herramientas de medición, ni identificadores
 publicitarios, ni informes de fallos automáticos.</p>
 
+<h2>Datos de usuario de Google a los que accede la aplicación</h2>
+
+<p>Si conectas tu cuenta, Snapgate solicita exactamente dos permisos de la API de
+Google Photos y ninguno más:</p>
+
+<table>
+  <tr><th>Permiso</th><th>Qué permite exactamente</th></tr>
+  <tr>
+    <td><code>photoslibrary.appendonly</code></td>
+    <td>Solo <strong>añadir</strong> fotos y crear álbumes en tu biblioteca. Es
+        de escritura: no da acceso de lectura a nada de lo que ya tienes.</td>
+  </tr>
+  <tr>
+    <td><code>photoslibrary.readonly.appcreateddata</code></td>
+    <td>Leer <strong>únicamente</strong> los álbumes creados por la propia
+        aplicación, para que puedas elegir a cuál enviar tus fotos.</td>
+  </tr>
+</table>
+
+<p>Con esos permisos, los datos de tu cuenta de Google a los que la aplicación
+tiene acceso se limitan a:</p>
+
+<ul>
+  <li>El <strong>título e identificador de los álbumes creados por la propia
+      aplicación</strong>, para mostrártelos como destino.</li>
+  <li>Los <strong>testigos de acceso</strong> (token de acceso y de renovación)
+      que emite Google al autorizarla.</li>
+</ul>
+
+<p>La aplicación <strong>no accede</strong> a tus fotos o álbumes existentes, ni a
+tu nombre, correo, contactos, calendario, archivos de Drive ni a ningún otro
+servicio de Google. Esa limitación no depende de nuestra buena fe: la impone
+Google al conceder solo esos permisos, y puedes comprobarla en la pantalla de
+consentimiento antes de aceptar.</p>
+
+<p><strong>Para qué se usan.</strong> Únicamente para subir a tu biblioteca las
+fotografías que apruebas de forma explícita, y para ofrecerte como destino los
+álbumes que la aplicación haya creado. No se usan para publicidad, ni para
+elaborar perfiles, ni para entrenar modelos, ni se venden o ceden a nadie.</p>
+
+<h2>Cómo se protegen estos datos</h2>
+
+<ul>
+  <li><strong>En tránsito.</strong> Toda comunicación con las API de Google viaja
+      cifrada mediante HTTPS/TLS. La aplicación no se comunica con ningún otro
+      servidor, porque no existe ningún servidor nuestro.</li>
+  <li><strong>En reposo.</strong> Los testigos de acceso se guardan en el
+      almacenamiento privado de la aplicación, aislado por el espacio de nombres
+      de Android, al que ninguna otra aplicación del dispositivo puede llegar.</li>
+  <li><strong>Fuera de las copias de seguridad.</strong> El fichero que contiene
+      los testigos está excluido tanto de la copia en la nube como de la
+      transferencia directa a un dispositivo nuevo. La credencial no sale nunca
+      del móvil en el que la autorizaste.</li>
+  <li><strong>Mínimo imprescindible.</strong> Se pide el permiso de escritura más
+      restringido que existe para esta función, en lugar de acceso completo a la
+      biblioteca.</li>
+  <li><strong>Conservación y borrado.</strong> Los testigos se conservan mientras
+      la cuenta siga conectada. Se eliminan al desconectarla desde los ajustes de
+      la aplicación y al desinstalarla. Puedes además revocar el acceso en
+      cualquier momento desde la
+      <a href="https://myaccount.google.com/permissions">página de permisos de tu
+      cuenta de Google</a>, lo que invalida los testigos de inmediato.</li>
+  <li><strong>Sin terceros.</strong> No se emplea analítica, ni SDK publicitarios,
+      ni servicios de registro de errores que pudieran recibir estos datos.</li>
+</ul>
+
 <h2>Con quién se comparten</h2>
 <p>Con nadie. Las únicas comunicaciones de red que realiza la aplicación son:</p>
 <ul>
@@ -98,7 +164,7 @@ TERMS["es"] = {
     "title": "Términos y condiciones · Snapgate",
     "description": "Condiciones de uso de la aplicación Snapgate.",
     "h1": "Términos y condiciones",
-    "meta": "Última actualización: 14 de septiembre de 2026",
+    "meta": "Última actualización: 17 de septiembre de 2026",
     "body": f"""
 <p>Al instalar y usar Snapgate aceptas estas condiciones. Si no estás de acuerdo
 con ellas, no uses la aplicación.</p>
@@ -164,7 +230,7 @@ PRIVACY["en"] = {
     "title": "Privacy policy · Snapgate",
     "description": "What data Snapgate handles and, above all, what it cannot do.",
     "h1": "Privacy policy",
-    "meta": "Last updated: 14 September 2026",
+    "meta": "Last updated: 17 September 2026",
     "body": f"""
 <p>Snapgate is an Android application that lets you decide, photo by photo, which
 images are uploaded to your Google Photos library and which are not.</p>
@@ -207,6 +273,70 @@ rule you created. It is not logged, not stored and never leaves the device.</p>
 <p>None. There is no analytics, no measurement tooling, no advertising identifiers
 and no automatic crash reporting.</p>
 
+<h2>Google user data accessed by the application</h2>
+
+<p>If you connect your account, Snapgate requests exactly two Google Photos API
+scopes and no others:</p>
+
+<table>
+  <tr><th>Scope</th><th>What it allows, exactly</th></tr>
+  <tr>
+    <td><code>photoslibrary.appendonly</code></td>
+    <td>Only to <strong>add</strong> photos and create albums in your library. It
+        is write-only: it grants no read access to anything you already have.</td>
+  </tr>
+  <tr>
+    <td><code>photoslibrary.readonly.appcreateddata</code></td>
+    <td>To read <strong>only</strong> the albums created by the application
+        itself, so you can choose which one to send photos to.</td>
+  </tr>
+</table>
+
+<p>With those scopes, the Google user data the application can access is limited
+to:</p>
+
+<ul>
+  <li>The <strong>title and identifier of albums created by the application
+      itself</strong>, in order to offer them as a destination.</li>
+  <li>The <strong>access and refresh tokens</strong> Google issues when you
+      authorise it.</li>
+</ul>
+
+<p>The application <strong>does not access</strong> your existing photos or
+albums, your name, email address, contacts, calendar, Drive files or any other
+Google service. That limitation does not rest on our good faith: Google enforces
+it by granting only those scopes, and you can verify it on the consent screen
+before accepting.</p>
+
+<p><strong>What it is used for.</strong> Solely to upload to your library the
+photographs you explicitly approve, and to offer app-created albums as a
+destination. It is not used for advertising, profiling or model training, and it
+is never sold or transferred to anyone.</p>
+
+<h2>How this data is protected</h2>
+
+<ul>
+  <li><strong>In transit.</strong> All communication with Google's APIs is
+      encrypted using HTTPS/TLS. The app talks to no other server, because no
+      server of ours exists.</li>
+  <li><strong>At rest.</strong> Tokens are stored in the application's private
+      storage, isolated by the Android sandbox, which no other app on the device
+      can reach.</li>
+  <li><strong>Excluded from backups.</strong> The file holding the tokens is
+      excluded from both cloud backup and direct device-to-device transfer. The
+      credential never leaves the phone where you authorised it.</li>
+  <li><strong>Least privilege.</strong> The most restricted write scope available
+      for this purpose is requested, rather than full library access.</li>
+  <li><strong>Retention and deletion.</strong> Tokens are kept only while the
+      account remains connected. They are deleted when you disconnect it from the
+      app's settings and when you uninstall the app. You can also revoke access at
+      any time from your
+      <a href="https://myaccount.google.com/permissions">Google account
+      permissions page</a>, which invalidates the tokens immediately.</li>
+  <li><strong>No third parties.</strong> There is no analytics, no advertising SDK
+      and no crash-reporting service that could receive this data.</li>
+</ul>
+
 <h2>Who it is shared with</h2>
 <p>Nobody. The only network communication the app performs is:</p>
 <ul>
@@ -243,7 +373,7 @@ TERMS["en"] = {
     "title": "Terms and conditions · Snapgate",
     "description": "Terms of use for the Snapgate application.",
     "h1": "Terms and conditions",
-    "meta": "Last updated: 14 September 2026",
+    "meta": "Last updated: 17 September 2026",
     "body": f"""
 <p>By installing and using Snapgate you accept these terms. If you do not agree with
 them, do not use the app.</p>
@@ -306,7 +436,7 @@ PRIVACY["pt"] = {
     "title": "Política de privacidade · Snapgate",
     "description": "Que dados o Snapgate trata e, sobretudo, o que não pode fazer.",
     "h1": "Política de privacidade",
-    "meta": "Última atualização: 14 de setembro de 2026",
+    "meta": "Última atualização: 17 de setembro de 2026",
     "body": f"""
 <p>O Snapgate é uma aplicação Android que te permite decidir, foto a foto, quais são
 enviadas para a tua biblioteca do Google Fotos.</p>
@@ -339,6 +469,63 @@ dispositivo.</p>
 <p>Nenhuns. Sem analítica, sem rastreadores, sem identificadores publicitários e sem
 relatórios automáticos de erros.</p>
 
+<h2>Dados de utilizador do Google a que a aplicação acede</h2>
+
+<p>Se ligares a tua conta, o Snapgate pede exatamente duas permissões da API do
+Google Photos e mais nenhuma:</p>
+
+<table>
+  <tr><th>Permissão</th><th>O que permite exatamente</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Só <strong>adicionar</strong> fotos e criar álbuns na tua biblioteca. É
+          de escrita: não dá acesso de leitura a nada do que já tens.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td>Ler <strong>apenas</strong> os álbuns criados pela própria aplicação,
+          para poderes escolher para qual enviar as fotos.</td></tr>
+</table>
+
+<p>Com essas permissões, os dados da tua conta Google a que a aplicação tem acesso
+limitam-se a:</p>
+<ul>
+  <li>O <strong>título e identificador dos álbuns criados pela própria
+      aplicação</strong>, para tos mostrar como destino.</li>
+  <li>Os <strong>tokens de acesso e de renovação</strong> emitidos pela Google ao
+      autorizares.</li>
+</ul>
+
+<p>A aplicação <strong>não acede</strong> às tuas fotos ou álbuns existentes, nem
+ao teu nome, email, contactos, calendário, ficheiros do Drive ou qualquer outro
+serviço Google. Essa limitação não depende da nossa boa-fé: é imposta pela Google
+ao conceder apenas essas permissões, e podes confirmá-la no ecrã de consentimento
+antes de aceitares.</p>
+
+<p><strong>Para que servem.</strong> Unicamente para enviar para a tua biblioteca
+as fotografias que aprovas de forma explícita e para te oferecer como destino os
+álbuns criados pela aplicação. Não são usados para publicidade, perfis ou treino
+de modelos, nem vendidos ou cedidos a ninguém.</p>
+
+<h2>Como estes dados são protegidos</h2>
+<ul>
+  <li><strong>Em trânsito.</strong> Toda a comunicação com as API da Google é
+      cifrada com HTTPS/TLS. A app não comunica com mais nenhum servidor, porque
+      não existe nenhum servidor nosso.</li>
+  <li><strong>Em repouso.</strong> Os tokens ficam no armazenamento privado da
+      aplicação, isolado pelo sandbox do Android, onde nenhuma outra app do
+      dispositivo chega.</li>
+  <li><strong>Fora das cópias de segurança.</strong> O ficheiro com os tokens está
+      excluído tanto da cópia na nuvem como da transferência direta para um
+      dispositivo novo. A credencial nunca sai do telemóvel onde a autorizaste.</li>
+  <li><strong>Mínimo indispensável.</strong> Pede-se a permissão de escrita mais
+      restrita que existe para esta função, em vez de acesso total à biblioteca.</li>
+  <li><strong>Conservação e eliminação.</strong> Os tokens duram enquanto a conta
+      estiver ligada. São eliminados ao desligá-la nas definições e ao desinstalar.
+      Podes ainda revogar o acesso a qualquer momento na
+      <a href="https://myaccount.google.com/permissions">página de permissões da
+      tua conta Google</a>, o que os invalida de imediato.</li>
+  <li><strong>Sem terceiros.</strong> Não há analítica, SDK publicitários nem
+      serviços de registo de erros que pudessem receber estes dados.</li>
+</ul>
+
 <h2>Com quem são partilhados</h2>
 <p>Com ninguém. As únicas comunicações de rede são com os servidores da Google, para
 enviar para <em>a tua</em> biblioteca o que aprovas, e com a Google Play, para verificar
@@ -366,7 +553,7 @@ TERMS["pt"] = {
     "title": "Termos e condições · Snapgate",
     "description": "Condições de utilização da aplicação Snapgate.",
     "h1": "Termos e condições",
-    "meta": "Última atualização: 14 de setembro de 2026",
+    "meta": "Última atualização: 17 de setembro de 2026",
     "body": f"""
 <p>Ao instalar e usar o Snapgate aceitas estas condições. Se não concordares, não uses a
 aplicação.</p>
@@ -425,7 +612,7 @@ PRIVACY["fr"] = {
     "title": "Politique de confidentialité · Snapgate",
     "description": "Quelles données Snapgate traite et, surtout, ce qu'elle ne peut pas faire.",
     "h1": "Politique de confidentialité",
-    "meta": "Dernière mise à jour : 14 septembre 2026",
+    "meta": "Dernière mise à jour : 17 septembre 2026",
     "body": f"""
 <p>Snapgate est une application Android qui vous permet de décider, photo par photo,
 lesquelles sont envoyées vers votre bibliothèque Google Photos.</p>
@@ -459,6 +646,67 @@ ni stockée, et ne quitte jamais l'appareil.</p>
 <p>Aucune. Pas d'analytique, pas de traqueurs, pas d'identifiants publicitaires, pas de
 rapports de plantage automatiques.</p>
 
+<h2>Données utilisateur Google auxquelles l'application accède</h2>
+
+<p>Si vous connectez votre compte, Snapgate demande exactement deux autorisations
+de l'API Google Photos, et aucune autre :</p>
+
+<table>
+  <tr><th>Autorisation</th><th>Ce qu'elle permet, exactement</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Uniquement <strong>ajouter</strong> des photos et créer des albums dans
+          votre bibliothèque. En écriture seule : aucun accès en lecture à ce que
+          vous possédez déjà.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td>Lire <strong>seulement</strong> les albums créés par l'application
+          elle-même, afin que vous puissiez choisir la destination.</td></tr>
+</table>
+
+<p>Avec ces autorisations, les données de votre compte Google auxquelles
+l'application a accès se limitent à :</p>
+<ul>
+  <li>Le <strong>titre et l'identifiant des albums créés par l'application
+      elle-même</strong>, pour vous les proposer comme destination.</li>
+  <li>Les <strong>jetons d'accès et de rafraîchissement</strong> délivrés par
+      Google lors de l'autorisation.</li>
+</ul>
+
+<p>L'application <strong>n'accède pas</strong> à vos photos ou albums existants,
+ni à votre nom, adresse e-mail, contacts, agenda, fichiers Drive ou tout autre
+service Google. Cette limite ne repose pas sur notre bonne foi : Google l'impose
+en n'accordant que ces autorisations, et vous pouvez le vérifier sur l'écran de
+consentement avant d'accepter.</p>
+
+<p><strong>À quoi elles servent.</strong> Uniquement à envoyer dans votre
+bibliothèque les photographies que vous approuvez explicitement, et à vous
+proposer comme destination les albums créés par l'application. Elles ne servent ni
+à la publicité, ni au profilage, ni à l'entraînement de modèles, et ne sont jamais
+vendues ni cédées.</p>
+
+<h2>Comment ces données sont protégées</h2>
+<ul>
+  <li><strong>En transit.</strong> Toute communication avec les API de Google est
+      chiffrée via HTTPS/TLS. L'app ne parle à aucun autre serveur, car aucun
+      serveur de notre part n'existe.</li>
+  <li><strong>Au repos.</strong> Les jetons sont stockés dans l'espace privé de
+      l'application, isolé par le bac à sable d'Android, inaccessible aux autres
+      applications.</li>
+  <li><strong>Hors sauvegardes.</strong> Le fichier contenant les jetons est exclu
+      à la fois de la sauvegarde cloud et du transfert direct vers un nouvel
+      appareil. L'identifiant ne quitte jamais le téléphone où vous l'avez
+      autorisé.</li>
+  <li><strong>Moindre privilège.</strong> L'autorisation d'écriture la plus
+      restreinte possible est demandée, plutôt qu'un accès complet.</li>
+  <li><strong>Conservation et suppression.</strong> Les jetons ne durent que tant
+      que le compte reste connecté. Ils sont supprimés à la déconnexion depuis les
+      réglages et à la désinstallation. Vous pouvez aussi révoquer l'accès à tout
+      moment depuis la
+      <a href="https://myaccount.google.com/permissions">page des autorisations de
+      votre compte Google</a>, ce qui les invalide immédiatement.</li>
+  <li><strong>Aucun tiers.</strong> Pas d'analytique, pas de SDK publicitaire, pas
+      de service de rapport de plantage susceptible de recevoir ces données.</li>
+</ul>
+
 <h2>Partage</h2>
 <p>Avec personne. Les seules communications réseau se font avec les serveurs de Google, pour
 envoyer vers <em>votre</em> bibliothèque ce que vous approuvez, et avec Google Play pour
@@ -487,7 +735,7 @@ TERMS["fr"] = {
     "title": "Conditions générales · Snapgate",
     "description": "Conditions d'utilisation de l'application Snapgate.",
     "h1": "Conditions générales",
-    "meta": "Dernière mise à jour : 14 septembre 2026",
+    "meta": "Dernière mise à jour : 17 septembre 2026",
     "body": f"""
 <p>En installant et en utilisant Snapgate, vous acceptez ces conditions. Si vous n'êtes pas
 d'accord, n'utilisez pas l'application.</p>
@@ -548,7 +796,7 @@ PRIVACY["de"] = {
     "title": "Datenschutzerklärung · Snapgate",
     "description": "Welche Daten Snapgate verarbeitet und vor allem, was die App nicht kann.",
     "h1": "Datenschutzerklärung",
-    "meta": "Zuletzt aktualisiert: 14. September 2026",
+    "meta": "Zuletzt aktualisiert: 17. September 2026",
     "body": f"""
 <p>Snapgate ist eine Android-App, mit der du Foto für Foto entscheidest, welche Bilder in
 deine Google-Fotos-Mediathek hochgeladen werden.</p>
@@ -581,6 +829,61 @@ und verlässt das Gerät nie.</p>
 <h3>Nutzungsdaten</h3>
 <p>Keine. Keine Analyse, kein Tracking, keine Werbe-IDs, keine automatischen Absturzberichte.</p>
 
+<h2>Google-Nutzerdaten, auf die die App zugreift</h2>
+
+<p>Wenn du dein Konto verbindest, fordert Snapgate genau zwei Berechtigungen der
+Google-Photos-API an und keine weiteren:</p>
+
+<table>
+  <tr><th>Berechtigung</th><th>Was sie genau erlaubt</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Nur Fotos <strong>hinzufügen</strong> und Alben anlegen. Schreibend:
+          kein Lesezugriff auf das, was du bereits hast.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td><strong>Nur</strong> die von der App selbst erstellten Alben lesen,
+          damit du ein Ziel auswählen kannst.</td></tr>
+</table>
+
+<p>Damit beschränken sich die zugänglichen Daten deines Google-Kontos auf:</p>
+<ul>
+  <li><strong>Titel und Kennung der von der App selbst erstellten Alben</strong>,
+      um sie dir als Ziel anzubieten.</li>
+  <li>Die von Google ausgestellten <strong>Zugriffs- und Aktualisierungstoken</strong>.</li>
+</ul>
+
+<p>Die App <strong>greift nicht</strong> auf deine vorhandenen Fotos oder Alben zu,
+auch nicht auf Name, E-Mail, Kontakte, Kalender, Drive-Dateien oder andere
+Google-Dienste. Diese Grenze beruht nicht auf unserem guten Willen: Google erzwingt
+sie, indem es nur diese Berechtigungen erteilt, und du kannst es vor dem Zustimmen
+auf dem Einwilligungsbildschirm prüfen.</p>
+
+<p><strong>Wozu sie dienen.</strong> Ausschließlich dazu, die von dir ausdrücklich
+freigegebenen Fotos in deine Mediathek zu laden und dir von der App erstellte Alben
+als Ziel anzubieten. Nicht für Werbung, Profilbildung oder Modelltraining, und
+niemals verkauft oder weitergegeben.</p>
+
+<h2>Wie diese Daten geschützt werden</h2>
+<ul>
+  <li><strong>Bei der Übertragung.</strong> Die gesamte Kommunikation mit Googles
+      APIs ist per HTTPS/TLS verschlüsselt. Mit anderen Servern spricht die App
+      nicht, denn einen eigenen Server gibt es nicht.</li>
+  <li><strong>Im Ruhezustand.</strong> Die Token liegen im privaten Speicher der
+      App, abgeschottet durch die Android-Sandbox, für andere Apps unerreichbar.</li>
+  <li><strong>Von Sicherungen ausgenommen.</strong> Die Datei mit den Token ist
+      sowohl von der Cloud-Sicherung als auch von der Geräteübertragung
+      ausgeschlossen. Die Zugangsdaten verlassen nie das Handy, auf dem du sie
+      erteilt hast.</li>
+  <li><strong>Geringstmögliche Rechte.</strong> Angefordert wird die
+      restriktivste Schreibberechtigung statt vollem Mediathekzugriff.</li>
+  <li><strong>Aufbewahrung und Löschung.</strong> Die Token bestehen nur, solange
+      das Konto verbunden ist. Sie werden beim Trennen in den Einstellungen und
+      beim Deinstallieren gelöscht. Du kannst den Zugriff zudem jederzeit auf der
+      <a href="https://myaccount.google.com/permissions">Berechtigungsseite deines
+      Google-Kontos</a> widerrufen, was sie sofort ungültig macht.</li>
+  <li><strong>Keine Dritten.</strong> Keine Analyse, keine Werbe-SDKs, keine
+      Absturzberichte, die diese Daten erhalten könnten.</li>
+</ul>
+
 <h2>Weitergabe</h2>
 <p>An niemanden. Die einzige Netzwerkkommunikation erfolgt mit Googles Servern, um Freigegebenes
 in <em>deine</em> Mediathek zu laden, und mit Google Play zur Kaufprüfung.</p>
@@ -608,7 +911,7 @@ TERMS["de"] = {
     "title": "Nutzungsbedingungen · Snapgate",
     "description": "Nutzungsbedingungen der App Snapgate.",
     "h1": "Nutzungsbedingungen",
-    "meta": "Zuletzt aktualisiert: 14. September 2026",
+    "meta": "Zuletzt aktualisiert: 17. September 2026",
     "body": f"""
 <p>Mit der Installation und Nutzung von Snapgate akzeptierst du diese Bedingungen. Wenn du
 nicht einverstanden bist, nutze die App nicht.</p>
@@ -667,7 +970,7 @@ PRIVACY["it"] = {
     "title": "Informativa sulla privacy · Snapgate",
     "description": "Quali dati tratta Snapgate e, soprattutto, cosa non può fare.",
     "h1": "Informativa sulla privacy",
-    "meta": "Ultimo aggiornamento: 14 settembre 2026",
+    "meta": "Ultimo aggiornamento: 17 settembre 2026",
     "body": f"""
 <p>Snapgate è un'app Android che ti permette di decidere, foto per foto, quali immagini
 vengono caricate nella tua libreria di Google Foto.</p>
@@ -700,6 +1003,60 @@ dispositivo.</p>
 <p>Nessuno. Niente analitica, niente tracciamento, nessun identificatore pubblicitario e
 nessun rapporto automatico sugli arresti anomali.</p>
 
+<h2>Dati utente Google a cui accede l'applicazione</h2>
+
+<p>Se colleghi il tuo account, Snapgate richiede esattamente due permessi dell'API
+di Google Foto e nessun altro:</p>
+
+<table>
+  <tr><th>Permesso</th><th>Cosa consente esattamente</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Solo <strong>aggiungere</strong> foto e creare album nella tua libreria.
+          È in scrittura: non dà accesso in lettura a ciò che hai già.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td>Leggere <strong>soltanto</strong> gli album creati dall'app stessa, per
+          poter scegliere la destinazione.</td></tr>
+</table>
+
+<p>Con questi permessi, i dati del tuo account Google a cui l'app accede si
+limitano a:</p>
+<ul>
+  <li><strong>Titolo e identificatore degli album creati dall'app stessa</strong>,
+      per proportele come destinazione.</li>
+  <li>I <strong>token di accesso e di aggiornamento</strong> emessi da Google.</li>
+</ul>
+
+<p>L'app <strong>non accede</strong> alle tue foto o ai tuoi album esistenti, né a
+nome, email, contatti, calendario, file di Drive o altri servizi Google. Questo
+limite non dipende dalla nostra buona fede: lo impone Google concedendo solo questi
+permessi, e puoi verificarlo nella schermata di consenso prima di accettare.</p>
+
+<p><strong>A cosa servono.</strong> Unicamente a caricare nella tua libreria le
+fotografie che approvi esplicitamente e a offrirti come destinazione gli album
+creati dall'app. Non servono per pubblicità, profilazione o addestramento di
+modelli, e non vengono mai venduti né ceduti.</p>
+
+<h2>Come vengono protetti questi dati</h2>
+<ul>
+  <li><strong>In transito.</strong> Tutte le comunicazioni con le API di Google
+      sono cifrate con HTTPS/TLS. L'app non parla con nessun altro server, perché
+      un nostro server non esiste.</li>
+  <li><strong>A riposo.</strong> I token restano nell'archivio privato dell'app,
+      isolato dalla sandbox di Android, irraggiungibile da altre app.</li>
+  <li><strong>Fuori dai backup.</strong> Il file con i token è escluso sia dal
+      backup su cloud sia dal trasferimento diretto verso un nuovo dispositivo. La
+      credenziale non lascia mai il telefono su cui l'hai autorizzata.</li>
+  <li><strong>Privilegio minimo.</strong> Si richiede il permesso di scrittura più
+      ristretto disponibile, invece dell'accesso completo alla libreria.</li>
+  <li><strong>Conservazione ed eliminazione.</strong> I token durano finché
+      l'account resta collegato. Vengono eliminati scollegandolo dalle impostazioni
+      e disinstallando l'app. Puoi inoltre revocare l'accesso in qualsiasi momento
+      dalla <a href="https://myaccount.google.com/permissions">pagina dei permessi
+      del tuo account Google</a>, cosa che li invalida subito.</li>
+  <li><strong>Nessun terzo.</strong> Nessuna analitica, nessun SDK pubblicitario,
+      nessun servizio di segnalazione errori che possa ricevere questi dati.</li>
+</ul>
+
 <h2>Condivisione</h2>
 <p>Con nessuno. Le uniche comunicazioni di rete avvengono con i server di Google, per caricare
 nella <em>tua</em> libreria ciò che approvi, e con Google Play per verificare l'acquisto.</p>
@@ -727,7 +1084,7 @@ TERMS["it"] = {
     "title": "Termini e condizioni · Snapgate",
     "description": "Condizioni d'uso dell'applicazione Snapgate.",
     "h1": "Termini e condizioni",
-    "meta": "Ultimo aggiornamento: 14 settembre 2026",
+    "meta": "Ultimo aggiornamento: 17 settembre 2026",
     "body": f"""
 <p>Installando e usando Snapgate accetti queste condizioni. Se non sei d'accordo, non usare
 l'applicazione.</p>

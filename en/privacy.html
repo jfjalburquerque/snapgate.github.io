@@ -37,7 +37,7 @@
 
 <div class="wrap page prose">
   <h1>Privacy policy</h1>
-  <p class="meta">Last updated: 14 September 2026</p>
+  <p class="meta">Last updated: 17 September 2026</p>
   
 <p>Snapgate is an Android application that lets you decide, photo by photo, which
 images are uploaded to your Google Photos library and which are not.</p>
@@ -79,6 +79,70 @@ rule you created. It is not logged, not stored and never leaves the device.</p>
 <h3>Usage data</h3>
 <p>None. There is no analytics, no measurement tooling, no advertising identifiers
 and no automatic crash reporting.</p>
+
+<h2>Google user data accessed by the application</h2>
+
+<p>If you connect your account, Snapgate requests exactly two Google Photos API
+scopes and no others:</p>
+
+<table>
+  <tr><th>Scope</th><th>What it allows, exactly</th></tr>
+  <tr>
+    <td><code>photoslibrary.appendonly</code></td>
+    <td>Only to <strong>add</strong> photos and create albums in your library. It
+        is write-only: it grants no read access to anything you already have.</td>
+  </tr>
+  <tr>
+    <td><code>photoslibrary.readonly.appcreateddata</code></td>
+    <td>To read <strong>only</strong> the albums created by the application
+        itself, so you can choose which one to send photos to.</td>
+  </tr>
+</table>
+
+<p>With those scopes, the Google user data the application can access is limited
+to:</p>
+
+<ul>
+  <li>The <strong>title and identifier of albums created by the application
+      itself</strong>, in order to offer them as a destination.</li>
+  <li>The <strong>access and refresh tokens</strong> Google issues when you
+      authorise it.</li>
+</ul>
+
+<p>The application <strong>does not access</strong> your existing photos or
+albums, your name, email address, contacts, calendar, Drive files or any other
+Google service. That limitation does not rest on our good faith: Google enforces
+it by granting only those scopes, and you can verify it on the consent screen
+before accepting.</p>
+
+<p><strong>What it is used for.</strong> Solely to upload to your library the
+photographs you explicitly approve, and to offer app-created albums as a
+destination. It is not used for advertising, profiling or model training, and it
+is never sold or transferred to anyone.</p>
+
+<h2>How this data is protected</h2>
+
+<ul>
+  <li><strong>In transit.</strong> All communication with Google's APIs is
+      encrypted using HTTPS/TLS. The app talks to no other server, because no
+      server of ours exists.</li>
+  <li><strong>At rest.</strong> Tokens are stored in the application's private
+      storage, isolated by the Android sandbox, which no other app on the device
+      can reach.</li>
+  <li><strong>Excluded from backups.</strong> The file holding the tokens is
+      excluded from both cloud backup and direct device-to-device transfer. The
+      credential never leaves the phone where you authorised it.</li>
+  <li><strong>Least privilege.</strong> The most restricted write scope available
+      for this purpose is requested, rather than full library access.</li>
+  <li><strong>Retention and deletion.</strong> Tokens are kept only while the
+      account remains connected. They are deleted when you disconnect it from the
+      app's settings and when you uninstall the app. You can also revoke access at
+      any time from your
+      <a href="https://myaccount.google.com/permissions">Google account
+      permissions page</a>, which invalidates the tokens immediately.</li>
+  <li><strong>No third parties.</strong> There is no analytics, no advertising SDK
+      and no crash-reporting service that could receive this data.</li>
+</ul>
 
 <h2>Who it is shared with</h2>
 <p>Nobody. The only network communication the app performs is:</p>

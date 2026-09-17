@@ -37,7 +37,7 @@
 
 <div class="wrap page prose">
   <h1>Politique de confidentialité</h1>
-  <p class="meta">Dernière mise à jour : 14 septembre 2026</p>
+  <p class="meta">Dernière mise à jour : 17 septembre 2026</p>
   
 <p>Snapgate est une application Android qui vous permet de décider, photo par photo,
 lesquelles sont envoyées vers votre bibliothèque Google Photos.</p>
@@ -70,6 +70,67 @@ ni stockée, et ne quitte jamais l'appareil.</p>
 <h3>Données d'usage</h3>
 <p>Aucune. Pas d'analytique, pas de traqueurs, pas d'identifiants publicitaires, pas de
 rapports de plantage automatiques.</p>
+
+<h2>Données utilisateur Google auxquelles l'application accède</h2>
+
+<p>Si vous connectez votre compte, Snapgate demande exactement deux autorisations
+de l'API Google Photos, et aucune autre :</p>
+
+<table>
+  <tr><th>Autorisation</th><th>Ce qu'elle permet, exactement</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Uniquement <strong>ajouter</strong> des photos et créer des albums dans
+          votre bibliothèque. En écriture seule : aucun accès en lecture à ce que
+          vous possédez déjà.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td>Lire <strong>seulement</strong> les albums créés par l'application
+          elle-même, afin que vous puissiez choisir la destination.</td></tr>
+</table>
+
+<p>Avec ces autorisations, les données de votre compte Google auxquelles
+l'application a accès se limitent à :</p>
+<ul>
+  <li>Le <strong>titre et l'identifiant des albums créés par l'application
+      elle-même</strong>, pour vous les proposer comme destination.</li>
+  <li>Les <strong>jetons d'accès et de rafraîchissement</strong> délivrés par
+      Google lors de l'autorisation.</li>
+</ul>
+
+<p>L'application <strong>n'accède pas</strong> à vos photos ou albums existants,
+ni à votre nom, adresse e-mail, contacts, agenda, fichiers Drive ou tout autre
+service Google. Cette limite ne repose pas sur notre bonne foi : Google l'impose
+en n'accordant que ces autorisations, et vous pouvez le vérifier sur l'écran de
+consentement avant d'accepter.</p>
+
+<p><strong>À quoi elles servent.</strong> Uniquement à envoyer dans votre
+bibliothèque les photographies que vous approuvez explicitement, et à vous
+proposer comme destination les albums créés par l'application. Elles ne servent ni
+à la publicité, ni au profilage, ni à l'entraînement de modèles, et ne sont jamais
+vendues ni cédées.</p>
+
+<h2>Comment ces données sont protégées</h2>
+<ul>
+  <li><strong>En transit.</strong> Toute communication avec les API de Google est
+      chiffrée via HTTPS/TLS. L'app ne parle à aucun autre serveur, car aucun
+      serveur de notre part n'existe.</li>
+  <li><strong>Au repos.</strong> Les jetons sont stockés dans l'espace privé de
+      l'application, isolé par le bac à sable d'Android, inaccessible aux autres
+      applications.</li>
+  <li><strong>Hors sauvegardes.</strong> Le fichier contenant les jetons est exclu
+      à la fois de la sauvegarde cloud et du transfert direct vers un nouvel
+      appareil. L'identifiant ne quitte jamais le téléphone où vous l'avez
+      autorisé.</li>
+  <li><strong>Moindre privilège.</strong> L'autorisation d'écriture la plus
+      restreinte possible est demandée, plutôt qu'un accès complet.</li>
+  <li><strong>Conservation et suppression.</strong> Les jetons ne durent que tant
+      que le compte reste connecté. Ils sont supprimés à la déconnexion depuis les
+      réglages et à la désinstallation. Vous pouvez aussi révoquer l'accès à tout
+      moment depuis la
+      <a href="https://myaccount.google.com/permissions">page des autorisations de
+      votre compte Google</a>, ce qui les invalide immédiatement.</li>
+  <li><strong>Aucun tiers.</strong> Pas d'analytique, pas de SDK publicitaire, pas
+      de service de rapport de plantage susceptible de recevoir ces données.</li>
+</ul>
 
 <h2>Partage</h2>
 <p>Avec personne. Les seules communications réseau se font avec les serveurs de Google, pour

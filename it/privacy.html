@@ -37,7 +37,7 @@
 
 <div class="wrap page prose">
   <h1>Informativa sulla privacy</h1>
-  <p class="meta">Ultimo aggiornamento: 14 settembre 2026</p>
+  <p class="meta">Ultimo aggiornamento: 17 settembre 2026</p>
   
 <p>Snapgate è un'app Android che ti permette di decidere, foto per foto, quali immagini
 vengono caricate nella tua libreria di Google Foto.</p>
@@ -69,6 +69,60 @@ dispositivo.</p>
 <h3>Dati di utilizzo</h3>
 <p>Nessuno. Niente analitica, niente tracciamento, nessun identificatore pubblicitario e
 nessun rapporto automatico sugli arresti anomali.</p>
+
+<h2>Dati utente Google a cui accede l'applicazione</h2>
+
+<p>Se colleghi il tuo account, Snapgate richiede esattamente due permessi dell'API
+di Google Foto e nessun altro:</p>
+
+<table>
+  <tr><th>Permesso</th><th>Cosa consente esattamente</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Solo <strong>aggiungere</strong> foto e creare album nella tua libreria.
+          È in scrittura: non dà accesso in lettura a ciò che hai già.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td>Leggere <strong>soltanto</strong> gli album creati dall'app stessa, per
+          poter scegliere la destinazione.</td></tr>
+</table>
+
+<p>Con questi permessi, i dati del tuo account Google a cui l'app accede si
+limitano a:</p>
+<ul>
+  <li><strong>Titolo e identificatore degli album creati dall'app stessa</strong>,
+      per proportele come destinazione.</li>
+  <li>I <strong>token di accesso e di aggiornamento</strong> emessi da Google.</li>
+</ul>
+
+<p>L'app <strong>non accede</strong> alle tue foto o ai tuoi album esistenti, né a
+nome, email, contatti, calendario, file di Drive o altri servizi Google. Questo
+limite non dipende dalla nostra buona fede: lo impone Google concedendo solo questi
+permessi, e puoi verificarlo nella schermata di consenso prima di accettare.</p>
+
+<p><strong>A cosa servono.</strong> Unicamente a caricare nella tua libreria le
+fotografie che approvi esplicitamente e a offrirti come destinazione gli album
+creati dall'app. Non servono per pubblicità, profilazione o addestramento di
+modelli, e non vengono mai venduti né ceduti.</p>
+
+<h2>Come vengono protetti questi dati</h2>
+<ul>
+  <li><strong>In transito.</strong> Tutte le comunicazioni con le API di Google
+      sono cifrate con HTTPS/TLS. L'app non parla con nessun altro server, perché
+      un nostro server non esiste.</li>
+  <li><strong>A riposo.</strong> I token restano nell'archivio privato dell'app,
+      isolato dalla sandbox di Android, irraggiungibile da altre app.</li>
+  <li><strong>Fuori dai backup.</strong> Il file con i token è escluso sia dal
+      backup su cloud sia dal trasferimento diretto verso un nuovo dispositivo. La
+      credenziale non lascia mai il telefono su cui l'hai autorizzata.</li>
+  <li><strong>Privilegio minimo.</strong> Si richiede il permesso di scrittura più
+      ristretto disponibile, invece dell'accesso completo alla libreria.</li>
+  <li><strong>Conservazione ed eliminazione.</strong> I token durano finché
+      l'account resta collegato. Vengono eliminati scollegandolo dalle impostazioni
+      e disinstallando l'app. Puoi inoltre revocare l'accesso in qualsiasi momento
+      dalla <a href="https://myaccount.google.com/permissions">pagina dei permessi
+      del tuo account Google</a>, cosa che li invalida subito.</li>
+  <li><strong>Nessun terzo.</strong> Nessuna analitica, nessun SDK pubblicitario,
+      nessun servizio di segnalazione errori che possa ricevere questi dati.</li>
+</ul>
 
 <h2>Condivisione</h2>
 <p>Con nessuno. Le uniche comunicazioni di rete avvengono con i server di Google, per caricare

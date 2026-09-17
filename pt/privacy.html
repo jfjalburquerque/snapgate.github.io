@@ -37,7 +37,7 @@
 
 <div class="wrap page prose">
   <h1>Política de privacidade</h1>
-  <p class="meta">Última atualização: 14 de setembro de 2026</p>
+  <p class="meta">Última atualização: 17 de setembro de 2026</p>
   
 <p>O Snapgate é uma aplicação Android que te permite decidir, foto a foto, quais são
 enviadas para a tua biblioteca do Google Fotos.</p>
@@ -69,6 +69,63 @@ dispositivo.</p>
 <h3>Dados de utilização</h3>
 <p>Nenhuns. Sem analítica, sem rastreadores, sem identificadores publicitários e sem
 relatórios automáticos de erros.</p>
+
+<h2>Dados de utilizador do Google a que a aplicação acede</h2>
+
+<p>Se ligares a tua conta, o Snapgate pede exatamente duas permissões da API do
+Google Photos e mais nenhuma:</p>
+
+<table>
+  <tr><th>Permissão</th><th>O que permite exatamente</th></tr>
+  <tr><td><code>photoslibrary.appendonly</code></td>
+      <td>Só <strong>adicionar</strong> fotos e criar álbuns na tua biblioteca. É
+          de escrita: não dá acesso de leitura a nada do que já tens.</td></tr>
+  <tr><td><code>photoslibrary.readonly.appcreateddata</code></td>
+      <td>Ler <strong>apenas</strong> os álbuns criados pela própria aplicação,
+          para poderes escolher para qual enviar as fotos.</td></tr>
+</table>
+
+<p>Com essas permissões, os dados da tua conta Google a que a aplicação tem acesso
+limitam-se a:</p>
+<ul>
+  <li>O <strong>título e identificador dos álbuns criados pela própria
+      aplicação</strong>, para tos mostrar como destino.</li>
+  <li>Os <strong>tokens de acesso e de renovação</strong> emitidos pela Google ao
+      autorizares.</li>
+</ul>
+
+<p>A aplicação <strong>não acede</strong> às tuas fotos ou álbuns existentes, nem
+ao teu nome, email, contactos, calendário, ficheiros do Drive ou qualquer outro
+serviço Google. Essa limitação não depende da nossa boa-fé: é imposta pela Google
+ao conceder apenas essas permissões, e podes confirmá-la no ecrã de consentimento
+antes de aceitares.</p>
+
+<p><strong>Para que servem.</strong> Unicamente para enviar para a tua biblioteca
+as fotografias que aprovas de forma explícita e para te oferecer como destino os
+álbuns criados pela aplicação. Não são usados para publicidade, perfis ou treino
+de modelos, nem vendidos ou cedidos a ninguém.</p>
+
+<h2>Como estes dados são protegidos</h2>
+<ul>
+  <li><strong>Em trânsito.</strong> Toda a comunicação com as API da Google é
+      cifrada com HTTPS/TLS. A app não comunica com mais nenhum servidor, porque
+      não existe nenhum servidor nosso.</li>
+  <li><strong>Em repouso.</strong> Os tokens ficam no armazenamento privado da
+      aplicação, isolado pelo sandbox do Android, onde nenhuma outra app do
+      dispositivo chega.</li>
+  <li><strong>Fora das cópias de segurança.</strong> O ficheiro com os tokens está
+      excluído tanto da cópia na nuvem como da transferência direta para um
+      dispositivo novo. A credencial nunca sai do telemóvel onde a autorizaste.</li>
+  <li><strong>Mínimo indispensável.</strong> Pede-se a permissão de escrita mais
+      restrita que existe para esta função, em vez de acesso total à biblioteca.</li>
+  <li><strong>Conservação e eliminação.</strong> Os tokens duram enquanto a conta
+      estiver ligada. São eliminados ao desligá-la nas definições e ao desinstalar.
+      Podes ainda revogar o acesso a qualquer momento na
+      <a href="https://myaccount.google.com/permissions">página de permissões da
+      tua conta Google</a>, o que os invalida de imediato.</li>
+  <li><strong>Sem terceiros.</strong> Não há analítica, SDK publicitários nem
+      serviços de registo de erros que pudessem receber estes dados.</li>
+</ul>
 
 <h2>Com quem são partilhados</h2>
 <p>Com ninguém. As únicas comunicações de rede são com os servidores da Google, para
