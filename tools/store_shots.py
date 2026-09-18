@@ -36,6 +36,30 @@ SHOTS = {
         ("en-features.png", "Rules that decide for you", "And modes that expire on their own."),
         ("en-onb1.png", "Your cloud stops filling up", "With receipts, invoices and whiteboards."),
     ],
+    "pt": [
+        ("pt-notif.png", "Decide a partir da notificação", "Sem abrir a app."),
+        ("pt-selection.png", "Ou revê por lotes", "Dez fotos despachadas em segundos."),
+        ("pt-features.png", "Regras que decidem por ti", "E modos que expiram sozinhos."),
+        ("pt-onb1.png", "A tua nuvem deixa de encher", "De recibos, faturas e quadros."),
+    ],
+    "fr": [
+        ("fr-notif.png", "Décidez depuis la notification", "Sans ouvrir l'application."),
+        ("fr-selection.png", "Ou passez-les en revue par lots", "Dix photos réglées en quelques secondes."),
+        ("fr-features.png", "Des règles qui décident pour vous", "Et des modes qui expirent d'eux-mêmes."),
+        ("fr-onb1.png", "Votre cloud cesse de se remplir", "De reçus, de factures et de tableaux."),
+    ],
+    "de": [
+        ("de-notif.png", "Entscheide aus der Benachrichtigung", "Ohne die App zu öffnen."),
+        ("de-selection.png", "Oder stapelweise prüfen", "Zehn Fotos in Sekunden erledigt."),
+        ("de-features.png", "Regeln, die für dich entscheiden", "Und Modi, die von selbst ablaufen."),
+        ("de-onb1.png", "Deine Cloud füllt sich nicht mehr", "Mit Belegen, Rechnungen und Whiteboards."),
+    ],
+    "it": [
+        ("it-notif.png", "Decidi dalla notifica", "Senza aprire l'app."),
+        ("it-selection.png", "O rivedi a gruppi", "Dieci foto sbrigate in pochi secondi."),
+        ("it-features.png", "Regole che decidono per te", "E modalità che scadono da sole."),
+        ("it-onb1.png", "Il tuo cloud smette di riempirsi", "Di scontrini, fatture e lavagne."),
+    ],
 }
 
 

@@ -191,6 +191,14 @@ FEATURE_TEXT = {
            "Pago único · Sin anuncios · Sin servidores"),
     "en": ("Decide which photos reach your cloud",
            "One-time purchase · No ads · No servers"),
+    "pt": ("Decide que fotos chegam à tua nuvem",
+           "Pagamento único · Sem anúncios · Sem servidores"),
+    "fr": ("Choisissez les photos qui montent dans le cloud",
+           "Achat unique · Sans publicité · Sans serveurs"),
+    "de": ("Entscheide, welche Fotos in die Cloud kommen",
+           "Einmalkauf · Keine Werbung · Keine Server"),
+    "it": ("Decidi quali foto arrivano al tuo cloud",
+           "Acquisto unico · Senza pubblicità · Senza server"),
 }
 
 
