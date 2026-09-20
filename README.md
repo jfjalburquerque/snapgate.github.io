@@ -47,6 +47,7 @@ Produce en `assets/brand/`:
 | `wordmark.png` / `-dark.png` | Solo la palabra |
 | `../store/feature/<idioma>.png` | Gráfico de cabecera de Play, 1024 × 500, en los seis idiomas |
 | `play-icon-512.png` | Icono de la ficha de Play, 512 × 512 |
+| `../store/social/reddit-en.png` | Imagen para foros, 1600 × 900 (`tools/reddit_image.py`) |
 
 Tipografía [Inter](https://rsms.me/inter/), con licencia SIL Open Font.
 
