@@ -107,6 +107,13 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
 """
 
 
+PLAY_URL = "https://play.google.com/store/apps/details?id=com.snapgate.app"
+
+# Enlace, no reproductor incrustado: el de YouTube carga cookies y rastreadores
+# de Google al abrir la pagina, y la web promete no descargar nada de terceros.
+FEATURED_VIDEO = "https://www.youtube.com/watch?v=TYNzg59ke30&amp;t=61s"
+
+
 def landing_html(lang):
     c = LANDING[lang]
     features = "".join(
@@ -125,10 +132,15 @@ def landing_html(lang):
   <h1>{c["h1"]}</h1>
   <p class="lede">{c["lede"]}</p>
   <div class="cta">
-    <a class="btn" href="#how">{c["cta_primary"]}</a>
+    <a class="btn" href="{PLAY_URL}" rel="noopener">{c["cta_play"]}</a>
+    <a class="btn ghost" href="#how">{c["cta_primary"]}</a>
     <a class="btn ghost" href="blog/">{c["cta_secondary"]}</a>
   </div>
   <p class="note">{c["note"]}</p>
+  <a class="featured" href="{FEATURED_VIDEO}" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+    <span><strong>{c["featured_label"]}</strong><br>{c["featured_text"]}</span>
+  </a>
 </div>
 
 <section id="problem">

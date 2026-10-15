@@ -36,9 +36,12 @@ LANDING["es"] = {
     "lede": "El ticket del parking, la factura, la pizarra de una reunión. "
             "Google Fotos sube tu carrete entero o no sube nada. Snapgate mete "
             "un portero en medio.",
+    "cta_play": "Descargar en Google Play",
     "cta_primary": "Cómo funciona",
     "cta_secondary": "Por qué la hicimos",
     "note": "Android 11 o superior · Pago único, sin suscripción",
+    "featured_label": "Elegida por HowToMen",
+    "featured_text": "Entre las 15 mejores apps de Android de octubre de 2026 · Ver en YouTube",
 
     "problem_h2": "El problema no es tu cámara, es el todo o nada",
     "problem_sub": "La copia de seguridad de Google Fotos solo tiene dos "
@@ -147,9 +150,12 @@ LANDING["en"] = {
     "lede": "The parking ticket, the receipt, a meeting whiteboard. Google Photos "
             "backs up your entire camera roll, or none of it. Snapgate puts a gate "
             "in between.",
+    "cta_play": "Get it on Google Play",
     "cta_primary": "How it works",
     "cta_secondary": "Why we built it",
     "note": "Android 11 or later · One-time purchase, no subscription",
+    "featured_label": "Featured by HowToMen",
+    "featured_text": "One of the Top 15 Best Android Apps of October 2026 · Watch on YouTube",
 
     "problem_h2": "The problem isn't your camera, it's all-or-nothing",
     "problem_sub": "Google Photos backup has exactly two states: on for an entire "
@@ -261,9 +267,12 @@ LANDING["pt"] = {
     "lede": "O bilhete do estacionamento, a fatura, o quadro de uma reunião. "
             "O Google Fotos guarda o rolo inteiro ou não guarda nada. O Snapgate "
             "põe um porteiro pelo meio.",
+    "cta_play": "Obter no Google Play",
     "cta_primary": "Como funciona",
     "cta_secondary": "Porque a criámos",
     "note": "Android 11 ou superior · Pagamento único, sem subscrição",
+    "featured_label": "Escolhida pelo HowToMen",
+    "featured_text": "Entre as 15 melhores apps Android de outubro de 2026 · Ver no YouTube",
 
     "problem_h2": "O problema não é a câmara, é o tudo ou nada",
     "problem_sub": "A cópia de segurança do Google Fotos tem apenas dois estados: "
@@ -371,9 +380,12 @@ LANDING["fr"] = {
     "lede": "Le ticket de parking, la facture, le tableau blanc d'une réunion. "
             "Google Photos sauvegarde toute votre pellicule, ou rien. Snapgate place "
             "un portier au milieu.",
+    "cta_play": "Disponible sur Google Play",
     "cta_primary": "Comment ça marche",
     "cta_secondary": "Pourquoi nous l'avons créée",
     "note": "Android 11 ou plus · Achat unique, sans abonnement",
+    "featured_label": "Sélectionnée par HowToMen",
+    "featured_text": "Parmi les 15 meilleures applis Android d’octobre 2026 · Voir sur YouTube",
 
     "problem_h2": "Le problème n'est pas votre appareil, c'est le tout ou rien",
     "problem_sub": "La sauvegarde de Google Photos n'a que deux états : activée pour "
@@ -484,9 +496,12 @@ LANDING["de"] = {
     "lede": "Der Parkschein, die Rechnung, das Whiteboard aus einem Meeting. Google "
             "Fotos sichert deine ganze Kamerarolle — oder gar nichts. Snapgate setzt "
             "einen Türsteher dazwischen.",
+    "cta_play": "Jetzt bei Google Play",
     "cta_primary": "So funktioniert es",
     "cta_secondary": "Warum wir sie gebaut haben",
     "note": "Android 11 oder neuer · Einmalkauf, kein Abo",
+    "featured_label": "Vorgestellt von HowToMen",
+    "featured_text": "Unter den 15 besten Android-Apps im Oktober 2026 · Auf YouTube ansehen",
 
     "problem_h2": "Das Problem ist nicht die Kamera, sondern das Alles-oder-nichts",
     "problem_sub": "Die Sicherung von Google Fotos kennt genau zwei Zustände: an für "
@@ -595,9 +610,12 @@ LANDING["it"] = {
     "lede": "Il biglietto del parcheggio, la fattura, la lavagna di una riunione. "
             "Google Foto carica tutto il rullino, o niente. Snapgate mette un portiere "
             "in mezzo.",
+    "cta_play": "Disponibile su Google Play",
     "cta_primary": "Come funziona",
     "cta_secondary": "Perché l'abbiamo fatta",
     "note": "Android 11 o successivo · Acquisto unico, senza abbonamento",
+    "featured_label": "Scelta da HowToMen",
+    "featured_text": "Tra le 15 migliori app Android di ottobre 2026 · Guarda su YouTube",
 
     "problem_h2": "Il problema non è la fotocamera, è il tutto o niente",
     "problem_sub": "Il backup di Google Foto ha esattamente due stati: attivo per "
