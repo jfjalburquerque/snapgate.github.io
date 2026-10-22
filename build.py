@@ -18,6 +18,7 @@ import shutil
 from content.site import LANGS, LANG_NAMES, UI, LANDING
 from content.legal import PRIVACY, TERMS
 from content.blog import POSTS, BLOG_INDEX
+from content.press import PRESS
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_LANG = "en"
@@ -97,7 +98,7 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
       <a href="{up}{lang}/privacy.html">{ui["nav_privacy"]}</a>
       <a href="{up}{lang}/terms.html">{ui["nav_terms"]}</a>
       <a href="{up}{lang}/blog/">{ui["nav_blog"]}</a>
-      <a href="https://github.com/jfjalburquerque/snapgate">GitHub</a>
+      <a href="{up}en/press.html">{ui["nav_press"]}</a>
     </div>
   </div>
 </footer>
@@ -113,6 +114,9 @@ PLAY_URL = "https://play.google.com/store/apps/details?id=com.snapgate.app"
 # de Google al abrir la pagina, y la web promete no descargar nada de terceros.
 FEATURED_VIDEO = "https://www.youtube.com/watch?v=TYNzg59ke30&amp;t=61s"
 
+# Mismo orden que en Play. Los textos alternativos viven en content/site.py.
+SHOT_NAMES = ["01-notif", "02-selection", "03-features", "04-onb1"]
+
 
 def landing_html(lang):
     c = LANDING[lang]
@@ -124,6 +128,13 @@ def landing_html(lang):
     )
     faq = "".join(
         f"<h3>{q}</h3><p>{a}</p>" for q, a in c["faq"]
+    )
+    # Las capturas de Play ya llevan su titular en el idioma de la pagina; las
+    # que se sirven aqui son las copias ligeras de tools/web_shots.py.
+    shots = "".join(
+        f'<img src="../assets/web/shots/{lang}/{name}.webp" width="540" height="960" '
+        f'loading="lazy" alt="{alt}">'
+        for name, alt in zip(SHOT_NAMES, c["shots"])
     )
 
     body = f"""
@@ -142,6 +153,13 @@ def landing_html(lang):
     <span><strong>{c["featured_label"]}</strong><br>{c["featured_text"]}</span>
   </a>
 </div>
+
+<section id="screens">
+  <div class="wrap">
+    <h2>{c["shots_h2"]}</h2>
+    <div class="shots">{shots}</div>
+  </div>
+</section>
 
 <section id="problem">
   <div class="wrap">
@@ -255,6 +273,10 @@ def main():
                 write(os.path.join(base, "blog", post["slug"] + ".html"),
                       post_html(lang, post))
                 written += 1
+
+    # Prensa solo en ingles; los pies de todos los idiomas apuntan aqui.
+    write(os.path.join(ROOT, "en", "press.html"), page_html("en", PRESS))
+    written += 1
 
     # Raiz: reparte segun el idioma del navegador. Se hace en cliente porque
     # Pages no permite negociacion de contenido en el servidor.

@@ -24,6 +24,7 @@ UI["es"] = {
     "nav_privacy": "Privacidad",
     "nav_terms": "Términos",
     "nav_blog": "Blog",
+    "nav_press": "Prensa",
     "footer_tagline": "tú decides qué sube a la nube",
     "footer_rights": "Hecho en España.",
 }
@@ -42,6 +43,15 @@ LANDING["es"] = {
     "note": "Android 11 o superior · Pago único, sin suscripción",
     "featured_label": "Elegida por HowToMen",
     "featured_text": "Entre las 15 mejores apps de Android de octubre de 2026 · Ver en YouTube",
+
+    "shots_h2": "Así se ve",
+    # Texto alternativo de cada captura: el mismo titular que lleva dentro.
+    "shots": [
+        "Decide desde la notificación",
+        "O repasa por tandas",
+        "Reglas que deciden por ti",
+        "Tu nube deja de llenarse",
+    ],
 
     "problem_h2": "El problema no es tu cámara, es el todo o nada",
     "problem_sub": "La copia de seguridad de Google Fotos solo tiene dos "
@@ -138,6 +148,7 @@ UI["en"] = {
     "nav_privacy": "Privacy",
     "nav_terms": "Terms",
     "nav_blog": "Blog",
+    "nav_press": "Press",
     "footer_tagline": "you decide what reaches the cloud",
     "footer_rights": "Made in Spain.",
 }
@@ -156,6 +167,15 @@ LANDING["en"] = {
     "note": "Android 11 or later · One-time purchase, no subscription",
     "featured_label": "Featured by HowToMen",
     "featured_text": "One of the Top 15 Best Android Apps of October 2026 · Watch on YouTube",
+
+    "shots_h2": "What it looks like",
+    # Texto alternativo de cada captura: el mismo titular que lleva dentro.
+    "shots": [
+        "Decide from the notification",
+        "Or review in batches",
+        "Rules that decide for you",
+        "Your cloud stops filling up",
+    ],
 
     "problem_h2": "The problem isn't your camera, it's all-or-nothing",
     "problem_sub": "Google Photos backup has exactly two states: on for an entire "
@@ -255,6 +275,7 @@ UI["pt"] = {
     "nav_privacy": "Privacidade",
     "nav_terms": "Termos",
     "nav_blog": "Blog",
+    "nav_press": "Imprensa",
     "footer_tagline": "decides tu o que vai para a nuvem",
     "footer_rights": "Feito em Espanha.",
 }
@@ -273,6 +294,15 @@ LANDING["pt"] = {
     "note": "Android 11 ou superior · Pagamento único, sem subscrição",
     "featured_label": "Escolhida pelo HowToMen",
     "featured_text": "Entre as 15 melhores apps Android de outubro de 2026 · Ver no YouTube",
+
+    "shots_h2": "Assim se vê",
+    # Texto alternativo de cada captura: el mismo titular que lleva dentro.
+    "shots": [
+        "Decide a partir da notificação",
+        "Ou revê por lotes",
+        "Regras que decidem por ti",
+        "A tua nuvem deixa de encher",
+    ],
 
     "problem_h2": "O problema não é a câmara, é o tudo ou nada",
     "problem_sub": "A cópia de segurança do Google Fotos tem apenas dois estados: "
@@ -368,6 +398,7 @@ UI["fr"] = {
     "nav_privacy": "Confidentialité",
     "nav_terms": "Conditions",
     "nav_blog": "Blog",
+    "nav_press": "Presse",
     "footer_tagline": "vous décidez de ce qui monte dans le cloud",
     "footer_rights": "Conçu en Espagne.",
 }
@@ -386,6 +417,15 @@ LANDING["fr"] = {
     "note": "Android 11 ou plus · Achat unique, sans abonnement",
     "featured_label": "Sélectionnée par HowToMen",
     "featured_text": "Parmi les 15 meilleures applis Android d’octobre 2026 · Voir sur YouTube",
+
+    "shots_h2": "À quoi ça ressemble",
+    # Texto alternativo de cada captura: el mismo titular que lleva dentro.
+    "shots": [
+        "Décidez depuis la notification",
+        "Ou passez-les en revue par lots",
+        "Des règles qui décident pour vous",
+        "Votre cloud cesse de se remplir",
+    ],
 
     "problem_h2": "Le problème n'est pas votre appareil, c'est le tout ou rien",
     "problem_sub": "La sauvegarde de Google Photos n'a que deux états : activée pour "
@@ -483,6 +523,7 @@ UI["de"] = {
     "nav_privacy": "Datenschutz",
     "nav_terms": "Bedingungen",
     "nav_blog": "Blog",
+    "nav_press": "Presse",
     "footer_tagline": "du entscheidest, was in die Cloud geht",
     "footer_rights": "Gemacht in Spanien.",
 }
@@ -502,6 +543,15 @@ LANDING["de"] = {
     "note": "Android 11 oder neuer · Einmalkauf, kein Abo",
     "featured_label": "Vorgestellt von HowToMen",
     "featured_text": "Unter den 15 besten Android-Apps im Oktober 2026 · Auf YouTube ansehen",
+
+    "shots_h2": "So sieht es aus",
+    # Texto alternativo de cada captura: el mismo titular que lleva dentro.
+    "shots": [
+        "Entscheide aus der Benachrichtigung",
+        "Oder stapelweise prüfen",
+        "Regeln, die für dich entscheiden",
+        "Deine Cloud füllt sich nicht mehr",
+    ],
 
     "problem_h2": "Das Problem ist nicht die Kamera, sondern das Alles-oder-nichts",
     "problem_sub": "Die Sicherung von Google Fotos kennt genau zwei Zustände: an für "
@@ -598,6 +648,7 @@ UI["it"] = {
     "nav_privacy": "Privacy",
     "nav_terms": "Termini",
     "nav_blog": "Blog",
+    "nav_press": "Stampa",
     "footer_tagline": "decidi tu cosa finisce nel cloud",
     "footer_rights": "Fatto in Spagna.",
 }
@@ -616,6 +667,15 @@ LANDING["it"] = {
     "note": "Android 11 o successivo · Acquisto unico, senza abbonamento",
     "featured_label": "Scelta da HowToMen",
     "featured_text": "Tra le 15 migliori app Android di ottobre 2026 · Guarda su YouTube",
+
+    "shots_h2": "Ecco com’è",
+    # Texto alternativo de cada captura: el mismo titular que lleva dentro.
+    "shots": [
+        "Decidi dalla notifica",
+        "O rivedi a gruppi",
+        "Regole che decidono per te",
+        "Il tuo cloud smette di riempirsi",
+    ],
 
     "problem_h2": "Il problema non è la fotocamera, è il tutto o niente",
     "problem_sub": "Il backup di Google Foto ha esattamente due stati: attivo per "

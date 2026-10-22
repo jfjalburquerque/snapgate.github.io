@@ -225,3 +225,23 @@ footer.site .links { display: flex; gap: 20px; flex-wrap: wrap; }
   .hero { padding-top: 58px; padding-bottom: 48px; }
   section { padding: 52px 0; }
 }
+
+/* --- Capturas --- */
+
+/* Cuatro en fila en escritorio. En movil no caben sin quedar diminutas, asi
+   que la fila se desplaza de lado dentro de su caja en vez de apilarse. */
+.shots {
+  display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.shots img, .shots a img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--line); border-radius: 14px;
+}
+@media (max-width: 760px) {
+  .shots {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 62%;
+    overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px;
+  }
+  .shots > * { scroll-snap-align: start; }
+}
+.page .shots { margin: 22px 0 30px; }
