@@ -98,7 +98,7 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
       <a href="{up}{lang}/privacy.html">{ui["nav_privacy"]}</a>
       <a href="{up}{lang}/terms.html">{ui["nav_terms"]}</a>
       <a href="{up}{lang}/blog/">{ui["nav_blog"]}</a>
-      <a href="{up}en/press.html">{ui["nav_press"]}</a>
+      <a href="{up}{lang}/press.html">{ui["nav_press"]}</a>
     </div>
   </div>
 </footer>
@@ -265,18 +265,15 @@ def main():
         write(os.path.join(base, "index.html"), landing_html(lang))
         write(os.path.join(base, "privacy.html"), page_html(lang, PRIVACY[lang]))
         write(os.path.join(base, "terms.html"), page_html(lang, TERMS[lang]))
+        write(os.path.join(base, "press.html"), page_html(lang, PRESS[lang]))
         write(os.path.join(base, "blog", "index.html"), blog_index_html(lang))
-        written += 4
+        written += 5
 
         for post in POSTS:
             if lang in post["langs"]:
                 write(os.path.join(base, "blog", post["slug"] + ".html"),
                       post_html(lang, post))
                 written += 1
-
-    # Prensa solo en ingles; los pies de todos los idiomas apuntan aqui.
-    write(os.path.join(ROOT, "en", "press.html"), page_html("en", PRESS))
-    written += 1
 
     # Raiz: reparte segun el idioma del navegador. Se hace en cliente porque
     # Pages no permite negociacion de contenido en el servidor.
