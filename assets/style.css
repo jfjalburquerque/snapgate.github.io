@@ -245,3 +245,7 @@ footer.site .links { display: flex; gap: 20px; flex-wrap: wrap; }
   .shots > * { scroll-snap-align: start; }
 }
 .page .shots { margin: 22px 0 30px; }
+
+/* Resto de la cobertura, debajo del sello de HowToMen: que se vea, sin competir con el. */
+.also { color: var(--ink-faint); font-size: 14px; margin: 12px 0 0; }
+.also a { color: var(--ink-soft); }

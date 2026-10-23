@@ -18,14 +18,17 @@ PLAY_URL = "https://play.google.com/store/apps/details?id=com.snapgate.app"
 SHOT_NAMES = ["01-notif", "02-selection", "03-features", "04-onb1"]
 
 # Cobertura, de la mas reciente a la mas antigua. El titulo se deja en su
-# idioma original: es el que el lector encontrara si sigue el enlace.
+# idioma original: es el que el lector encontrara si sigue el enlace. El nombre
+# corto es el que sale en la portada, en la linea de «tambien en».
 COVERAGE = [
+    ("https://www.youtube.com/watch?v=urBE-pYEg-k",
+     "Gadgets One Malayalam: 5 Must-Try Android Apps October", "in", "Gadgets One"),
     ("https://www.bug.hr/appdana/snapgate-omogucuje-biranje-koje-ce-fotografije-zavrsiti-u-google-photosu-63479",
-     "Bug.hr: App dana", "hr"),
+     "Bug.hr: App dana", "hr", "Bug.hr"),
     ("https://www.youtube.com/watch?v=P_iMZNBO7lk",
-     "9TUENG: Snapgate", "th"),
+     "9TUENG: Snapgate", "th", "9TUENG"),
     ("https://www.youtube.com/watch?v=TYNzg59ke30&amp;t=61s",
-     "HowToMen: Top 15 Best Android Apps, October 2026", "yt"),
+     "HowToMen: Top 15 Best Android Apps, October 2026", "yt", "HowToMen"),
 ]
 
 T = {}
@@ -72,7 +75,7 @@ T["en"] = {
     "logo_dark": "Logo for dark backgrounds",
     "feature": "Feature graphic",
     "coverage_h2": "Coverage",
-    "where": {"hr": "Croatia", "th": "YouTube, Thailand", "yt": "YouTube"},
+    "where": {"hr": "Croatia", "th": "YouTube, Thailand", "yt": "YouTube", "in": "YouTube, India"},
     "contact_h2": "Contact",
     "contact": "Questions, interviews or a free unlock code for review:",
     "reply": "I usually answer within a day.",
@@ -122,7 +125,7 @@ T["es"] = {
     "logo_dark": "Logotipo para fondos oscuros",
     "feature": "Gráfico de cabecera",
     "coverage_h2": "Cobertura",
-    "where": {"hr": "Croacia", "th": "YouTube, Tailandia", "yt": "YouTube"},
+    "where": {"hr": "Croacia", "th": "YouTube, Tailandia", "yt": "YouTube", "in": "YouTube, India"},
     "contact_h2": "Contacto",
     "contact": "Preguntas, entrevistas o un código de desbloqueo gratuito para hacer una reseña:",
     "reply": "Suelo responder en menos de un día.",
@@ -173,7 +176,7 @@ T["pt"] = {
     "logo_dark": "Logótipo para fundos escuros",
     "feature": "Gráfico de destaque",
     "coverage_h2": "Cobertura",
-    "where": {"hr": "Croácia", "th": "YouTube, Tailândia", "yt": "YouTube"},
+    "where": {"hr": "Croácia", "th": "YouTube, Tailândia", "yt": "YouTube", "in": "YouTube, Índia"},
     "contact_h2": "Contacto",
     "contact": "Perguntas, entrevistas ou um código de desbloqueio gratuito para análise:",
     "reply": "Costumo responder em menos de um dia.",
@@ -224,7 +227,7 @@ T["fr"] = {
     "logo_dark": "Logo pour fonds sombres",
     "feature": "Bannière",
     "coverage_h2": "Couverture",
-    "where": {"hr": "Croatie", "th": "YouTube, Thaïlande", "yt": "YouTube"},
+    "where": {"hr": "Croatie", "th": "YouTube, Thaïlande", "yt": "YouTube", "in": "YouTube, Inde"},
     "contact_h2": "Contact",
     "contact": "Questions, interviews ou un code de déverrouillage gratuit pour un test :",
     "reply": "Je réponds en général sous un jour.",
@@ -274,7 +277,7 @@ T["de"] = {
     "logo_dark": "Logo für dunkle Hintergründe",
     "feature": "Vorstellungsgrafik",
     "coverage_h2": "Berichterstattung",
-    "where": {"hr": "Kroatien", "th": "YouTube, Thailand", "yt": "YouTube"},
+    "where": {"hr": "Kroatien", "th": "YouTube, Thailand", "yt": "YouTube", "in": "YouTube, Indien"},
     "contact_h2": "Kontakt",
     "contact": "Fragen, Interviews oder ein kostenloser Freischaltcode für einen Test:",
     "reply": "Ich antworte meist innerhalb eines Tages.",
@@ -324,7 +327,7 @@ T["it"] = {
     "logo_dark": "Logo per sfondi scuri",
     "feature": "Immagine in evidenza",
     "coverage_h2": "Copertura",
-    "where": {"hr": "Croazia", "th": "YouTube, Thailandia", "yt": "YouTube"},
+    "where": {"hr": "Croazia", "th": "YouTube, Thailandia", "yt": "YouTube", "in": "YouTube, India"},
     "contact_h2": "Contatti",
     "contact": "Domande, interviste o un codice di sblocco gratuito per una recensione:",
     "reply": "Di solito rispondo entro un giorno.",
@@ -353,7 +356,7 @@ def _body(lang):
     # El grafico de cabecera existe en los seis idiomas; se da el de la pagina.
     coverage = "".join(
         f'<li><a href="{url}">{title}</a> ({t["where"][where]})</li>'
-        for url, title, where in COVERAGE
+        for url, title, where, _ in COVERAGE
     )
     return f"""
 <h2>{t["line_h2"]}</h2>

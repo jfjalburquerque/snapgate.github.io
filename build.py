@@ -18,7 +18,7 @@ import shutil
 from content.site import LANGS, LANG_NAMES, UI, LANDING
 from content.legal import PRIVACY, TERMS
 from content.blog import POSTS, BLOG_INDEX
-from content.press import PRESS
+from content.press import PRESS, COVERAGE
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_LANG = "en"
@@ -137,6 +137,13 @@ def landing_html(lang):
         for name, alt in zip(SHOT_NAMES, c["shots"])
     )
 
+    # HowToMen ya tiene su sello; el resto de la cobertura va en una sola linea
+    # discreta debajo, con el nombre corto de cada medio.
+    also = " · ".join(
+        f'<a href="{url}" rel="noopener">{short}</a>'
+        for url, _, _, short in COVERAGE if short != "HowToMen"
+    )
+
     body = f"""
 <div class="wrap hero">
   <img class="app-icon" src="../assets/brand/mark-512.png" alt="Snapgate">
@@ -152,6 +159,7 @@ def landing_html(lang):
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
     <span><strong>{c["featured_label"]}</strong><br>{c["featured_text"]}</span>
   </a>
+  <p class="also">{c["also_label"]}: {also}</p>
 </div>
 
 <section id="screens">

@@ -43,6 +43,7 @@ LANDING["es"] = {
     "note": "Android 11 o superior · Pago único, sin suscripción",
     "featured_label": "Elegida por HowToMen",
     "featured_text": "Entre las 15 mejores apps de Android de octubre de 2026 · Ver en YouTube",
+    "also_label": "También en",
 
     "shots_h2": "Así se ve",
     # Texto alternativo de cada captura: el mismo titular que lleva dentro.
@@ -167,6 +168,7 @@ LANDING["en"] = {
     "note": "Android 11 or later · One-time purchase, no subscription",
     "featured_label": "Featured by HowToMen",
     "featured_text": "One of the Top 15 Best Android Apps of October 2026 · Watch on YouTube",
+    "also_label": "Also featured on",
 
     "shots_h2": "What it looks like",
     # Texto alternativo de cada captura: el mismo titular que lleva dentro.
@@ -294,6 +296,7 @@ LANDING["pt"] = {
     "note": "Android 11 ou superior · Pagamento único, sem subscrição",
     "featured_label": "Escolhida pelo HowToMen",
     "featured_text": "Entre as 15 melhores apps Android de outubro de 2026 · Ver no YouTube",
+    "also_label": "Também em",
 
     "shots_h2": "Assim se vê",
     # Texto alternativo de cada captura: el mismo titular que lleva dentro.
@@ -417,6 +420,7 @@ LANDING["fr"] = {
     "note": "Android 11 ou plus · Achat unique, sans abonnement",
     "featured_label": "Sélectionnée par HowToMen",
     "featured_text": "Parmi les 15 meilleures applis Android d’octobre 2026 · Voir sur YouTube",
+    "also_label": "Également sur",
 
     "shots_h2": "À quoi ça ressemble",
     # Texto alternativo de cada captura: el mismo titular que lleva dentro.
@@ -543,6 +547,7 @@ LANDING["de"] = {
     "note": "Android 11 oder neuer · Einmalkauf, kein Abo",
     "featured_label": "Vorgestellt von HowToMen",
     "featured_text": "Unter den 15 besten Android-Apps im Oktober 2026 · Auf YouTube ansehen",
+    "also_label": "Auch bei",
 
     "shots_h2": "So sieht es aus",
     # Texto alternativo de cada captura: el mismo titular que lleva dentro.
@@ -667,6 +672,7 @@ LANDING["it"] = {
     "note": "Android 11 o successivo · Acquisto unico, senza abbonamento",
     "featured_label": "Scelta da HowToMen",
     "featured_text": "Tra le 15 migliori app Android di ottobre 2026 · Guarda su YouTube",
+    "also_label": "Anche su",
 
     "shots_h2": "Ecco com’è",
     # Texto alternativo de cada captura: el mismo titular que lleva dentro.
