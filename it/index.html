@@ -3,16 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snapgate · Decidi quali foto arrivano al tuo cloud</title>
-<meta name="description" content="Google Foto carica tutto il rullino o niente. Snapgate ti lascia decidere foto per foto, dalla notifica.">
-<meta property="og:title" content="Snapgate · Decidi quali foto arrivano al tuo cloud">
-<meta property="og:description" content="Google Foto carica tutto il rullino o niente. Snapgate ti lascia decidere foto per foto, dalla notifica.">
+<title>Snapgate · Scegli quali foto carica Google Foto, una a una</title>
+<meta name="description" content="Google Foto decide per cartelle: tutta la cartella della fotocamera o niente. Snapgate ti chiede di ogni foto mentre la scatti, dalla notifica.">
+<link rel="canonical" href="https://snapgate.app/it/">
+<meta property="og:title" content="Snapgate · Scegli quali foto carica Google Foto, una a una">
+<meta property="og:description" content="Google Foto decide per cartelle: tutta la cartella della fotocamera o niente. Snapgate ti chiede di ogni foto mentre la scatti, dalla notifica.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/brand/mark-512.png">
-<meta name="theme-color" content="#16a34a">
+<meta property="og:url" content="https://snapgate.app/it/">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Snapgate">
+<meta property="og:image" content="https://snapgate.app/assets/brand/og/it.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="icon" href="../assets/brand/mark-512.png">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/">
+<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/"><link rel="alternate" hreflang="x-default" href="https://snapgate.app/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://snapgate.app/#website",
+   "url": "https://snapgate.app/",
+   "name": "Snapgate",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://snapgate.app/#org",
+   "name": "Snapgate",
+   "url": "https://snapgate.app/",
+   "logo": "https://snapgate.app/assets/brand/mark-512.png",
+   "founder": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "sameAs": [
+    "https://play.google.com/store/apps/details?id=com.snapgate.app"
+   ]
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://snapgate.app/#app",
+   "name": "Snapgate",
+   "description": "Google Foto decide per cartelle: tutta la cartella della fotocamera o niente. Snapgate ti chiede di ogni foto mentre la scatti, dalla notifica.",
+   "url": "https://snapgate.app/it/",
+   "operatingSystem": "Android 11+",
+   "applicationCategory": "MultimediaApplication",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "installUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "downloadUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "image": "https://snapgate.app/assets/brand/mark-512.png",
+   "screenshot": [
+    "https://snapgate.app/assets/web/shots/it/01-notif.webp",
+    "https://snapgate.app/assets/web/shots/it/02-selection.webp",
+    "https://snapgate.app/assets/web/shots/it/03-features.webp",
+    "https://snapgate.app/assets/web/shots/it/04-onb1.webp"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "EUR"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -22,7 +105,7 @@
       <img src="../assets/brand/mark-512.png" alt="">
       <span>Snapgate</span>
     </a>
-    <nav class="main">
+    <nav class="main" aria-label="Navigazione principale">
       <a href="../it/#how" class="hide-sm">Come funziona</a>
       <a href="../it/privacy.html">Privacy</a>
       <a href="../it/blog/">Blog</a>
@@ -34,11 +117,12 @@
   </div>
 </header>
 
+<main>
 
 <div class="wrap hero">
   <img class="app-icon" src="../assets/brand/mark-512.png" alt="Snapgate">
   <h1>Il tuo cloud si riempie di foto che non volevi conservare</h1>
-  <p class="lede">Il biglietto del parcheggio, la fattura, la lavagna di una riunione. Google Foto carica tutto il rullino, o niente. Snapgate mette un portiere in mezzo.</p>
+  <p class="lede">Il biglietto del parcheggio, la fattura, la lavagna di una riunione. Finisce tutto nella stessa cartella della fotocamera, e Google Foto sa caricare solo cartelle intere. Snapgate mette un portiere in mezzo: ti chiede di ogni foto nel momento in cui la scatti.</p>
   <div class="cta">
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.snapgate.app" rel="noopener">Disponibile su Google Play</a>
     <a class="btn ghost" href="#how">Come funziona</a>
@@ -61,8 +145,8 @@
 
 <section id="problem">
   <div class="wrap">
-    <h2>Il problema non è la fotocamera, è il tutto o niente</h2>
-    <p class="sub">Il backup di Google Foto ha esattamente due stati: attivo per un'intera cartella, oppure spento. Non c'è via di mezzo, ed è per questo che il tuo spazio si riempie di cose fotografate per guardarle dieci minuti.</p>
+    <h2>Il problema non è la fotocamera, è che Google Foto decide per cartelle</h2>
+    <p class="sub">Google Foto ti lascia scegliere quali cartelle salvare e caricare singole foto a mano. Ma tutto ciò che scatti con la fotocamera finisce nella stessa cartella: la fattura viaggia con le vacanze, e scegliere a mano dopo è proprio ciò che nessuno fa. Per questo il tuo spazio si riempie di cose fotografate per guardarle dieci minuti.</p>
     <div class="callout"><p>Ci sono due modi di fermarlo: rivedere il rullino ogni tanto e cancellare a mano — cosa che non fa nessuno — oppure decidere sul momento. Snapgate è il secondo.</p></div>
   </div>
 </section>
@@ -105,16 +189,17 @@ pubblicità.</p>
 <section id="faq">
   <div class="wrap prose">
     <h2>Domande legittime</h2>
-    <h3>Devo disattivare il backup di Google Foto?</h3><p>Sì, ed è l'unico passo che nessun progetto può evitare. Finché è attivo, Google Foto carica tutto il rullino qualunque cosa faccia Snapgate. È un solo interruttore e la configurazione ti ci accompagna.</p><h3>E se non rispondo alla notifica?</h3><p>Non succede niente. La foto resta sul telefono, non viene caricata, e dopo qualche minuto smette di chiedertelo. Configurabile, cinque minuti di default.</p><h3>Cancella le mie foto?</h3><p>Mai. Scartare significa «non caricarla»; la foto resta nel rullino esattamente come prima.</p><h3>Perché serve una notifica permanente?</h3><p>Perché Android avvisa di una foto nuova solo le app in esecuzione. È il prezzo di saperlo subito invece che ogni quindici minuti. Puoi nasconderla dalle impostazioni di sistema.</p><h3>È un abbonamento?</h3><p>No. Quattordici giorni di prova, poi un acquisto unico.</p>
+    <h3>Google Foto non permette già di scegliere cosa caricare?</h3><p>In parte. Puoi attivare o disattivare il backup per cartella e caricare singole foto a mano. Quello che non fa è chiederti di ogni nuova foto: quelle della fotocamera vanno tutte insieme, e scegliere dopo vuol dire ricordarsene. Snapgate chiede sul momento, quando sai ancora perché l'hai scattata.</p><h3>Devo disattivare il backup di Google Foto?</h3><p>Sì, ed è l'unico passo che nessun progetto può evitare. Finché è attivo, Google Foto carica tutto il rullino qualunque cosa faccia Snapgate. È un solo interruttore e la configurazione ti ci accompagna.</p><h3>E se non rispondo alla notifica?</h3><p>Non succede niente. La foto resta sul telefono, non viene caricata, e dopo qualche minuto smette di chiedertelo. Configurabile, cinque minuti di default.</p><h3>Cancella le mie foto?</h3><p>Mai. Scartare significa «non caricarla»; la foto resta nel rullino esattamente come prima.</p><h3>Perché serve una notifica permanente?</h3><p>Perché Android avvisa di una foto nuova solo le app in esecuzione. È il prezzo di saperlo subito invece che ogni quindici minuti. Puoi nasconderla dalle impostazioni di sistema.</p><h3>È un abbonamento?</h3><p>No. Quattordici giorni di prova, poi un acquisto unico.</p>
   </div>
 </section>
 
+</main>
 
 <footer class="site">
   <div class="wrap cols">
     <div>
       <strong style="color:var(--ink-soft)">Snapgate</strong> · decidi tu cosa finisce nel cloud<br>
-      <span>© 2026. Fatto in Spagna.</span>
+      <span>© 2026. Fatto in Spagna da jfjalburquerque.</span>
     </div>
     <div class="links">
       <a href="../it/privacy.html">Privacy</a>

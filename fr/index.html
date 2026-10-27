@@ -3,16 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snapgate · Choisissez les photos qui montent dans votre cloud</title>
-<meta name="description" content="Google Photos sauvegarde toute votre pellicule ou rien du tout. Snapgate vous laisse décider photo par photo, depuis la notification.">
-<meta property="og:title" content="Snapgate · Choisissez les photos qui montent dans votre cloud">
-<meta property="og:description" content="Google Photos sauvegarde toute votre pellicule ou rien du tout. Snapgate vous laisse décider photo par photo, depuis la notification.">
+<title>Snapgate · Choisissez les photos que Google Photos sauvegarde</title>
+<meta name="description" content="Google Photos décide par dossier : tout le dossier de l'appareil photo, ou rien. Snapgate vous demande pour chaque photo, au moment de la prendre, depuis la notification.">
+<link rel="canonical" href="https://snapgate.app/fr/">
+<meta property="og:title" content="Snapgate · Choisissez les photos que Google Photos sauvegarde">
+<meta property="og:description" content="Google Photos décide par dossier : tout le dossier de l'appareil photo, ou rien. Snapgate vous demande pour chaque photo, au moment de la prendre, depuis la notification.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/brand/mark-512.png">
-<meta name="theme-color" content="#16a34a">
+<meta property="og:url" content="https://snapgate.app/fr/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Snapgate">
+<meta property="og:image" content="https://snapgate.app/assets/brand/og/fr.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="icon" href="../assets/brand/mark-512.png">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/">
+<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/"><link rel="alternate" hreflang="x-default" href="https://snapgate.app/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://snapgate.app/#website",
+   "url": "https://snapgate.app/",
+   "name": "Snapgate",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://snapgate.app/#org",
+   "name": "Snapgate",
+   "url": "https://snapgate.app/",
+   "logo": "https://snapgate.app/assets/brand/mark-512.png",
+   "founder": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "sameAs": [
+    "https://play.google.com/store/apps/details?id=com.snapgate.app"
+   ]
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://snapgate.app/#app",
+   "name": "Snapgate",
+   "description": "Google Photos décide par dossier : tout le dossier de l'appareil photo, ou rien. Snapgate vous demande pour chaque photo, au moment de la prendre, depuis la notification.",
+   "url": "https://snapgate.app/fr/",
+   "operatingSystem": "Android 11+",
+   "applicationCategory": "MultimediaApplication",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "installUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "downloadUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "image": "https://snapgate.app/assets/brand/mark-512.png",
+   "screenshot": [
+    "https://snapgate.app/assets/web/shots/fr/01-notif.webp",
+    "https://snapgate.app/assets/web/shots/fr/02-selection.webp",
+    "https://snapgate.app/assets/web/shots/fr/03-features.webp",
+    "https://snapgate.app/assets/web/shots/fr/04-onb1.webp"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "EUR"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -22,7 +105,7 @@
       <img src="../assets/brand/mark-512.png" alt="">
       <span>Snapgate</span>
     </a>
-    <nav class="main">
+    <nav class="main" aria-label="Navigation principale">
       <a href="../fr/#how" class="hide-sm">Comment ça marche</a>
       <a href="../fr/privacy.html">Confidentialité</a>
       <a href="../fr/blog/">Blog</a>
@@ -34,11 +117,12 @@
   </div>
 </header>
 
+<main>
 
 <div class="wrap hero">
   <img class="app-icon" src="../assets/brand/mark-512.png" alt="Snapgate">
   <h1>Votre cloud se remplit de photos que vous ne vouliez pas garder</h1>
-  <p class="lede">Le ticket de parking, la facture, le tableau blanc d'une réunion. Google Photos sauvegarde toute votre pellicule, ou rien. Snapgate place un portier au milieu.</p>
+  <p class="lede">Le ticket de parking, la facture, le tableau blanc d'une réunion. Tout finit dans le même dossier de l'appareil photo, et Google Photos ne sait sauvegarder que des dossiers entiers. Snapgate place un portier au milieu : il vous demande pour chaque photo, au moment où vous la prenez.</p>
   <div class="cta">
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.snapgate.app" rel="noopener">Disponible sur Google Play</a>
     <a class="btn ghost" href="#how">Comment ça marche</a>
@@ -61,8 +145,8 @@
 
 <section id="problem">
   <div class="wrap">
-    <h2>Le problème n'est pas votre appareil, c'est le tout ou rien</h2>
-    <p class="sub">La sauvegarde de Google Photos n'a que deux états : activée pour un dossier entier, ou désactivée. Aucun intermédiaire, et c'est pourquoi votre stockage se remplit de choses photographiées pour être regardées dix minutes.</p>
+    <h2>Le problème n'est pas votre appareil, c'est que Google Photos décide par dossier</h2>
+    <p class="sub">Google Photos vous laisse choisir les dossiers sauvegardés et envoyer des photos à la main. Mais tout ce que vous prenez avec l'appareil photo va dans le même dossier : la facture voyage avec les vacances, et trier à la main après coup, personne ne le fait. C'est pourquoi votre stockage se remplit de choses photographiées pour être regardées dix minutes.</p>
     <div class="callout"><p>Deux façons d'arrêter l'hémorragie : trier sa pellicule régulièrement et supprimer à la main — ce que personne ne fait — ou décider sur le moment. Snapgate, c'est la seconde.</p></div>
   </div>
 </section>
@@ -106,16 +190,17 @@ vous le demandez.</p>
 <section id="faq">
   <div class="wrap prose">
     <h2>Questions légitimes</h2>
-    <h3>Dois-je désactiver la sauvegarde de Google Photos ?</h3><p>Oui, et c'est la seule étape qu'aucune conception ne peut éviter. Tant qu'elle est active, Google Photos envoie toute votre pellicule quoi que fasse Snapgate. C'est un seul interrupteur et la configuration vous y mène.</p><h3>Et si je ne réponds pas à la notification ?</h3><p>Rien de grave. La photo reste sur le téléphone, n'est pas envoyée, et après quelques minutes elle cesse de vous solliciter. Configurable, cinq minutes par défaut.</p><h3>Est-ce que ça supprime mes photos ?</h3><p>Jamais. Écarter signifie « ne l'envoie pas » ; la photo reste dans votre pellicule exactement comme avant.</p><h3>Pourquoi une notification permanente ?</h3><p>Parce qu'Android ne signale une nouvelle photo qu'aux apps en cours d'exécution. C'est le prix d'être averti immédiatement. Vous pouvez la masquer depuis les réglages système.</p><h3>Est-ce un abonnement ?</h3><p>Non. Quatorze jours d'essai, puis un achat unique.</p>
+    <h3>Google Photos ne permet-il pas déjà de choisir ce qui est sauvegardé ?</h3><p>En partie. Vous pouvez activer ou désactiver la sauvegarde par dossier et envoyer des photos à la main. Ce qu'il ne fait pas, c'est vous demander pour chaque nouvelle photo : celles de l'appareil photo partent toutes ensemble, et trier après coup suppose d'y penser. Snapgate demande sur le moment, quand vous savez encore pourquoi vous l'avez prise.</p><h3>Dois-je désactiver la sauvegarde de Google Photos ?</h3><p>Oui, et c'est la seule étape qu'aucune conception ne peut éviter. Tant qu'elle est active, Google Photos envoie toute votre pellicule quoi que fasse Snapgate. C'est un seul interrupteur et la configuration vous y mène.</p><h3>Et si je ne réponds pas à la notification ?</h3><p>Rien de grave. La photo reste sur le téléphone, n'est pas envoyée, et après quelques minutes elle cesse de vous solliciter. Configurable, cinq minutes par défaut.</p><h3>Est-ce que ça supprime mes photos ?</h3><p>Jamais. Écarter signifie « ne l'envoie pas » ; la photo reste dans votre pellicule exactement comme avant.</p><h3>Pourquoi une notification permanente ?</h3><p>Parce qu'Android ne signale une nouvelle photo qu'aux apps en cours d'exécution. C'est le prix d'être averti immédiatement. Vous pouvez la masquer depuis les réglages système.</p><h3>Est-ce un abonnement ?</h3><p>Non. Quatorze jours d'essai, puis un achat unique.</p>
   </div>
 </section>
 
+</main>
 
 <footer class="site">
   <div class="wrap cols">
     <div>
       <strong style="color:var(--ink-soft)">Snapgate</strong> · vous décidez de ce qui monte dans le cloud<br>
-      <span>© 2026. Conçu en Espagne.</span>
+      <span>© 2026. Conçu en Espagne par jfjalburquerque.</span>
     </div>
     <div class="links">
       <a href="../fr/privacy.html">Confidentialité</a>

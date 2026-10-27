@@ -258,6 +258,192 @@ def feature_graphic(lang="es"):
     return canvas
 
 
+# Tarjeta para compartir enlaces (og:image). El reclamo es el titulo de la
+# portada, y la notificacion usa los textos reales de la app en cada idioma,
+# los mismos que se ven en la primera captura de Play.
+OG_TEXT = {
+    "es": ("Elige qué fotos sube Google Fotos, una a una",
+           "Android 11+ · Pago único · Sin servidores",
+           ("10 fotos sin subir", "Elige cuáles suben", "Descartar", "Subir")),
+    "en": ("Choose which photos Google Photos backs up",
+           "Android 11+ · One-time purchase · No servers",
+           ("10 photos not uploaded", "Choose which ones upload", "Discard", "Upload")),
+    "pt": ("Escolhe as fotos que o Google Fotos guarda",
+           "Android 11+ · Pagamento único · Sem servidores",
+           ("10 fotos por enviar", "Escolhe quais são enviadas", "Descartar", "Enviar")),
+    "fr": ("Choisissez les photos que Google Photos sauvegarde",
+           "Android 11+ · Achat unique · Sans serveurs",
+           ("10 photos non envoyées", "Choisissez lesquelles partent", "Écarter", "Envoyer")),
+    "de": ("Entscheide, welche Fotos Google Fotos sichert",
+           "Android 11+ · Einmalkauf · Keine Server",
+           ("10 Fotos nicht hochgeladen", "Wähle aus, was hochlädt", "Verwerfen", "Hochladen")),
+    "it": ("Scegli quali foto carica Google Foto, una a una",
+           "Android 11+ · Acquisto unico · Senza server",
+           ("10 foto non caricate", "Scegli quali caricare", "Scarta", "Carica")),
+}
+
+
+def wrap(draw, text, font, width):
+    lines, line = [], ""
+    for word in text.split():
+        probe = f"{line} {word}".strip()
+        if line and draw.textlength(probe, font=font) > width:
+            lines.append(line)
+            line = word
+        else:
+            line = probe
+    return lines + [line]
+
+
+def landscape(size, sky, hills, sun=None):
+    """Miniatura de paisaje como las de las capturas: cielo, sol y dos colinas."""
+    w, h = size
+    img = Image.new("RGB", size, sky)
+    d = ImageDraw.Draw(img)
+    if sun:
+        d.ellipse((w * 0.68, h * 0.10, w * 0.86, h * 0.28), fill=sun)
+    d.ellipse((-w * 0.3, h * 0.55, w * 0.7, h * 1.5), fill=hills[0])
+    d.ellipse((w * 0.35, h * 0.50, w * 1.35, h * 1.5), fill=hills[0])
+    d.ellipse((-w * 0.1, h * 0.72, w * 1.1, h * 1.7), fill=hills[1])
+    return img
+
+
+def document(size):
+    """Miniatura de un documento fotografiado: la clase de foto que sobra."""
+    w, h = size
+    img = Image.new("RGB", size, (250, 249, 244))
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, 0, int(w * 0.07), h), fill=(52, 50, 48))
+    d.rectangle((int(w * 0.93), 0, w, h), fill=(52, 50, 48))
+    y = h * 0.12
+    for i in range(9):
+        d.rectangle((w * 0.16, y, w * (0.80 if i % 3 else 0.62), y + h * 0.025),
+                    fill=(120, 120, 120))
+        y += h * 0.075
+    return img
+
+
+def og_card(lang="es"):
+    """1200 x 630, el tamano que esperan las vistas previas de enlaces.
+
+    Se dibuja a 2x y se reduce al final para que el texto pequeno de la
+    notificacion salga limpio.
+    """
+    K = 2
+    W, H = 1200 * K, 630 * K
+    claim, sub, (n_title, n_text, n_discard, n_upload) = OG_TEXT[lang]
+
+    canvas = Image.new("RGB", (W, H))
+    gd = ImageDraw.Draw(canvas)
+    for y in range(H):
+        t = y / H
+        gd.line([(0, y), (W, y)], fill=(int(250 - 12 * t), int(252 - 6 * t), int(250 - 8 * t)))
+    veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(veil).ellipse((W - 380 * K, -300 * K, W + 320 * K, 330 * K),
+                                 fill=(22, 163, 74, 18))
+    canvas = Image.alpha_composite(canvas.convert("RGBA"), veil)
+    d = ImageDraw.Draw(canvas)
+
+    # Marca arriba a la izquierda.
+    mark_size = 96 * K
+    mark = icon_at(mark_size)
+    x0, y0 = 72 * K, 64 * K
+    canvas.paste(mark, (x0 - int(mark_size * 0.10), y0 - int(mark_size * 0.10)), mark)
+    name = face("SemiBold", 54 * K)
+    tracking = -1.4 * K
+    w_snap = sum(d.textlength(c, font=name) + tracking for c in "Snap")
+    tx, ty = x0 + mark_size + 26 * K, y0 + 12 * K
+    draw_tracked(d, (tx, ty), "Snap", name, INK, tracking)
+    draw_tracked(d, (tx + w_snap, ty), "gate", name, GREEN, tracking)
+
+    # Reclamo: el cuerpo mas grande que quepa en tres lineas.
+    col = 560 * K
+    for pt in range(60, 40, -2):
+        font = face("SemiBold", pt * K)
+        lines = wrap(d, claim, font, col)
+        if len(lines) <= 3:
+            break
+    lead = int(pt * K * 1.18)
+    cy = 250 * K - (len(lines) - 3) * lead // 2
+    for i, line in enumerate(lines):
+        d.text((x0, cy + i * lead), line, font=font, fill=INK)
+
+    d.text((x0, 540 * K), sub, font=face("Medium", 24 * K), fill=(118, 127, 140))
+
+    # A la derecha, un trozo de la galeria con la notificacion encima.
+    px, py, pw = 688 * K, 150 * K, 456 * K
+    tile = (pw - 8 * K) // 3
+    ph = 70 * K + tile * 2 + 4 * K
+    screen = Image.new("RGB", (pw, ph), (250, 250, 250))
+    thumbs = [
+        landscape((tile, tile), (178, 210, 236), [(108, 150, 120), (70, 110, 84)]),
+        landscape((tile, tile), (240, 200, 160), [(140, 110, 130), (90, 70, 96)]),
+        document((tile, tile)),
+        document((tile, tile)),
+        landscape((tile, tile), (120, 160, 206), [(70, 110, 140), (50, 84, 112)], (252, 240, 200)),
+        landscape((tile, tile), (238, 160, 130), [(110, 80, 100), (70, 52, 72)], (250, 214, 140)),
+    ]
+    for i, th in enumerate(thumbs):
+        screen.paste(th, ((i % 3) * (tile + 4 * K), 70 * K + (i // 3) * (tile + 4 * K)))
+    # La galeria se desvanece hacia abajo en transparencia, no hacia un color,
+    # para que no se note el borde sobre el degradado del fondo.
+    screen = rounded(screen.convert("RGBA"), radius_ratio=0.06)
+    alpha = screen.getchannel("A")
+    fade = Image.new("L", (pw, ph), 255)
+    fd = ImageDraw.Draw(fade)
+    for y in range(ph):
+        fd.line([(0, y), (pw, y)], fill=int(255 * min(1, max(0, (ph - y) / (ph * 0.45)))))
+    screen.putalpha(Image.composite(fade, Image.new("L", (pw, ph), 0), alpha))
+    canvas.paste(screen, (px, py), screen)
+
+    # Notificacion, con la sombra suave del resto de la marca.
+    nx, ny, nw, nh = px - 34 * K, py - 40 * K, pw + 68 * K, 176 * K
+    shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rounded_rectangle((nx, ny + 10 * K, nx + nw, ny + nh + 10 * K),
+                                             radius=34 * K, fill=(20, 26, 34, 60))
+    canvas = Image.alpha_composite(canvas, shadow.filter(ImageFilter.GaussianBlur(18 * K)))
+    d = ImageDraw.Draw(canvas)
+    d.rounded_rectangle((nx, ny, nx + nw, ny + nh), radius=34 * K, fill=(234, 233, 241))
+
+    ix, iy, ir = nx + 30 * K, ny + 34 * K, 22 * K
+    d.ellipse((ix, iy, ix + ir * 2, iy + ir * 2), fill=(62, 82, 140))
+    cx, cyy = ix + ir, iy + ir
+    d.rounded_rectangle((cx - 11 * K, cyy - 8 * K, cx + 11 * K, cyy + 9 * K), radius=3 * K,
+                        fill=(255, 255, 255))
+    d.polygon([(cx, cyy - 6 * K), (cx - 6 * K, cyy + 1 * K), (cx + 6 * K, cyy + 1 * K)],
+              fill=(62, 82, 140))
+    d.rectangle((cx - 2 * K, cyy, cx + 2 * K, cyy + 5 * K), fill=(62, 82, 140))
+
+    # Los textos se reducen hasta caber antes de la miniatura: en frances y
+    # aleman son bastante mas largos que en espanol.
+    tx = ix + ir * 2 + 22 * K
+    room = nw - (tx - nx) - 174 * K
+    pt = 25
+    while pt > 17 and max(d.textlength(n_title, font=face("Medium", pt * K)),
+                          d.textlength(n_text, font=face("Regular", (pt - 2) * K))) > room:
+        pt -= 1
+    d.text((tx, ny + 28 * K), n_title, font=face("Medium", pt * K), fill=(30, 31, 38))
+    d.text((tx, ny + 64 * K), n_text, font=face("Regular", (pt - 2) * K), fill=(72, 74, 86))
+
+    th = landscape((76 * K, 76 * K), (178, 210, 236), [(108, 150, 120), (70, 110, 84)],
+                   (244, 206, 90))
+    th = rounded(th.convert("RGBA"), radius_ratio=0.14)
+    canvas.paste(th, (nx + nw - 150 * K, ny + 24 * K), th)
+    d = ImageDraw.Draw(canvas)
+    ex, ey = nx + nw - 58 * K, ny + 46 * K
+    d.ellipse((ex, ey, ex + 32 * K, ey + 32 * K), fill=(220, 219, 228))
+    d.line([(ex + 9 * K, ey + 13 * K), (ex + 16 * K, ey + 20 * K), (ex + 23 * K, ey + 13 * K)],
+           fill=(40, 40, 48), width=3 * K, joint="curve")
+
+    btn = face("Medium", 23 * K)
+    by = ny + 122 * K
+    d.text((tx, by), n_discard, font=btn, fill=(70, 92, 160))
+    d.text((tx + d.textlength(n_discard, font=btn) + 44 * K, by), n_upload, font=btn,
+           fill=(70, 92, 160))
+
+    return canvas.convert("RGB").resize((1200, 630), Image.LANCZOS)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     jobs = {
@@ -273,6 +459,11 @@ def main():
     os.makedirs(features, exist_ok=True)
     for lang in FEATURE_TEXT:
         feature_graphic(lang).save(os.path.join(features, f"{lang}.png"))
+
+    og = os.path.join(OUT, "og")
+    os.makedirs(og, exist_ok=True)
+    for lang in OG_TEXT:
+        og_card(lang).save(os.path.join(og, f"{lang}.png"), optimize=True)
 
     # Logotipo de la pantalla de consentimiento de OAuth: 120 x 120 exactos.
     # Google exige que identifique la marca sin ambiguedad y que sea el mismo que

@@ -25,7 +25,7 @@ fotos no salen de tu dispositivo salvo hacia tu propia cuenta de Google, y solo
 cuando tú lo pides.</p>
 
 <h2>Responsable</h2>
-<p>El desarrollador de Snapgate. Puedes contactar en <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+<p>José Francisco Jiménez Alburquerque (jfjalburquerque), desarrollador independiente de Snapgate, en España. Puedes contactar en <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 
 <h2>Qué datos se tratan y para qué</h2>
 
@@ -234,7 +234,7 @@ never leave your device except towards your own Google account, and only when yo
 ask for it.</p>
 
 <h2>Who is responsible</h2>
-<p>The developer of Snapgate. You can get in touch at
+<p>José Francisco Jiménez Alburquerque (jfjalburquerque), the independent developer of Snapgate, based in Spain. You can get in touch at
 <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 
 <h2>What data is handled, and why</h2>
@@ -433,7 +433,7 @@ enviadas para a tua biblioteca do Google Fotos.</p>
 não saem do dispositivo exceto para a tua própria conta Google, e só quando o pedes.</p>
 
 <h2>Responsável</h2>
-<p>O programador do Snapgate. Contacto: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+<p>José Francisco Jiménez Alburquerque (jfjalburquerque), programador independente do Snapgate, em Espanha. Contacto: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 
 <h2>Que dados são tratados</h2>
 <h3>As tuas fotos</h3>
@@ -605,7 +605,7 @@ quittent pas votre appareil sauf vers votre propre compte Google, et uniquement 
 demande.</p>
 
 <h2>Responsable</h2>
-<p>Le développeur de Snapgate. Contact : <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+<p>José Francisco Jiménez Alburquerque (jfjalburquerque), développeur indépendant de Snapgate, basé en Espagne. Contact : <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 
 <h2>Quelles données sont traitées</h2>
 <h3>Vos photos</h3>
@@ -784,7 +784,7 @@ Fotos verlassen dein Gerät nur in Richtung deines eigenen Google-Kontos, und nu
 verlangst.</p>
 
 <h2>Verantwortlich</h2>
-<p>Der Entwickler von Snapgate. Kontakt: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+<p>José Francisco Jiménez Alburquerque (jfjalburquerque), unabhängiger Entwickler von Snapgate aus Spanien. Kontakt: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 
 <h2>Welche Daten verarbeitet werden</h2>
 <h3>Deine Fotos</h3>
@@ -952,7 +952,7 @@ vengono caricate nella tua libreria di Google Foto.</p>
 lasciano il dispositivo se non verso il tuo account Google, e solo quando lo chiedi tu.</p>
 
 <h2>Titolare</h2>
-<p>Lo sviluppatore di Snapgate. Contatto: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
+<p>José Francisco Jiménez Alburquerque (jfjalburquerque), sviluppatore indipendente di Snapgate, in Spagna. Contatto: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 
 <h2>Quali dati vengono trattati</h2>
 <h3>Le tue foto</h3>

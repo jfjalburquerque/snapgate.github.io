@@ -3,16 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snapgate · Decide qué fotos llegan a tu nube</title>
-<meta name="description" content="Google Fotos sube tu carrete entero o no sube nada. Snapgate te deja decidir foto a foto, desde la notificación.">
-<meta property="og:title" content="Snapgate · Decide qué fotos llegan a tu nube">
-<meta property="og:description" content="Google Fotos sube tu carrete entero o no sube nada. Snapgate te deja decidir foto a foto, desde la notificación.">
+<title>Snapgate · Elige qué fotos sube Google Fotos, una a una</title>
+<meta name="description" content="Google Fotos decide por carpetas: sube toda la cámara o nada de ella. Snapgate te pregunta por cada foto al hacerla, desde la notificación.">
+<link rel="canonical" href="https://snapgate.app/es/">
+<meta property="og:title" content="Snapgate · Elige qué fotos sube Google Fotos, una a una">
+<meta property="og:description" content="Google Fotos decide por carpetas: sube toda la cámara o nada de ella. Snapgate te pregunta por cada foto al hacerla, desde la notificación.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/brand/mark-512.png">
-<meta name="theme-color" content="#16a34a">
+<meta property="og:url" content="https://snapgate.app/es/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Snapgate">
+<meta property="og:image" content="https://snapgate.app/assets/brand/og/es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="icon" href="../assets/brand/mark-512.png">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/">
+<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/"><link rel="alternate" hreflang="x-default" href="https://snapgate.app/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://snapgate.app/#website",
+   "url": "https://snapgate.app/",
+   "name": "Snapgate",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://snapgate.app/#org",
+   "name": "Snapgate",
+   "url": "https://snapgate.app/",
+   "logo": "https://snapgate.app/assets/brand/mark-512.png",
+   "founder": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "sameAs": [
+    "https://play.google.com/store/apps/details?id=com.snapgate.app"
+   ]
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://snapgate.app/#app",
+   "name": "Snapgate",
+   "description": "Google Fotos decide por carpetas: sube toda la cámara o nada de ella. Snapgate te pregunta por cada foto al hacerla, desde la notificación.",
+   "url": "https://snapgate.app/es/",
+   "operatingSystem": "Android 11+",
+   "applicationCategory": "MultimediaApplication",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "installUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "downloadUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "image": "https://snapgate.app/assets/brand/mark-512.png",
+   "screenshot": [
+    "https://snapgate.app/assets/web/shots/es/01-notif.webp",
+    "https://snapgate.app/assets/web/shots/es/02-selection.webp",
+    "https://snapgate.app/assets/web/shots/es/03-features.webp",
+    "https://snapgate.app/assets/web/shots/es/04-onb1.webp"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "EUR"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -22,7 +105,7 @@
       <img src="../assets/brand/mark-512.png" alt="">
       <span>Snapgate</span>
     </a>
-    <nav class="main">
+    <nav class="main" aria-label="Navegación principal">
       <a href="../es/#how" class="hide-sm">Cómo funciona</a>
       <a href="../es/privacy.html">Privacidad</a>
       <a href="../es/blog/">Blog</a>
@@ -34,11 +117,12 @@
   </div>
 </header>
 
+<main>
 
 <div class="wrap hero">
   <img class="app-icon" src="../assets/brand/mark-512.png" alt="Snapgate">
   <h1>Tu nube se llena de fotos que nunca quisiste guardar</h1>
-  <p class="lede">El ticket del parking, la factura, la pizarra de una reunión. Google Fotos sube tu carrete entero o no sube nada. Snapgate mete un portero en medio.</p>
+  <p class="lede">El ticket del parking, la factura, la pizarra de una reunión. Todo acaba en la misma carpeta de la cámara, y Google Fotos solo sabe copiar carpetas enteras. Snapgate mete un portero en medio: te pregunta por cada foto en el momento de hacerla.</p>
   <div class="cta">
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.snapgate.app" rel="noopener">Descargar en Google Play</a>
     <a class="btn ghost" href="#how">Cómo funciona</a>
@@ -61,8 +145,8 @@
 
 <section id="problem">
   <div class="wrap">
-    <h2>El problema no es tu cámara, es el todo o nada</h2>
-    <p class="sub">La copia de seguridad de Google Fotos solo tiene dos estados: encendida para toda una carpeta, o apagada. No hay término medio, y por eso tu almacenamiento se llena de cosas que fotografiaste para mirarlas diez minutos.</p>
+    <h2>El problema no es tu cámara, es que Google Fotos decide por carpetas</h2>
+    <p class="sub">Google Fotos te deja elegir qué carpetas se copian y subir fotos sueltas a mano. Pero todo lo que haces con la cámara va a la misma carpeta, así que la factura viaja con las vacaciones, y elegir después a mano es justo lo que nadie hace. Por eso tu almacenamiento se llena de cosas que fotografiaste para mirarlas diez minutos.</p>
     <div class="callout"><p>Hay dos maneras de que deje de llenarse: revisar el carrete cada cierto tiempo y borrar a mano —que nadie hace—, o decidir en el momento. Snapgate es lo segundo.</p></div>
   </div>
 </section>
@@ -106,16 +190,17 @@ tú lo pides.</p>
 <section id="faq">
   <div class="wrap prose">
     <h2>Preguntas razonables</h2>
-    <h3>¿Tengo que apagar la copia de seguridad de Google Fotos?</h3><p>Sí, y es el único paso que ningún diseño puede evitar. Mientras esté encendida, Google Fotos sube tu carrete entero haga lo que haga Snapgate. Es un solo interruptor y el alta te guía hasta él.</p><h3>¿Y si no contesto al aviso?</h3><p>No pasa nada. La foto se queda en tu móvil, no se sube, y después de unos minutos deja de preguntarte. Configurable, con cinco minutos por defecto.</p><h3>¿Borra mis fotos?</h3><p>Nunca. Descartar significa «no la subas»; la foto sigue en tu carrete exactamente igual que antes.</p><h3>¿Por qué necesita una notificación permanente?</h3><p>Porque Android solo avisa de una foto nueva a las apps que están en marcha. Es el precio de enterarse al momento en lugar de cada quince minutos. Puedes ocultarla desde los ajustes del sistema.</p><h3>¿Es una suscripción?</h3><p>No. Se prueba catorce días y luego se desbloquea con un pago único.</p>
+    <h3>¿Google Fotos no deja ya elegir qué se sube?</h3><p>En parte. Puedes activar o desactivar la copia por carpeta y subir fotos sueltas a mano. Lo que no hace es preguntarte por cada foto nueva: las de la cámara van todas juntas, y elegir después exige acordarte. Snapgate pregunta en el momento, cuando todavía sabes por qué la hiciste.</p><h3>¿Tengo que apagar la copia de seguridad de Google Fotos?</h3><p>Sí, y es el único paso que ningún diseño puede evitar. Mientras esté encendida, Google Fotos sube tu carrete entero haga lo que haga Snapgate. Es un solo interruptor y el alta te guía hasta él.</p><h3>¿Y si no contesto al aviso?</h3><p>No pasa nada. La foto se queda en tu móvil, no se sube, y después de unos minutos deja de preguntarte. Configurable, con cinco minutos por defecto.</p><h3>¿Borra mis fotos?</h3><p>Nunca. Descartar significa «no la subas»; la foto sigue en tu carrete exactamente igual que antes.</p><h3>¿Por qué necesita una notificación permanente?</h3><p>Porque Android solo avisa de una foto nueva a las apps que están en marcha. Es el precio de enterarse al momento en lugar de cada quince minutos. Puedes ocultarla desde los ajustes del sistema.</p><h3>¿Es una suscripción?</h3><p>No. Se prueba catorce días y luego se desbloquea con un pago único.</p>
   </div>
 </section>
 
+</main>
 
 <footer class="site">
   <div class="wrap cols">
     <div>
       <strong style="color:var(--ink-soft)">Snapgate</strong> · tú decides qué sube a la nube<br>
-      <span>© 2026. Hecho en España.</span>
+      <span>© 2026. Hecho en España por jfjalburquerque.</span>
     </div>
     <div class="links">
       <a href="../es/privacy.html">Privacidad</a>

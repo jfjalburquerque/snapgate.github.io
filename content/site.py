@@ -25,18 +25,21 @@ UI["es"] = {
     "nav_terms": "Términos",
     "nav_blog": "Blog",
     "nav_press": "Prensa",
+    "nav_label": "Navegación principal",
     "footer_tagline": "tú decides qué sube a la nube",
-    "footer_rights": "Hecho en España.",
+    "footer_rights": "Hecho en España por jfjalburquerque.",
 }
 
 LANDING["es"] = {
-    "title": "Snapgate · Decide qué fotos llegan a tu nube",
-    "description": "Google Fotos sube tu carrete entero o no sube nada. "
-                   "Snapgate te deja decidir foto a foto, desde la notificación.",
+    "title": "Snapgate · Elige qué fotos sube Google Fotos, una a una",
+    "description": "Google Fotos decide por carpetas: sube toda la cámara o nada de "
+                   "ella. Snapgate te pregunta por cada foto al hacerla, desde la "
+                   "notificación.",
     "h1": "Tu nube se llena de fotos que nunca quisiste guardar",
-    "lede": "El ticket del parking, la factura, la pizarra de una reunión. "
-            "Google Fotos sube tu carrete entero o no sube nada. Snapgate mete "
-            "un portero en medio.",
+    "lede": "El ticket del parking, la factura, la pizarra de una reunión. Todo"
+            " acaba en la misma carpeta de la cámara, y Google Fotos solo sabe "
+            "copiar carpetas enteras. Snapgate mete un portero en medio: te "
+            "pregunta por cada foto en el momento de hacerla.",
     "cta_play": "Descargar en Google Play",
     "cta_primary": "Cómo funciona",
     "cta_secondary": "Por qué la hicimos",
@@ -54,11 +57,14 @@ LANDING["es"] = {
         "Tu nube deja de llenarse",
     ],
 
-    "problem_h2": "El problema no es tu cámara, es el todo o nada",
-    "problem_sub": "La copia de seguridad de Google Fotos solo tiene dos "
-                   "estados: encendida para toda una carpeta, o apagada. No "
-                   "hay término medio, y por eso tu almacenamiento se llena de "
-                   "cosas que fotografiaste para mirarlas diez minutos.",
+    "problem_h2": "El problema no es tu cámara, es que Google Fotos decide por "
+                  "carpetas",
+    "problem_sub": "Google Fotos te deja elegir qué carpetas se copian y subir fotos "
+                   "sueltas a mano. Pero todo lo que haces con la cámara va a la misma"
+                   " carpeta, así que la factura viaja con las vacaciones, y elegir "
+                   "después a mano es justo lo que nadie hace. Por eso tu "
+                   "almacenamiento se llena de cosas que fotografiaste para mirarlas "
+                   "diez minutos.",
     "problem_callout": "<p>Hay dos maneras de que deje de llenarse: revisar el "
                        "carrete cada cierto tiempo y borrar a mano —que nadie "
                        "hace—, o decidir en el momento. Snapgate es lo segundo.</p>",
@@ -120,6 +126,12 @@ tú lo pides.</p>
 
     "faq_h2": "Preguntas razonables",
     "faq": [
+        ("¿Google Fotos no deja ya elegir qué se sube?",
+         "En parte. Puedes activar o desactivar la copia por carpeta y subir"
+         " fotos sueltas a mano. Lo que no hace es preguntarte por cada foto"
+         " nueva: las de la cámara van todas juntas, y elegir después exige "
+         "acordarte. Snapgate pregunta en el momento, cuando todavía sabes "
+         "por qué la hiciste."),
         ("¿Tengo que apagar la copia de seguridad de Google Fotos?",
          "Sí, y es el único paso que ningún diseño puede evitar. Mientras esté "
          "encendida, Google Fotos sube tu carrete entero haga lo que haga "
@@ -150,18 +162,21 @@ UI["en"] = {
     "nav_terms": "Terms",
     "nav_blog": "Blog",
     "nav_press": "Press",
+    "nav_label": "Main navigation",
     "footer_tagline": "you decide what reaches the cloud",
-    "footer_rights": "Made in Spain.",
+    "footer_rights": "Made in Spain by jfjalburquerque.",
 }
 
 LANDING["en"] = {
-    "title": "Snapgate · Decide which photos reach your cloud",
-    "description": "Google Photos backs up your whole camera roll or none of it. "
-                   "Snapgate lets you decide photo by photo, from the notification.",
+    "title": "Snapgate · Choose which photos Google Photos backs up",
+    "description": "Google Photos decides by folder: it backs up your whole camera "
+                   "folder or none of it. Snapgate asks about each photo as you take "
+                   "it, right from the notification.",
     "h1": "Your cloud fills up with photos you never meant to keep",
-    "lede": "The parking ticket, the receipt, a meeting whiteboard. Google Photos "
-            "backs up your entire camera roll, or none of it. Snapgate puts a gate "
-            "in between.",
+    "lede": "The parking ticket, the receipt, a meeting whiteboard. They all "
+            "land in the same camera folder, and Google Photos only backs up "
+            "whole folders. Snapgate puts a gate in between: it asks about each"
+            " photo the moment you take it.",
     "cta_play": "Get it on Google Play",
     "cta_primary": "How it works",
     "cta_secondary": "Why we built it",
@@ -179,11 +194,14 @@ LANDING["en"] = {
         "Your cloud stops filling up",
     ],
 
-    "problem_h2": "The problem isn't your camera, it's all-or-nothing",
-    "problem_sub": "Google Photos backup has exactly two states: on for an entire "
-                   "folder, or off. There is no middle ground, which is why your "
-                   "storage fills with things you photographed to look at for ten "
-                   "minutes.",
+    "problem_h2": "The problem isn't your camera, it's that Google Photos decides by "
+                  "folder",
+    "problem_sub": "Google Photos lets you pick which folders get backed up and upload"
+                   " single photos by hand. But everything you shoot goes into the "
+                   "same camera folder, so the receipt travels with the holiday "
+                   "photos, and picking by hand afterwards is exactly what nobody "
+                   "does. That's why your storage fills with things you photographed "
+                   "to look at for ten minutes.",
     "problem_callout": "<p>There are two ways to stop it filling up: review your "
                        "camera roll regularly and delete by hand — which nobody "
                        "does — or decide in the moment. Snapgate is the second one.</p>",
@@ -249,6 +267,12 @@ ask for it.</p>
 
     "faq_h2": "Fair questions",
     "faq": [
+        ("Can't Google Photos already choose what gets backed up?",
+         "Partly. You can turn backup on or off per folder and upload single"
+         " photos by hand. What it doesn't do is ask about each new photo: "
+         "everything from the camera goes together, and choosing later means"
+         " remembering to. Snapgate asks in the moment, while you still know"
+         " why you took it."),
         ("Do I have to turn off Google Photos backup?",
          "Yes, and it's the one step no design can avoid. While it's on, Google "
          "Photos uploads your whole camera roll no matter what Snapgate does. It's a "
@@ -278,18 +302,21 @@ UI["pt"] = {
     "nav_terms": "Termos",
     "nav_blog": "Blog",
     "nav_press": "Imprensa",
+    "nav_label": "Navegação principal",
     "footer_tagline": "decides tu o que vai para a nuvem",
-    "footer_rights": "Feito em Espanha.",
+    "footer_rights": "Feito em Espanha por jfjalburquerque.",
 }
 
 LANDING["pt"] = {
-    "title": "Snapgate · Decide que fotos chegam à tua nuvem",
-    "description": "O Google Fotos guarda o rolo inteiro ou não guarda nada. "
-                   "O Snapgate deixa-te decidir foto a foto, a partir da notificação.",
+    "title": "Snapgate · Escolhe as fotos que o Google Fotos guarda",
+    "description": "O Google Fotos decide por pastas: guarda a pasta da câmara inteira"
+                   " ou nada dela. O Snapgate pergunta-te por cada foto no momento, a "
+                   "partir da notificação.",
     "h1": "A tua nuvem enche-se de fotos que nunca quiseste guardar",
     "lede": "O bilhete do estacionamento, a fatura, o quadro de uma reunião. "
-            "O Google Fotos guarda o rolo inteiro ou não guarda nada. O Snapgate "
-            "põe um porteiro pelo meio.",
+            "Tudo vai parar à mesma pasta da câmara, e o Google Fotos só sabe "
+            "guardar pastas inteiras. O Snapgate põe um porteiro pelo meio: "
+            "pergunta-te por cada foto no momento em que a tiras.",
     "cta_play": "Obter no Google Play",
     "cta_primary": "Como funciona",
     "cta_secondary": "Porque a criámos",
@@ -307,11 +334,13 @@ LANDING["pt"] = {
         "A tua nuvem deixa de encher",
     ],
 
-    "problem_h2": "O problema não é a câmara, é o tudo ou nada",
-    "problem_sub": "A cópia de segurança do Google Fotos tem apenas dois estados: "
-                   "ligada para uma pasta inteira, ou desligada. Não há meio termo, "
-                   "e é por isso que o teu armazenamento se enche de coisas que "
-                   "fotografaste para ver durante dez minutos.",
+    "problem_h2": "O problema não é a câmara, é que o Google Fotos decide por pastas",
+    "problem_sub": "O Google Fotos deixa-te escolher que pastas são guardadas e enviar"
+                   " fotos soltas à mão. Mas tudo o que tiras com a câmara vai para a "
+                   "mesma pasta, por isso a fatura viaja com as férias, e escolher à "
+                   "mão depois é precisamente o que ninguém faz. É por isso que o teu "
+                   "armazenamento se enche de coisas que fotografaste para ver durante"
+                   " dez minutos.",
     "problem_callout": "<p>Há duas formas de parar isto: rever o rolo regularmente "
                        "e apagar à mão — o que ninguém faz — ou decidir no momento. "
                        "O Snapgate é a segunda.</p>",
@@ -373,6 +402,12 @@ publicidade.</p>
 
     "faq_h2": "Perguntas razoáveis",
     "faq": [
+        ("O Google Fotos não deixa já escolher o que é guardado?",
+         "Em parte. Podes ligar ou desligar a cópia por pasta e enviar fotos"
+         " soltas à mão. O que não faz é perguntar-te por cada foto nova: as"
+         " da câmara vão todas juntas, e escolher depois obriga-te a "
+         "lembrar-te. O Snapgate pergunta no momento, quando ainda sabes "
+         "porque a tiraste."),
         ("Tenho de desligar a cópia do Google Fotos?",
          "Sim, e é o único passo que nenhum desenho consegue evitar. Enquanto estiver "
          "ligada, o Google Fotos envia o rolo inteiro faça o Snapgate o que fizer. É "
@@ -402,18 +437,22 @@ UI["fr"] = {
     "nav_terms": "Conditions",
     "nav_blog": "Blog",
     "nav_press": "Presse",
+    "nav_label": "Navigation principale",
     "footer_tagline": "vous décidez de ce qui monte dans le cloud",
-    "footer_rights": "Conçu en Espagne.",
+    "footer_rights": "Conçu en Espagne par jfjalburquerque.",
 }
 
 LANDING["fr"] = {
-    "title": "Snapgate · Choisissez les photos qui montent dans votre cloud",
-    "description": "Google Photos sauvegarde toute votre pellicule ou rien du tout. "
-                   "Snapgate vous laisse décider photo par photo, depuis la notification.",
+    "title": "Snapgate · Choisissez les photos que Google Photos sauvegarde",
+    "description": "Google Photos décide par dossier : tout le dossier de l'appareil "
+                   "photo, ou rien. Snapgate vous demande pour chaque photo, au moment"
+                   " de la prendre, depuis la notification.",
     "h1": "Votre cloud se remplit de photos que vous ne vouliez pas garder",
     "lede": "Le ticket de parking, la facture, le tableau blanc d'une réunion. "
-            "Google Photos sauvegarde toute votre pellicule, ou rien. Snapgate place "
-            "un portier au milieu.",
+            "Tout finit dans le même dossier de l'appareil photo, et Google "
+            "Photos ne sait sauvegarder que des dossiers entiers. Snapgate "
+            "place un portier au milieu : il vous demande pour chaque photo, au"
+            " moment où vous la prenez.",
     "cta_play": "Disponible sur Google Play",
     "cta_primary": "Comment ça marche",
     "cta_secondary": "Pourquoi nous l'avons créée",
@@ -431,11 +470,14 @@ LANDING["fr"] = {
         "Votre cloud cesse de se remplir",
     ],
 
-    "problem_h2": "Le problème n'est pas votre appareil, c'est le tout ou rien",
-    "problem_sub": "La sauvegarde de Google Photos n'a que deux états : activée pour "
-                   "un dossier entier, ou désactivée. Aucun intermédiaire, et c'est "
-                   "pourquoi votre stockage se remplit de choses photographiées pour "
-                   "être regardées dix minutes.",
+    "problem_h2": "Le problème n'est pas votre appareil, c'est que Google Photos "
+                  "décide par dossier",
+    "problem_sub": "Google Photos vous laisse choisir les dossiers sauvegardés et "
+                   "envoyer des photos à la main. Mais tout ce que vous prenez avec "
+                   "l'appareil photo va dans le même dossier : la facture voyage avec "
+                   "les vacances, et trier à la main après coup, personne ne le fait. "
+                   "C'est pourquoi votre stockage se remplit de choses photographiées "
+                   "pour être regardées dix minutes.",
     "problem_callout": "<p>Deux façons d'arrêter l'hémorragie : trier sa pellicule "
                        "régulièrement et supprimer à la main — ce que personne ne "
                        "fait — ou décider sur le moment. Snapgate, c'est la seconde.</p>",
@@ -498,6 +540,14 @@ vous le demandez.</p>
 
     "faq_h2": "Questions légitimes",
     "faq": [
+        ("Google Photos ne permet-il pas déjà de choisir ce qui est "
+         "sauvegardé ?",
+         "En partie. Vous pouvez activer ou désactiver la sauvegarde par "
+         "dossier et envoyer des photos à la main. Ce qu'il ne fait pas, "
+         "c'est vous demander pour chaque nouvelle photo : celles de "
+         "l'appareil photo partent toutes ensemble, et trier après coup "
+         "suppose d'y penser. Snapgate demande sur le moment, quand vous "
+         "savez encore pourquoi vous l'avez prise."),
         ("Dois-je désactiver la sauvegarde de Google Photos ?",
          "Oui, et c'est la seule étape qu'aucune conception ne peut éviter. Tant "
          "qu'elle est active, Google Photos envoie toute votre pellicule quoi que "
@@ -528,19 +578,21 @@ UI["de"] = {
     "nav_terms": "Bedingungen",
     "nav_blog": "Blog",
     "nav_press": "Presse",
+    "nav_label": "Hauptnavigation",
     "footer_tagline": "du entscheidest, was in die Cloud geht",
-    "footer_rights": "Gemacht in Spanien.",
+    "footer_rights": "Gemacht in Spanien von jfjalburquerque.",
 }
 
 LANDING["de"] = {
-    "title": "Snapgate · Entscheide, welche Fotos in deine Cloud kommen",
-    "description": "Google Fotos sichert deine ganze Kamerarolle oder gar nichts. "
-                   "Mit Snapgate entscheidest du Foto für Foto, direkt aus der "
-                   "Benachrichtigung.",
+    "title": "Snapgate · Entscheide, welche Fotos Google Fotos sichert",
+    "description": "Google Fotos entscheidet nach Ordnern: der ganze Kameraordner oder"
+                   " nichts davon. Snapgate fragt bei jedem Foto direkt nach der "
+                   "Aufnahme, in der Benachrichtigung.",
     "h1": "Deine Cloud füllt sich mit Fotos, die du nie behalten wolltest",
-    "lede": "Der Parkschein, die Rechnung, das Whiteboard aus einem Meeting. Google "
-            "Fotos sichert deine ganze Kamerarolle — oder gar nichts. Snapgate setzt "
-            "einen Türsteher dazwischen.",
+    "lede": "Der Parkschein, die Rechnung, das Whiteboard aus einem Meeting. "
+            "Alles landet im selben Kameraordner, und Google Fotos sichert nur "
+            "ganze Ordner. Snapgate setzt einen Türsteher dazwischen: Er fragt "
+            "bei jedem Foto, sobald du es aufnimmst.",
     "cta_play": "Jetzt bei Google Play",
     "cta_primary": "So funktioniert es",
     "cta_secondary": "Warum wir sie gebaut haben",
@@ -558,11 +610,14 @@ LANDING["de"] = {
         "Deine Cloud füllt sich nicht mehr",
     ],
 
-    "problem_h2": "Das Problem ist nicht die Kamera, sondern das Alles-oder-nichts",
-    "problem_sub": "Die Sicherung von Google Fotos kennt genau zwei Zustände: an für "
-                   "einen ganzen Ordner, oder aus. Nichts dazwischen — und deshalb "
-                   "füllt sich dein Speicher mit Dingen, die du fotografiert hast, um "
-                   "sie zehn Minuten anzuschauen.",
+    "problem_h2": "Das Problem ist nicht die Kamera, sondern dass Google Fotos nach "
+                  "Ordnern entscheidet",
+    "problem_sub": "Google Fotos lässt dich auswählen, welche Ordner gesichert werden,"
+                   " und einzelne Fotos von Hand hochladen. Aber alles, was du mit der"
+                   " Kamera aufnimmst, landet im selben Ordner: Die Rechnung reist mit"
+                   " den Urlaubsfotos mit, und hinterher von Hand auswählen macht "
+                   "niemand. Deshalb füllt sich dein Speicher mit Dingen, die du "
+                   "fotografiert hast, um sie zehn Minuten anzuschauen.",
     "problem_callout": "<p>Es gibt zwei Wege, das zu stoppen: die Kamerarolle "
                        "regelmäßig durchgehen und von Hand löschen — was niemand "
                        "macht — oder im Moment entscheiden. Snapgate ist der zweite.</p>",
@@ -624,6 +679,13 @@ verlangst.</p>
 
     "faq_h2": "Berechtigte Fragen",
     "faq": [
+        ("Kann Google Fotos nicht schon auswählen, was gesichert wird?",
+         "Teilweise. Du kannst die Sicherung pro Ordner ein- oder "
+         "ausschalten und einzelne Fotos von Hand hochladen. Was es nicht "
+         "tut: bei jedem neuen Foto fragen. Alles aus der Kamera geht "
+         "gemeinsam, und später auswählen heißt, daran denken zu müssen. "
+         "Snapgate fragt im Moment, solange du noch weißt, warum du es "
+         "gemacht hast."),
         ("Muss ich die Sicherung von Google Fotos ausschalten?",
          "Ja, und das ist der eine Schritt, den kein Design vermeiden kann. Solange sie "
          "an ist, lädt Google Fotos deine ganze Kamerarolle hoch, egal was Snapgate "
@@ -654,18 +716,22 @@ UI["it"] = {
     "nav_terms": "Termini",
     "nav_blog": "Blog",
     "nav_press": "Stampa",
+    "nav_label": "Navigazione principale",
     "footer_tagline": "decidi tu cosa finisce nel cloud",
-    "footer_rights": "Fatto in Spagna.",
+    "footer_rights": "Fatto in Spagna da jfjalburquerque.",
 }
 
 LANDING["it"] = {
-    "title": "Snapgate · Decidi quali foto arrivano al tuo cloud",
-    "description": "Google Foto carica tutto il rullino o niente. Snapgate ti lascia "
-                   "decidere foto per foto, dalla notifica.",
+    "title": "Snapgate · Scegli quali foto carica Google Foto, una a una",
+    "description": "Google Foto decide per cartelle: tutta la cartella della "
+                   "fotocamera o niente. Snapgate ti chiede di ogni foto mentre la "
+                   "scatti, dalla notifica.",
     "h1": "Il tuo cloud si riempie di foto che non volevi conservare",
-    "lede": "Il biglietto del parcheggio, la fattura, la lavagna di una riunione. "
-            "Google Foto carica tutto il rullino, o niente. Snapgate mette un portiere "
-            "in mezzo.",
+    "lede": "Il biglietto del parcheggio, la fattura, la lavagna di una "
+            "riunione. Finisce tutto nella stessa cartella della fotocamera, e "
+            "Google Foto sa caricare solo cartelle intere. Snapgate mette un "
+            "portiere in mezzo: ti chiede di ogni foto nel momento in cui la "
+            "scatti.",
     "cta_play": "Disponibile su Google Play",
     "cta_primary": "Come funziona",
     "cta_secondary": "Perché l'abbiamo fatta",
@@ -683,11 +749,14 @@ LANDING["it"] = {
         "Il tuo cloud smette di riempirsi",
     ],
 
-    "problem_h2": "Il problema non è la fotocamera, è il tutto o niente",
-    "problem_sub": "Il backup di Google Foto ha esattamente due stati: attivo per "
-                   "un'intera cartella, oppure spento. Non c'è via di mezzo, ed è per "
-                   "questo che il tuo spazio si riempie di cose fotografate per "
-                   "guardarle dieci minuti.",
+    "problem_h2": "Il problema non è la fotocamera, è che Google Foto decide per "
+                  "cartelle",
+    "problem_sub": "Google Foto ti lascia scegliere quali cartelle salvare e caricare "
+                   "singole foto a mano. Ma tutto ciò che scatti con la fotocamera "
+                   "finisce nella stessa cartella: la fattura viaggia con le vacanze, "
+                   "e scegliere a mano dopo è proprio ciò che nessuno fa. Per questo "
+                   "il tuo spazio si riempie di cose fotografate per guardarle dieci "
+                   "minuti.",
     "problem_callout": "<p>Ci sono due modi di fermarlo: rivedere il rullino ogni "
                        "tanto e cancellare a mano — cosa che non fa nessuno — oppure "
                        "decidere sul momento. Snapgate è il secondo.</p>",
@@ -749,6 +818,12 @@ pubblicità.</p>
 
     "faq_h2": "Domande legittime",
     "faq": [
+        ("Google Foto non permette già di scegliere cosa caricare?",
+         "In parte. Puoi attivare o disattivare il backup per cartella e "
+         "caricare singole foto a mano. Quello che non fa è chiederti di "
+         "ogni nuova foto: quelle della fotocamera vanno tutte insieme, e "
+         "scegliere dopo vuol dire ricordarsene. Snapgate chiede sul "
+         "momento, quando sai ancora perché l'hai scattata."),
         ("Devo disattivare il backup di Google Foto?",
          "Sì, ed è l'unico passo che nessun progetto può evitare. Finché è attivo, "
          "Google Foto carica tutto il rullino qualunque cosa faccia Snapgate. È un solo "

@@ -12,6 +12,7 @@ Escribe un directorio por idioma en la raiz del repositorio, que es lo que
 Pages publica directamente desde la rama principal.
 """
 
+import json
 import os
 import shutil
 
@@ -29,26 +30,105 @@ DEFAULT_LANG = "en"
 # que no existe es peor que no ponerlo.
 SITE_URL = "https://snapgate.app"
 
+# Descripcion de la raiz, que solo ven quien no ejecuta JavaScript y los buscadores.
+ROOT_DESCRIPTION = ("Snapgate is an Android app that asks you, photo by photo and "
+                    "right from the notification, which pictures Google Photos "
+                    "should back up.")
 
-def shell(lang, *, title, description, body, path_depth=1, active=""):
-    """Envoltura comun: cabecera, contenido y pie."""
+# Firma del desarrollador: pie, autoría de los artículos y datos estructurados.
+AUTHOR = "jfjalburquerque"
+
+# Locale de Open Graph por idioma.
+OG_LOCALES = {"es": "es_ES", "en": "en_US", "pt": "pt_PT", "fr": "fr_FR",
+              "de": "de_DE", "it": "it_IT"}
+
+# Paginas publicadas, para el sitemap: ruta -> {idioma: ruta equivalente}.
+SITEMAP = {}
+
+
+def url(path):
+    """URL absoluta de una ruta relativa a la raiz; index.html se omite."""
+    if path.endswith("index.html"):
+        path = path[: -len("index.html")]
+    return f"{SITE_URL}/{path}"
+
+
+def hreflangs(alts):
+    """Pares (hreflang, url) de una pagina, con x-default.
+
+    Las portadas apuntan x-default a la raiz, que es el selector de idioma; el
+    resto, a la version inglesa si existe.
+    """
+    pairs = [(code, url(alts[code])) for code in LANGS if code in alts]
+    if all(p == f"{c}/index.html" for c, p in alts.items()):
+        pairs.append(("x-default", url("index.html")))
+    else:
+        pairs.append(("x-default", url(alts.get(DEFAULT_LANG, next(iter(alts.values()))))))
+    return pairs
+
+
+def hreflang_links(alts):
+    return "".join(
+        f'<link rel="alternate" hreflang="{code}" href="{href}">'
+        for code, href in hreflangs(alts)
+    )
+
+
+def same_page(name):
+    """Equivalentes de una pagina que existe en todos los idiomas."""
+    return {code: f"{code}/{name}" for code in LANGS}
+
+
+def person():
+    return {"@type": "Person", "name": AUTHOR}
+
+
+def breadcrumbs(items):
+    return {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": name, "item": url(path)}
+            for i, (name, path) in enumerate(items, 1)
+        ],
+    }
+
+
+def jsonld_script(data):
+    # "</" se escapa para que ningun texto pueda cerrar la etiqueta script.
+    text = json.dumps(data, ensure_ascii=False, indent=1).replace("</", "<\\/")
+    return f'<script type="application/ld+json">\n{text}\n</script>'
+
+
+def shell(lang, *, title, description, body, path, alts, path_depth=1,
+          og_type="website", jsonld=None, index=True):
+    """Envoltura comun: cabecera, contenido y pie.
+
+    `path` es la ruta de la pagina desde la raiz y `alts` sus equivalentes en
+    cada idioma en que existe ({idioma: ruta}); de ahi salen el canonical, los
+    hreflang y el selector de idioma. Las paginas con `index=False` llevan
+    noindex y no entran en el sitemap.
+    """
     ui = UI[lang]
     up = "../" * path_depth
     year = 2026
+    if index:
+        SITEMAP[path] = alts
 
     def nav_link(key, href, label, extra=""):
         cls = ' class="' + extra + '"' if extra else ""
         return f'<a href="{href}"{cls}>{label}</a>'
 
+    # El selector lleva a la misma pagina en el otro idioma si existe, y a la
+    # portada de ese idioma si no.
     langs = "".join(
-        f'<li><a href="{"../" * path_depth}{code}/" hreflang="{code}">{LANG_NAMES[code]}</a></li>'
+        f'<li><a href="{up}{alts.get(code, code + "/").removesuffix("index.html")}" '
+        f'hreflang="{code}">{LANG_NAMES[code]}</a></li>'
         for code in LANGS
     )
 
-    alternates = "".join(
-        f'<link rel="alternate" hreflang="{code}" href="{SITE_URL}/{code}/">'
-        for code in LANGS
-    )
+    alternates = hreflang_links(alts)
+    robots = "" if index else '\n<meta name="robots" content="noindex, follow">'
+    ld = "\n" + jsonld_script(jsonld) if jsonld else ""
 
     return f"""<!doctype html>
 <html lang="{lang}">
@@ -56,15 +136,22 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
-<meta name="description" content="{description}">
+<meta name="description" content="{description}">{robots}
+<link rel="canonical" href="{url(path)}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="{up}assets/brand/mark-512.png">
-<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="{og_type}">
+<meta property="og:url" content="{url(path)}">
+<meta property="og:locale" content="{OG_LOCALES[lang]}">
+<meta property="og:site_name" content="Snapgate">
+<meta property="og:image" content="{SITE_URL}/assets/brand/og/{lang}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="icon" href="{up}assets/brand/mark-512.png">
 <link rel="stylesheet" href="{up}assets/style.css">
-{alternates}
+{alternates}{ld}
 </head>
 <body>
 
@@ -74,7 +161,7 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
       <img src="{up}assets/brand/mark-512.png" alt="">
       <span>Snapgate</span>
     </a>
-    <nav class="main">
+    <nav class="main" aria-label="{ui["nav_label"]}">
       {nav_link("features", up + lang + "/#how", ui["nav_how"], "hide-sm")}
       {nav_link("privacy", up + lang + "/privacy.html", ui["nav_privacy"])}
       {nav_link("blog", up + lang + "/blog/", ui["nav_blog"])}
@@ -86,7 +173,9 @@ def shell(lang, *, title, description, body, path_depth=1, active=""):
   </div>
 </header>
 
+<main>
 {body}
+</main>
 
 <footer class="site">
   <div class="wrap cols">
@@ -207,10 +296,54 @@ def landing_html(lang):
   </div>
 </section>
 """
-    return shell(lang, title=c["title"], description=c["description"], body=body)
+    path = f"{lang}/index.html"
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": f"{SITE_URL}/#website",
+                "url": f"{SITE_URL}/",
+                "name": "Snapgate",
+                "inLanguage": LANGS,
+                "publisher": {"@id": f"{SITE_URL}/#org"},
+            },
+            {
+                "@type": "Organization",
+                "@id": f"{SITE_URL}/#org",
+                "name": "Snapgate",
+                "url": f"{SITE_URL}/",
+                "logo": f"{SITE_URL}/assets/brand/mark-512.png",
+                "founder": person(),
+                "sameAs": [PLAY_URL],
+            },
+            {
+                "@type": "MobileApplication",
+                "@id": f"{SITE_URL}/#app",
+                "name": "Snapgate",
+                "description": c["description"],
+                "url": url(path),
+                "operatingSystem": "Android 11+",
+                "applicationCategory": "MultimediaApplication",
+                "inLanguage": LANGS,
+                "installUrl": PLAY_URL,
+                "downloadUrl": PLAY_URL,
+                "image": f"{SITE_URL}/assets/brand/mark-512.png",
+                "screenshot": [
+                    f"{SITE_URL}/assets/web/shots/{lang}/{name}.webp" for name in SHOT_NAMES
+                ],
+                # Prueba gratuita de 14 dias y despues pago unico (content/press.py).
+                "offers": {"@type": "Offer", "price": "4.99", "priceCurrency": "EUR"},
+                "author": person(),
+                "publisher": {"@id": f"{SITE_URL}/#org"},
+            },
+        ],
+    }
+    return shell(lang, title=c["title"], description=c["description"], body=body,
+                 path=path, alts=same_page("index.html"), jsonld=data)
 
 
-def page_html(lang, doc, depth=1):
+def page_html(lang, doc, name, depth=1):
     body = f"""
 <div class="wrap page prose">
   <h1>{doc["h1"]}</h1>
@@ -218,8 +351,12 @@ def page_html(lang, doc, depth=1):
   {doc["body"]}
 </div>
 """
+    path = f"{lang}/{name}"
+    data = {"@context": "https://schema.org", **breadcrumbs(
+        [("Snapgate", f"{lang}/index.html"), (doc["h1"], path)])}
     return shell(lang, title=doc["title"], description=doc["description"],
-                 body=body, path_depth=depth)
+                 body=body, path_depth=depth, path=path, alts=same_page(name),
+                 jsonld=data)
 
 
 def blog_index_html(lang):
@@ -242,7 +379,20 @@ def blog_index_html(lang):
   <ul class="posts">{items}</ul>
 </div>
 """
-    return shell(lang, title=c["title"], description=c["lede"], body=body, path_depth=2)
+    # Un indice sin articulos en su idioma es contenido escaso: se publica para
+    # que el menu no lleve a un 404, pero sin indexar.
+    path = f"{lang}/blog/index.html"
+    data = {"@context": "https://schema.org", **breadcrumbs(
+        [("Snapgate", f"{lang}/index.html"), (c["h1"], path)])}
+    return shell(lang, title=c["title"], description=c["lede"], body=body,
+                 path_depth=2, path=path, alts=blog_alts(), jsonld=data,
+                 index=bool(posts))
+
+
+def blog_alts():
+    """Idiomas con algun articulo: son los unicos cuyo indice se indexa."""
+    langs = {code for post in POSTS for code in post["langs"]}
+    return {code: f"{code}/blog/index.html" for code in LANGS if code in langs}
 
 
 def post_html(lang, post):
@@ -250,12 +400,58 @@ def post_html(lang, post):
     body = f"""
 <div class="wrap page prose">
   <h1>{t["title"]}</h1>
-  <p class="meta">{t["date_label"]}</p>
+  <p class="meta"><time datetime="{post["date"]}">{t["date_label"]}</time> · {AUTHOR}</p>
   {t["body"]}
 </div>
 """
+    path = f"{lang}/blog/{post['slug']}.html"
+    alts = {code: f"{code}/blog/{post['slug']}.html" for code in post["langs"]}
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": t["title"],
+                "description": t["excerpt"],
+                "datePublished": post["date"],
+                "inLanguage": lang,
+                "url": url(path),
+                "mainEntityOfPage": url(path),
+                "image": f"{SITE_URL}/assets/brand/og/{lang}.png",
+                "author": person(),
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Snapgate",
+                    "logo": f"{SITE_URL}/assets/brand/mark-512.png",
+                },
+            },
+            breadcrumbs([
+                ("Snapgate", f"{lang}/index.html"),
+                (BLOG_INDEX[lang]["h1"], f"{lang}/blog/index.html"),
+                (t["title"], path),
+            ]),
+        ],
+    }
     return shell(lang, title=t["title"] + " · Snapgate", description=t["excerpt"],
-                 body=body, path_depth=2)
+                 body=body, path_depth=2, path=path, alts=alts,
+                 og_type="article", jsonld=data)
+
+
+def sitemap_xml():
+    """Sitemap con las alternativas de idioma de cada URL."""
+    entries = ""
+    for path in sorted(SITEMAP):
+        links = "".join(
+            f'\n    <xhtml:link rel="alternate" hreflang="{code}" href="{href}"/>'
+            for code, href in hreflangs(SITEMAP[path])
+        )
+        entries += f"  <url>\n    <loc>{url(path)}</loc>{links}\n  </url>\n"
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        f"{entries}</urlset>\n"
+    )
 
 
 def write(path, html):
@@ -271,9 +467,10 @@ def main():
         shutil.rmtree(base, ignore_errors=True)
 
         write(os.path.join(base, "index.html"), landing_html(lang))
-        write(os.path.join(base, "privacy.html"), page_html(lang, PRIVACY[lang]))
-        write(os.path.join(base, "terms.html"), page_html(lang, TERMS[lang]))
-        write(os.path.join(base, "press.html"), page_html(lang, PRESS[lang]))
+        write(os.path.join(base, "privacy.html"),
+              page_html(lang, PRIVACY[lang], "privacy.html"))
+        write(os.path.join(base, "terms.html"), page_html(lang, TERMS[lang], "terms.html"))
+        write(os.path.join(base, "press.html"), page_html(lang, PRESS[lang], "press.html"))
         write(os.path.join(base, "blog", "index.html"), blog_index_html(lang))
         written += 5
 
@@ -289,28 +486,40 @@ def main():
         f'<li><a href="{code}/">{LANG_NAMES[code]}</a></li>' for code in LANGS
     )
     supported = ",".join(f'"{c}"' for c in LANGS)
+    SITEMAP["index.html"] = same_page("index.html")
     write(os.path.join(ROOT, "index.html"), f"""<!doctype html>
 <html lang="{DEFAULT_LANG}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snapgate</title>
-<meta name="description" content="Decide which photos reach your cloud.">
-<link rel="icon" href="assets/icon.png">
-<link rel="stylesheet" href="assets/style.css">
+<title>Snapgate · Choose which photos Google Photos backs up</title>
 <script>
   var supported = [{supported}];
   var want = (navigator.language || "{DEFAULT_LANG}").slice(0, 2).toLowerCase();
   var go = supported.indexOf(want) >= 0 ? want : "{DEFAULT_LANG}";
   location.replace(go + "/" + location.hash);
 </script>
+<noscript><meta http-equiv="refresh" content="0; url={DEFAULT_LANG}/"></noscript>
+<meta name="description" content="{ROOT_DESCRIPTION}">
+<link rel="canonical" href="{SITE_URL}/">
+<meta property="og:title" content="Snapgate · Choose which photos Google Photos backs up">
+<meta property="og:description" content="{ROOT_DESCRIPTION}">
+<meta property="og:url" content="{SITE_URL}/">
+<meta property="og:image" content="{SITE_URL}/assets/brand/og/{DEFAULT_LANG}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+{hreflang_links(same_page("index.html"))}
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="wrap page prose">
+<main class="wrap page prose">
   <h1>Snapgate</h1>
+  <p>{ROOT_DESCRIPTION}</p>
   <p>Choose your language:</p>
   <ul>{options}</ul>
-</div>
+</main>
 </body>
 </html>
 """)
@@ -335,6 +544,10 @@ def main():
 </html>
 """)
     written += 1
+
+    write(os.path.join(ROOT, "robots.txt"),
+          f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+    write(os.path.join(ROOT, "sitemap.xml"), sitemap_xml())
     print(f"{written} paginas generadas en {len(LANGS)} idiomas")
 
 

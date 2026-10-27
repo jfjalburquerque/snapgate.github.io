@@ -3,16 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snapgate · Decide que fotos chegam à tua nuvem</title>
-<meta name="description" content="O Google Fotos guarda o rolo inteiro ou não guarda nada. O Snapgate deixa-te decidir foto a foto, a partir da notificação.">
-<meta property="og:title" content="Snapgate · Decide que fotos chegam à tua nuvem">
-<meta property="og:description" content="O Google Fotos guarda o rolo inteiro ou não guarda nada. O Snapgate deixa-te decidir foto a foto, a partir da notificação.">
+<title>Snapgate · Escolhe as fotos que o Google Fotos guarda</title>
+<meta name="description" content="O Google Fotos decide por pastas: guarda a pasta da câmara inteira ou nada dela. O Snapgate pergunta-te por cada foto no momento, a partir da notificação.">
+<link rel="canonical" href="https://snapgate.app/pt/">
+<meta property="og:title" content="Snapgate · Escolhe as fotos que o Google Fotos guarda">
+<meta property="og:description" content="O Google Fotos decide por pastas: guarda a pasta da câmara inteira ou nada dela. O Snapgate pergunta-te por cada foto no momento, a partir da notificação.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/brand/mark-512.png">
-<meta name="theme-color" content="#16a34a">
+<meta property="og:url" content="https://snapgate.app/pt/">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Snapgate">
+<meta property="og:image" content="https://snapgate.app/assets/brand/og/pt.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
 <link rel="icon" href="../assets/brand/mark-512.png">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/">
+<link rel="alternate" hreflang="es" href="https://snapgate.app/es/"><link rel="alternate" hreflang="en" href="https://snapgate.app/en/"><link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/"><link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/"><link rel="alternate" hreflang="de" href="https://snapgate.app/de/"><link rel="alternate" hreflang="it" href="https://snapgate.app/it/"><link rel="alternate" hreflang="x-default" href="https://snapgate.app/">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://snapgate.app/#website",
+   "url": "https://snapgate.app/",
+   "name": "Snapgate",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://snapgate.app/#org",
+   "name": "Snapgate",
+   "url": "https://snapgate.app/",
+   "logo": "https://snapgate.app/assets/brand/mark-512.png",
+   "founder": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "sameAs": [
+    "https://play.google.com/store/apps/details?id=com.snapgate.app"
+   ]
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://snapgate.app/#app",
+   "name": "Snapgate",
+   "description": "O Google Fotos decide por pastas: guarda a pasta da câmara inteira ou nada dela. O Snapgate pergunta-te por cada foto no momento, a partir da notificação.",
+   "url": "https://snapgate.app/pt/",
+   "operatingSystem": "Android 11+",
+   "applicationCategory": "MultimediaApplication",
+   "inLanguage": [
+    "es",
+    "en",
+    "pt",
+    "fr",
+    "de",
+    "it"
+   ],
+   "installUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "downloadUrl": "https://play.google.com/store/apps/details?id=com.snapgate.app",
+   "image": "https://snapgate.app/assets/brand/mark-512.png",
+   "screenshot": [
+    "https://snapgate.app/assets/web/shots/pt/01-notif.webp",
+    "https://snapgate.app/assets/web/shots/pt/02-selection.webp",
+    "https://snapgate.app/assets/web/shots/pt/03-features.webp",
+    "https://snapgate.app/assets/web/shots/pt/04-onb1.webp"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "4.99",
+    "priceCurrency": "EUR"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "jfjalburquerque"
+   },
+   "publisher": {
+    "@id": "https://snapgate.app/#org"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -22,7 +105,7 @@
       <img src="../assets/brand/mark-512.png" alt="">
       <span>Snapgate</span>
     </a>
-    <nav class="main">
+    <nav class="main" aria-label="Navegação principal">
       <a href="../pt/#how" class="hide-sm">Como funciona</a>
       <a href="../pt/privacy.html">Privacidade</a>
       <a href="../pt/blog/">Blog</a>
@@ -34,11 +117,12 @@
   </div>
 </header>
 
+<main>
 
 <div class="wrap hero">
   <img class="app-icon" src="../assets/brand/mark-512.png" alt="Snapgate">
   <h1>A tua nuvem enche-se de fotos que nunca quiseste guardar</h1>
-  <p class="lede">O bilhete do estacionamento, a fatura, o quadro de uma reunião. O Google Fotos guarda o rolo inteiro ou não guarda nada. O Snapgate põe um porteiro pelo meio.</p>
+  <p class="lede">O bilhete do estacionamento, a fatura, o quadro de uma reunião. Tudo vai parar à mesma pasta da câmara, e o Google Fotos só sabe guardar pastas inteiras. O Snapgate põe um porteiro pelo meio: pergunta-te por cada foto no momento em que a tiras.</p>
   <div class="cta">
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.snapgate.app" rel="noopener">Obter no Google Play</a>
     <a class="btn ghost" href="#how">Como funciona</a>
@@ -61,8 +145,8 @@
 
 <section id="problem">
   <div class="wrap">
-    <h2>O problema não é a câmara, é o tudo ou nada</h2>
-    <p class="sub">A cópia de segurança do Google Fotos tem apenas dois estados: ligada para uma pasta inteira, ou desligada. Não há meio termo, e é por isso que o teu armazenamento se enche de coisas que fotografaste para ver durante dez minutos.</p>
+    <h2>O problema não é a câmara, é que o Google Fotos decide por pastas</h2>
+    <p class="sub">O Google Fotos deixa-te escolher que pastas são guardadas e enviar fotos soltas à mão. Mas tudo o que tiras com a câmara vai para a mesma pasta, por isso a fatura viaja com as férias, e escolher à mão depois é precisamente o que ninguém faz. É por isso que o teu armazenamento se enche de coisas que fotografaste para ver durante dez minutos.</p>
     <div class="callout"><p>Há duas formas de parar isto: rever o rolo regularmente e apagar à mão — o que ninguém faz — ou decidir no momento. O Snapgate é a segunda.</p></div>
   </div>
 </section>
@@ -105,16 +189,17 @@ publicidade.</p>
 <section id="faq">
   <div class="wrap prose">
     <h2>Perguntas razoáveis</h2>
-    <h3>Tenho de desligar a cópia do Google Fotos?</h3><p>Sim, e é o único passo que nenhum desenho consegue evitar. Enquanto estiver ligada, o Google Fotos envia o rolo inteiro faça o Snapgate o que fizer. É um só interruptor e a configuração leva-te até ele.</p><h3>E se não responder ao aviso?</h3><p>Não acontece nada. A foto fica no telemóvel, não é enviada, e ao fim de uns minutos deixa de perguntar. Configurável, cinco minutos por omissão.</p><h3>Apaga as minhas fotos?</h3><p>Nunca. Descartar significa «não envies esta»; a foto continua no rolo tal como estava.</p><h3>Porque precisa de uma notificação permanente?</h3><p>Porque o Android só avisa de uma foto nova às apps em execução. É o preço de saber no momento em vez de a cada quinze minutos. Podes escondê-la nas definições do sistema.</p><h3>É uma subscrição?</h3><p>Não. Catorze dias de experiência e depois um pagamento único.</p>
+    <h3>O Google Fotos não deixa já escolher o que é guardado?</h3><p>Em parte. Podes ligar ou desligar a cópia por pasta e enviar fotos soltas à mão. O que não faz é perguntar-te por cada foto nova: as da câmara vão todas juntas, e escolher depois obriga-te a lembrar-te. O Snapgate pergunta no momento, quando ainda sabes porque a tiraste.</p><h3>Tenho de desligar a cópia do Google Fotos?</h3><p>Sim, e é o único passo que nenhum desenho consegue evitar. Enquanto estiver ligada, o Google Fotos envia o rolo inteiro faça o Snapgate o que fizer. É um só interruptor e a configuração leva-te até ele.</p><h3>E se não responder ao aviso?</h3><p>Não acontece nada. A foto fica no telemóvel, não é enviada, e ao fim de uns minutos deixa de perguntar. Configurável, cinco minutos por omissão.</p><h3>Apaga as minhas fotos?</h3><p>Nunca. Descartar significa «não envies esta»; a foto continua no rolo tal como estava.</p><h3>Porque precisa de uma notificação permanente?</h3><p>Porque o Android só avisa de uma foto nova às apps em execução. É o preço de saber no momento em vez de a cada quinze minutos. Podes escondê-la nas definições do sistema.</p><h3>É uma subscrição?</h3><p>Não. Catorze dias de experiência e depois um pagamento único.</p>
   </div>
 </section>
 
+</main>
 
 <footer class="site">
   <div class="wrap cols">
     <div>
       <strong style="color:var(--ink-soft)">Snapgate</strong> · decides tu o que vai para a nuvem<br>
-      <span>© 2026. Feito em Espanha.</span>
+      <span>© 2026. Feito em Espanha por jfjalburquerque.</span>
     </div>
     <div class="links">
       <a href="../pt/privacy.html">Privacidade</a>

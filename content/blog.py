@@ -74,13 +74,14 @@ medio.</p>
 <p>Fotos que hice para mirarlas diez minutos y que llevan años pagando alquiler en
 mi cuenta.</p>
 
-<h2>El problema no es la cámara, es el todo o nada</h2>
+<h2>El problema no es la cámara, es que Google Fotos decide por carpetas</h2>
 
-<p>La copia de seguridad de Google Fotos tiene exactamente dos estados: encendida
-para una carpeta entera, o apagada. No hay término medio. O sube todo tu carrete, o
-no sube nada y asumes el riesgo de perder las fotos que sí importan.</p>
+<p>La copia de seguridad de Google Fotos se enciende o se apaga por carpetas, y
+deja subir fotos sueltas a mano. Pero todo lo que hago con la cámara va a la misma
+carpeta: la foto de las vacaciones y la del ticket del parking. O suben las dos, o
+ninguna, y asumo el riesgo de perder las fotos que sí importan.</p>
 
-<p>Como no hay matiz posible, la inmensa mayoría de la gente lo deja encendido y paga
+<p>Como elegir a mano después es algo que nunca ocurre, la inmensa mayoría de la gente lo deja encendido y paga
 por almacenar basura. Es un diseño perfectamente razonable desde el punto de vista de
 Google, y perfectamente incómodo desde el mío.</p>
 
@@ -131,13 +132,14 @@ from a meeting that ended eighteen months ago.</p>
 
 <p>Photos I took to look at for ten minutes, paying rent in my account ever since.</p>
 
-<h2>The problem isn't the camera, it's all-or-nothing</h2>
+<h2>The problem isn't the camera, it's that Google Photos decides by folder</h2>
 
-<p>Google Photos backup has exactly two states: on for an entire folder, or off.
-There is no middle ground. Either it uploads your whole camera roll, or it uploads
-nothing and you accept the risk of losing the photos that actually matter.</p>
+<p>Google Photos backup is switched on or off per folder, and it lets you upload
+single photos by hand. But everything I shoot goes into the same camera folder: the
+holiday photo and the parking ticket. Either both go up, or neither does and I accept
+the risk of losing the photos that actually matter.</p>
 
-<p>Since no nuance is possible, most people leave it on and pay to store rubbish. It
+<p>Since picking by hand afterwards never actually happens, most people leave it on and pay to store rubbish. It
 is a perfectly reasonable design from Google's point of view, and a perfectly
 annoying one from mine.</p>
 

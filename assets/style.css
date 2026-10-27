@@ -8,8 +8,9 @@
   --paper: #ffffff;
   --paper-alt: #f6f8fa;
   --line: #e4e8ee;
-  --accent: #16a34a;
+  --accent: #15803d;
   --accent-soft: #eaf7ef;
+  --on-accent: #fff;
   --radius: 14px;
   --max: 1080px;
   --prose: 680px;
@@ -24,6 +25,7 @@
     --paper-alt: #1b1f26;
     --line: #2a2f38;
     --accent: #34d17c;
+    --on-accent: #0b1f13;
     --accent-soft: #172a20;
   }
 }
@@ -108,7 +110,7 @@ nav.main a:hover { color: var(--ink); text-decoration: none; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
 .btn {
   display: inline-block; padding: 13px 24px; border-radius: 11px;
-  background: var(--accent); color: #fff; font-weight: 570; font-size: 16px;
+  background: var(--accent); color: var(--on-accent); font-weight: 570; font-size: 16px;
 }
 .btn:hover { text-decoration: none; filter: brightness(1.06); }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
@@ -151,7 +153,7 @@ ol.steps li:last-child { border-left-color: transparent; padding-bottom: 0; }
 ol.steps li::before {
   content: counter(s); position: absolute; left: -16px; top: -3px;
   width: 30px; height: 30px; border-radius: 50%;
-  background: var(--accent); color: #fff;
+  background: var(--accent); color: var(--on-accent);
   display: grid; place-items: center; font-size: 14px; font-weight: 640;
 }
 ol.steps h3 { margin: 0 0 5px; font-size: 17.5px; font-weight: 620; }

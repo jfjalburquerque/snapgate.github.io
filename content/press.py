@@ -43,10 +43,11 @@ T["en"] = {
     "line": "Snapgate asks you, right from the notification, whether each new photo "
             "should back up to Google Photos.",
     "para_h2": "In a paragraph",
-    "para": "Google Photos backup has two settings: everything or nothing. So receipts, "
+    "para": "Google Photos backs up by folder, and everything from the camera lands in the "
+            "same one. So receipts, "
             "parking spots, screenshots and meeting whiteboards end up in the cloud next "
-            "to the photos that matter, eating into the free 15 GB. Snapgate adds a third "
-            "option. Seconds after you take a photo, a notification shows a thumbnail with "
+            "to the photos that matter, eating into the free 15 GB. Snapgate adds what's "
+            "missing: a decision per photo. Seconds after you take a photo, a notification shows a thumbnail with "
             "two buttons, Upload and Discard. Discarded photos stay on the phone untouched. "
             "Temporary modes and rules by time, day or folder handle the moments when you "
             "don't want to be asked. There are no servers, no ads and no analytics, and the "
@@ -91,10 +92,10 @@ T["es"] = {
     "line": "Snapgate te pregunta, desde la propia notificación, si cada foto nueva debe "
             "subirse a Google Fotos.",
     "para_h2": "En un párrafo",
-    "para": "La copia de seguridad de Google Fotos solo tiene dos posiciones: todo o nada. "
+    "para": "Google Fotos decide por carpetas, y todo lo que sale de la cámara va a la misma. "
             "Así que tickets, plazas de aparcamiento, capturas de pantalla y pizarras de "
             "reuniones acaban en la nube junto a las fotos que importan, gastando los 15 GB "
-            "gratuitos. Snapgate añade una tercera opción. Segundos después de hacer una foto, "
+            "gratuitos. Snapgate añade lo que falta: decidir foto a foto. Segundos después de hacer una foto, "
             "una notificación muestra la miniatura con dos botones, Subir y Descartar. Las "
             "fotos descartadas se quedan en el móvil intactas. Los modos temporales y las "
             "reglas por hora, día o carpeta cubren los momentos en que no quieres que te "
@@ -142,10 +143,11 @@ T["pt"] = {
     "line": "O Snapgate pergunta-te, a partir da própria notificação, se cada foto nova "
             "deve ir para o Google Fotos.",
     "para_h2": "Num parágrafo",
-    "para": "A cópia de segurança do Google Fotos só tem duas posições: tudo ou nada. Por "
+    "para": "O Google Fotos guarda por pastas, e tudo o que sai da câmara vai para a mesma. "
+            "Por "
             "isso, recibos, lugares de estacionamento, capturas de ecrã e quadros de reuniões "
             "acabam na nuvem ao lado das fotos que importam, a gastar os 15 GB gratuitos. O "
-            "Snapgate acrescenta uma terceira opção. Segundos depois de tirares uma foto, uma "
+            "Snapgate acrescenta o que falta: decidir foto a foto. Segundos depois de tirares uma foto, uma "
             "notificação mostra a miniatura com dois botões, Enviar e Descartar. As fotos "
             "descartadas ficam no telemóvel intactas. Os modos temporários e as regras por "
             "hora, dia ou pasta tratam dos momentos em que não queres que te pergunte. Não há "
@@ -192,10 +194,11 @@ T["fr"] = {
     "line": "Snapgate vous demande, directement depuis la notification, si chaque nouvelle "
             "photo doit être sauvegardée dans Google Photos.",
     "para_h2": "En un paragraphe",
-    "para": "La sauvegarde de Google Photos n'a que deux positions : tout ou rien. Tickets, "
+    "para": "Google Photos sauvegarde par dossier, et tout ce qui sort de l'appareil photo "
+            "atterrit dans le même. Tickets, "
             "places de parking, captures d'écran et tableaux de réunion finissent donc dans "
             "le cloud à côté des photos qui comptent, et grignotent les 15 Go gratuits. "
-            "Snapgate ajoute une troisième option. Quelques secondes après une photo, une "
+            "Snapgate ajoute ce qui manque : décider photo par photo. Quelques secondes après une photo, une "
             "notification affiche une miniature et deux boutons, Envoyer et Ignorer. Les "
             "photos ignorées restent intactes sur le téléphone. Les modes temporaires et les "
             "règles par heure, jour ou dossier prennent le relais quand vous ne voulez pas "
@@ -243,10 +246,10 @@ T["de"] = {
     "line": "Snapgate fragt dich direkt in der Benachrichtigung, ob jedes neue Foto in "
             "Google Fotos gesichert werden soll.",
     "para_h2": "In einem Absatz",
-    "para": "Die Sicherung von Google Fotos kennt nur zwei Zustände: alles oder nichts. So "
+    "para": "Google Fotos sichert nach Ordnern, und alles aus der Kamera landet im selben. So "
             "landen Kassenzettel, Parkplätze, Screenshots und Whiteboards aus Meetings neben "
             "den Fotos, die zählen, in der Cloud und verbrauchen die kostenlosen 15 GB. "
-            "Snapgate ergänzt eine dritte Möglichkeit. Sekunden nach dem Foto zeigt eine "
+            "Snapgate ergänzt, was fehlt: eine Entscheidung pro Foto. Sekunden nach dem Foto zeigt eine "
             "Benachrichtigung ein Vorschaubild mit zwei Schaltflächen, Hochladen und "
             "Verwerfen. Verworfene Fotos bleiben unverändert auf dem Handy. Temporäre Modi "
             "und Regeln nach Uhrzeit, Wochentag oder Ordner übernehmen, wenn du nicht gefragt "
@@ -293,10 +296,11 @@ T["it"] = {
     "line": "Snapgate ti chiede, direttamente dalla notifica, se ogni nuova foto deve "
             "finire su Google Foto.",
     "para_h2": "In un paragrafo",
-    "para": "Il backup di Google Foto ha solo due posizioni: tutto o niente. Così scontrini, "
+    "para": "Google Foto fa il backup per cartelle, e tutto ciò che esce dalla fotocamera "
+            "finisce nella stessa. Così scontrini, "
             "posti auto, screenshot e lavagne delle riunioni finiscono nel cloud accanto alle "
-            "foto che contano, consumando i 15 GB gratuiti. Snapgate aggiunge una terza "
-            "opzione. Pochi secondi dopo lo scatto, una notifica mostra l'anteprima con due "
+            "foto che contano, consumando i 15 GB gratuiti. Snapgate aggiunge ciò che "
+            "manca: decidere foto per foto. Pochi secondi dopo lo scatto, una notifica mostra l'anteprima con due "
             "pulsanti, Carica e Scarta. Le foto scartate restano intatte sul telefono. Le "
             "modalità temporanee e le regole per orario, giorno o cartella pensano ai momenti "
             "in cui non vuoi essere interpellato. Niente server, niente pubblicità, niente "
