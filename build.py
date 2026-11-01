@@ -199,9 +199,10 @@ def shell(lang, *, title, description, body, path, alts, path_depth=1,
 
 PLAY_URL = "https://play.google.com/store/apps/details?id=com.snapgate.app"
 
-# Enlace, no reproductor incrustado: el de YouTube carga cookies y rastreadores
-# de Google al abrir la pagina, y la web promete no descargar nada de terceros.
-FEATURED_VIDEO = "https://www.youtube.com/watch?v=TYNzg59ke30&amp;t=61s"
+# El sello principal: la cobertura de mas peso. Enlace normal, sin nada
+# incrustado, porque la web promete no cargar nada de terceros.
+FEATURED_URL = "https://www.androidpolice.com/stopped-google-photos-backing-up/"
+FEATURED_NAME = "Android Police"
 
 # Mismo orden que en Play. Los textos alternativos viven en content/site.py.
 SHOT_NAMES = ["01-notif", "02-selection", "03-features", "04-onb1"]
@@ -226,11 +227,13 @@ def landing_html(lang):
         for name, alt in zip(SHOT_NAMES, c["shots"])
     )
 
-    # HowToMen ya tiene su sello; el resto de la cobertura va en una sola linea
-    # discreta debajo, con el nombre corto de cada medio.
+    # El medio del sello no se repite debajo. HowToMen va el primero de la
+    # linea: fue el que mas descargas trajo; el resto, del mas reciente al
+    # mas antiguo, como en la pagina de prensa.
+    rest = [c_ for c_ in COVERAGE if c_[3] != FEATURED_NAME]
+    rest.sort(key=lambda c_: c_[3] != "HowToMen")
     also = " · ".join(
-        f'<a href="{url}" rel="noopener">{short}</a>'
-        for url, _, _, short in COVERAGE if short != "HowToMen"
+        f'<a href="{url}" rel="noopener">{short}</a>' for url, _, _, short in rest
     )
 
     body = f"""
@@ -244,8 +247,8 @@ def landing_html(lang):
     <a class="btn ghost" href="blog/">{c["cta_secondary"]}</a>
   </div>
   <p class="note">{c["note"]}</p>
-  <a class="featured" href="{FEATURED_VIDEO}" rel="noopener">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+  <a class="featured" href="{FEATURED_URL}" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h11l3 3v15H5zM8 9h8v1.6H8zm0 3.5h8v1.6H8zm0 3.5h5v1.6H8z"/></svg>
     <span><strong>{c["featured_label"]}</strong><br>{c["featured_text"]}</span>
   </a>
   <p class="also">{c["also_label"]}: {also}</p>
