@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/de/blog/google-photos-storage-full.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/de/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+  </url>
+  <url>
     <loc>https://snapgate.app/de/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/"/>
@@ -44,6 +84,10 @@
     <loc>https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
   </url>
   <url>
@@ -56,18 +100,30 @@
     <loc>https://snapgate.app/en/blog/google-photos-storage-full.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/google-photos-storage-full.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/google-photos-storage-full.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
   </url>
   <url>
     <loc>https://snapgate.app/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/"/>
   </url>
   <url>
     <loc>https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
   </url>
   <url>
@@ -126,6 +182,10 @@
     <loc>https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
   </url>
   <url>
@@ -138,18 +198,30 @@
     <loc>https://snapgate.app/es/blog/google-photos-storage-full.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/google-photos-storage-full.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/google-photos-storage-full.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
   </url>
   <url>
     <loc>https://snapgate.app/es/blog/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/"/>
   </url>
   <url>
     <loc>https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
   </url>
   <url>
@@ -205,6 +277,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/terms.html"/>
   </url>
   <url>
+    <loc>https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/fr/blog/google-photos-storage-full.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/fr/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+  </url>
+  <url>
     <loc>https://snapgate.app/fr/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/"/>
@@ -255,6 +367,46 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/"/>
   </url>
   <url>
+    <loc>https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/it/blog/google-photos-storage-full.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/it/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+  </url>
+  <url>
     <loc>https://snapgate.app/it/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/"/>
@@ -293,6 +445,46 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/terms.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/terms.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/back-up-only-some-photos-google-photos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/back-up-only-some-photos-google-photos.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/pt/blog/google-photos-storage-full.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/google-photos-storage-full.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/google-photos-storage-full.html"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/pt/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://snapgate.app/es/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://snapgate.app/pt/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://snapgate.app/fr/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://snapgate.app/de/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://snapgate.app/it/blog/stop-google-photos-backing-up-screenshots.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://snapgate.app/en/blog/stop-google-photos-backing-up-screenshots.html"/>
   </url>
   <url>
     <loc>https://snapgate.app/pt/</loc>
