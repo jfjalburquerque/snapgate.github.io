@@ -408,3 +408,9 @@ its state verified by the app: if it isn't done, it tells you and takes you ther
         },
     },
 })
+
+# Las guías prácticas van primero: son las más recientes y las que responden a
+# lo que la gente busca.
+from content.blog_guides import GUIDES  # noqa: E402
+
+POSTS[:0] = GUIDES
